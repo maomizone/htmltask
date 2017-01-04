@@ -4,7 +4,7 @@
     font-family: 'Microsoft YaHei';
 }
 body{
-    min-width: 1000px;
+    min-width: 1280px;
 }
 header{
     width: 100%;
@@ -30,7 +30,7 @@ header .right{
 }
 .login{
     display: inline-block;
-    margin-left: 150px;
+    margin-left: 100px;
 }
 .login img{
     vertical-align: text-bottom;
@@ -44,8 +44,7 @@ nav,nav ul, nav li{
 }
 nav li{
     text-align: center;
-    margin-right: 15px;
-    width: 95px;
+    width: 90px;
     cursor: pointer;
 }
 nav li:hover{
@@ -187,19 +186,35 @@ nav li:hover{
     font-size: 20px;
     color: white  ;
 }
-.four p:nth-child(2){
+.four p:nth-child(3){
     color: white  ;
-    margin-top: 40px;
+}
+.four .divider{
+    display: block;
+    margin: 10px auto;
+    width: 40px;
+    height: 30px;
+    border-top: 2px solid white;
+
+    -webkit-transition: width 0.4s ease-in;
+    -moz-transition: width 0.4s ease-in;
+    -o-transition: width 0.4s ease-in;
+    -ms-transition: width 0.4s ease-in;
+    transition: width 0.4s ease-in;
+}
+.four .divider:hover{
+    width: 280px;
 }
 .four .select{
+    position: relative;
+    display: inline-block;
     margin-top: 50px;
     margin-right: 20px;
     width: 237px;
     height: 36px;
     line-height: 36px;
     background-color: white;
-    border: 1px solid red;
-    display: inline-block;
+    border: 1px solid #AE7271;
 }
 .four .select span{
     color: #999999;
@@ -211,4 +226,104 @@ nav li:hover{
     width: 18px;
     height: 18px;
     margin: 9px 5px;
+}
+.four .select:last-child{
+    background-color: #E53C3C;
+    border: 1px solid #E53C3C;
+    -webkit-transition: all 0.4s ease-in;
+    -moz-transition: all 0.4s ease-in;
+    -o-transition: all 0.4s ease-in;
+    -ms-transition: all 0.4s ease-in;
+    transition: all 0.4s ease-in;
+}
+.four .select:last-child span{
+    color:white;
+    padding-left: 100px;
+
+
+}
+.four .select:last-child:hover{
+    background-color: red;
+}
+.four .select:last-child img{
+    visibility:collapse ;
+}
+.four .option{
+    display: none;
+    position: absolute;
+    top: 37px;
+    left: 0;
+    width: 236px;
+    height: auto;
+    background-color: lightgray;
+}
+.four .option li{
+    color: #999999;
+    list-style: none;
+}
+.four .select:hover .option{
+    display: inline-block;
+    border: 1px solid #AE7271;
+    border-top: none;
+}
+.four .option li:hover{
+    color: white;
+    background-color: #E53C3C;
+}
+/*section five*/
+.five{
+    width: 100%;
+    height: 600px;
+    display: table;
+    background-color: #F7F7F7;
+}
+.five>div{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    margin: 0 auto;
+}
+.five .content{
+    display: inline-block;
+    width: 220px;
+    height: 388px;
+    margin: 0 90px;
+}
+.five .content p:nth-child(2){
+    margin-top: 12px;
+}
+.five .content p:nth-child(3){
+    margin-top: 12px;
+    color: #888888;
+    font-size: 12px;
+}
+.five .content2{
+    display: inline-block;
+    width: 220px;
+    height: 388px;
+    margin: 0 90px;
+}
+.five .content2 p:nth-child(1){
+    font-size: 20px;
+}
+.five .content2 p:nth-child(2){
+    margin: 12px 0 12px 0;
+    color: #888888;
+    font-size: 12px;
+}
+/*section six*/
+.six{
+    width: 100%;
+    height: 566px;
+}
+.six .left{
+    width: 70%;
+    float: left;
+    height: 566px;
+    background-image: url(../images/task07/pic07.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}
+.six .right{
+    float: right;
 }
