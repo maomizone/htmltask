@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    font: 13px/1.5em "黑体",sans-serif;
+}
+.main{
+    margin: 20px;
+    padding: 20px;
+    background-color: gainsboro;
+    border: 1px solid #999;
+    min-width: 600px;
+}
+.left{
+    background-color: white;
+    text-align: center;
+    width: 200px;
+    height: 100px;
+    line-height: 100px;
+    border: 1px solid #999;
+  float: left;
+}
+.left img{
+    vertical-align: middle;
+}
+.left p{
+    display: inline-block;
+    font-weight: bold;
+}
+.right{
+    background-color: white;
+    text-align: center;
+    width: 120px;
+    line-height: 100px;
+    border: 1px solid #999;
+ float: right;
+}
+.center{
+    height:700px;
+    background-color: #a82724;
+    margin: 0 140px 0 220px;
+}

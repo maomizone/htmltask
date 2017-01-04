@@ -1,0 +1,92 @@
+<!--
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    margin: 10px;
+    font-size: 13px;
+}
+
+a:link {
+    color: #666;
+    text-decoration: none; /*去除链接下划线*/
+}
+
+a:visited {
+    color: #666;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #F90;
+}
+
+h3 {
+    color: #FFF;
+    background-color: #F90;
+    width: 100px;
+    padding-top: 3px;
+    text-align: center;
+}
+
+ul {
+    width: 300px;
+    border-top: 1px solid #F60; /*使其上边有一线条，与标题h3吻合*/
+}
+
+ul li {
+    padding: 5px;
+    border-bottom: 1px solid #CCC;
+    list-style: none; /*去除列表样式，这对于标准浏览器很重要*/
+}
+
+a {
+    position: relative; /*设置其定位方法为相对定位，等一下内部信息面板就可以相对它定位*/
+    /*display: block; *//*让链接以块状呈现，这样不用点中链接文字就可以响应链接*/
+}
+
+a div {
+    display: none; /*初始化信息面板不显示*/
+}
+
+a:hover {
+    background: #fff;
+}
+
+/*IE7以下版本A状态伪类bug*/
+a:hover div {
+    position: absolute;/*display: inline-block*/
+    padding: 5px;
+    display: block;
+    width: 245px; /*只给出宽度，高让它随内容多少自动调整*/
+    left: 150px; /*这是相对父级A的定位*/
+    top: 20px;
+    border: 1px solid rgb(91, 185, 233);
+    background-color: rgb(228, 246, 255);
+    z-index: 999; /*把信息面板提到一个较高的位置，使链接文字过长时不会与面板重叠,但这只对FF有效*/
+}
+
+a img {
+    width: 80px;
+    height: 80px;
+    border: none; /*去除图片边框，默认情况下，链接内的图片在标准浏览器会出现边框*/
+    display: block;
+    position: absolute; /*用绝对定位抽离正常文本流，不然在设计的时候考虑到不同浏览器正常显示会更麻烦*/
+    top: 5px; /*这里的5px是与信息面板大盒子的填充一样的*/
+    left: 5px;
+}
+
+dl {
+    width: 160px;
+    float: right;
+    color: #999;
+    line-height: 20px;
+}
+dl dd span {
+    font-weight: bold;
+    color: #639;
+}
+
+-->

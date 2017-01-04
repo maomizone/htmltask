@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-size: 13px;
+}
+.container{
+    position: absolute;
+    left: 45%;
+    margin-top: 200px;
+}
+a div{
+    display: none;
+}
+a{
+    position: relative;
+    color: #555555;
+    text-decoration: none;
+}
+a:hover{
+    color: orange;
+}
+a:hover div{
+    position: absolute;
+    display: block;
+    width: 250px;
+    background-color: paleturquoise;
+    border: 1px gray solid;
+    left: 135px;
+    top:5px;
+    padding: 5px;
+    z-index: 99;
+}
+ul{
+    width: 300px;
+    border-top:  1px solid orange;
+}
+li{
+    padding: 5px;
+    list-style: none;
+    border-bottom:  1px solid lightgray;
+}
+li div img{
+    width: 60px;
+    height: 60px;
+    position: absolute; /*用绝对定位抽离正常文本流，不然在设计的时候考虑到不同浏览器正常显示会更麻烦*/
+}
+dl{
+    line-height: 150%;
+    margin-left:70px;
+}
+dd{
+    color: gray;
+}
+dd span{
+    color: blue;
+    font-weight: bold;
+}
+
+
+h3{
+    padding: 0.2em 0.6em;
+    text-align: center;
+    color: white;
+    background-color: orange;
+    width: 100px;
+}

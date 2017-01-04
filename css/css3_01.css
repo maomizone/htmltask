@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-size: 16px;
+}
+
+ul{
+    background-color: #f65f57;
+    width: 550px;
+    margin: 50px auto;
+    text-align: center;
+    border-radius:15px;
+    box-shadow: 0 5px #a82724;
+}
+li{
+    display: inline-block;
+    position: relative;/*加这行似乎让a反应较快*/
+    list-style: none;
+    padding: 18px 10px;
+    text-align: center;
+    /*background: #a82724 no-repeat right / 1px 15px ;*/
+    background:url("http://img5.duitang.com/uploads/item/201408/06/20140806203024_TvcVS.jpeg") no-repeat right / 1px 15px ;
+}
+li:last-child{
+    background: none    ;
+}
+a{
+    text-decoration: none;
+    color: white;
+    text-shadow: 2px 2px rgba(0,0,0,.5);
+    font:bold 13px Arial;
+    display: inline-block;/*加这行a才能旋转 不然不行 why*/
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    -ms-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+}
+.nav a:hover{
+    -webkit-transform:rotate(360deg);
+    -moz-transform:rotate(360deg);
+    -o-transform:rotate(360deg);
+    -ms-transform:rotate(360deg);
+    transform:rotate(360deg);
+}

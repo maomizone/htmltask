@@ -1,0 +1,93 @@
+*{
+    padding: 0;
+    margin: 0;
+    font: 12px/1.5em "黑体",sans-serif;
+}
+body{
+    background-color: #888888;
+}
+hr{
+    clear: both;
+    height: 2px;
+    background-color: #938e8c;
+}
+.main{
+    width: 900px;
+    height: 1386px;
+    background-color: white;
+    margin: auto;
+    padding: 0 44px 0 44px;
+}
+header{
+    position: relative;
+}
+header .left{
+   width: 110px;
+   height:61px;
+   background-color: #f65f57;
+    float: left;
+   position: relative;
+    display: inline-block;
+}
+header .left span{
+    position: absolute;
+    display: inline-block;
+    color: white;
+    bottom: 5px;
+    left: 5px;
+}
+header .right{
+    float: right;
+    height: 61px;
+}
+header .right span{
+    position: absolute;
+    display: inline-block;
+    bottom: 5px;
+    right: 0px;
+}
+.one{
+    margin-top: 22px;
+}
+
+.one .left {
+    width: 641px;
+    height:301px;
+    float: left;
+    position: relative;
+}
+.one .left img{
+    width: 641px;
+    height:301px;
+}
+.one .left .img_left{
+    width: 191px;
+    height:301px;
+    background: #72A664;  opacity: 0.5;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.one .left .img_right{
+    width: 191px;
+    height:301px;
+    background: firebrick;  opacity: 0.5;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.one .right{
+    background-color: #72A664;
+    float:right;
+    width: 203px;
+    height:301px;
+}
+.one .right hr{
+    width: 203px;
+    height:2px;
+    background-color: #cc8091;
+}
+.one .right h2{
+    font: 20px/1.5em "微软雅黑";
+    text-decoration: underline;
+}

@@ -1,0 +1,214 @@
+*{
+    padding: 0;
+    margin:0;
+    font-family: 'Microsoft YaHei';
+}
+body{
+    min-width: 1000px;
+}
+header{
+    width: 100%;
+    height: 57px;
+    line-height: 57px;
+}
+header .left{
+    float: left;
+    margin-left: 150px;
+}
+header .left h2{
+    display: inline-block;
+    font-size: 20px;
+}
+header .left img{
+    width: 30px;
+    height: 30px;
+    vertical-align: text-bottom;
+}
+header .right{
+    float: right;
+    margin-right: 54px;
+}
+.login{
+    display: inline-block;
+    margin-left: 150px;
+}
+.login img{
+    vertical-align: text-bottom;
+}
+.login a{
+    color: red;
+    cursor: pointer;
+}
+nav,nav ul, nav li{
+    display: inline-block;
+}
+nav li{
+    text-align: center;
+    margin-right: 15px;
+    width: 95px;
+    cursor: pointer;
+}
+nav li:hover{
+    color: red;
+    border-bottom: 3px solid red;
+}
+/*section one*/
+.one{
+    width: 100%;
+    margin-top: 3px;
+    height: 690px;
+    background-image: url(../images/task07/pic01.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    display: table;
+}
+.one div{
+    padding-left: 126px;
+    display: table-cell;
+    vertical-align:middle;
+}
+.one div>p:nth-child(1){
+    font-family: Arial;
+    font-size: 60px;
+    color: white;
+    letter-spacing: 3px;
+}
+.one div>p:nth-child(2){
+    margin-top: 20px;
+    font-size: 20px;
+    color: white;
+    line-height: 1.5em;
+    font-weight: bold;
+}
+.one div>p:nth-child(3){
+    margin-top:60px;
+    font-size: 30px;
+    color: white;
+    width: 330px;
+    height: 60px;
+    display: inline-block;
+    line-height: 60px;
+    background-color: #E53C3C;
+    text-align: center;
+    cursor: pointer;
+
+    transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+.one div>p:nth-child(3):hover{
+    background-color: red;
+    border-radius: 3px;
+}
+
+/*section two*/
+.two{
+    width: 100%;
+    height: 250px;
+    display: table;
+
+}
+.two div{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+.two ul{
+    display: inline-block;
+    width: 100%;
+}
+.two ul li{
+    display: inline-block;
+    width: 24%;
+
+    transition: color 0.4s ease-in-out;
+    -webkit-transition: color 0.4s ease-in-out;
+    -moz-transition: color 0.4s ease-in-out;
+}
+.two img{
+    /*display: inline-block;*/
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    -ms-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+}
+.two ul:last-child li{
+    cursor: pointer;
+    border-right: 2px solid #555555;
+}
+.two ul:last-child li:last-child{
+    border: none;
+}
+.two ul li:hover{
+    color: red;
+}
+
+.two img:hover{
+    -webkit-transform:rotate(360deg);
+    -moz-transform:rotate(360deg);
+    -o-transform:rotate(360deg);
+    -ms-transform:rotate(360deg);
+    transform:rotate(360deg);
+}
+/*section three*/
+.three{
+    width: 100%;
+    height: 360px;
+    display: table;
+    background-color: lightgray;
+}
+.three div{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+.three p{
+    margin-top: 50px;
+    font-size: 50px;
+    color: #464646  ;
+}
+/*section four*/
+.four{
+    width: 100%;
+    height: 340px;
+    display: table;
+    background-image: url(../images/task07/pic02.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}
+.four>div:first-child{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+.four p:nth-child(1){
+    font-size: 20px;
+    color: white  ;
+}
+.four p:nth-child(2){
+    color: white  ;
+    margin-top: 40px;
+}
+.four .select{
+    margin-top: 50px;
+    margin-right: 20px;
+    width: 237px;
+    height: 36px;
+    line-height: 36px;
+    background-color: white;
+    border: 1px solid red;
+    display: inline-block;
+}
+.four .select span{
+    color: #999999;
+    float: left;
+    margin-left: 5px;
+}
+.four .select img{
+    float: right;
+    width: 18px;
+    height: 18px;
+    margin: 9px 5px;
+}
