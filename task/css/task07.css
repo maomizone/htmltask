@@ -444,7 +444,7 @@ nav li:hover{
 .seven .content:nth-of-type(3){
     background-image: url("../images/task07/pic08.jpg");
     background-repeat: no-repeat;
-    background-size: 100% auto;
+    background-size:  cover;
     float: right;
 }
 
