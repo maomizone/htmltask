@@ -556,15 +556,16 @@ nav li:hover{
     height: 450px;
 }
 .eight .bottom .left{
-    width: 40%;
+    width: 50%;
     height: 100%;
     float: left;
 }
 
 .eight .bottom .left .content{
-    width: 290px;
+    width: 500px;
     height: auto;
     float: right;
+    box-sizing: border-box;
     padding-right:138px;
 }
 .eight .bottom .left .content h4{
@@ -580,13 +581,14 @@ nav li:hover{
     color: brown;
 }
 .eight .bottom .right{
-    width: 60%;
+    width: 50%;
     height: 100%;
     float: right;
 }
 .eight .bottom .right .content{
     width: 70%;
     height: auto;
+    box-sizing: border-box;
 }
 .eight .bottom .right .content>input{
     background-color: #EDECEE;
@@ -595,7 +597,7 @@ nav li:hover{
     padding-left: 8px;
 }
 .eight .bottom .right .content>input[type="text"]{
-    width: 48%;
+    width: 47%;
 }
 .eight .bottom .right .content>input[type="text"]:nth-of-type(2n){
     float: right;
