@@ -39,7 +39,7 @@ header .right{
     color: red;
     cursor: pointer;
 }
-nav,nav ul, nav li{
+header nav,header nav ul, header nav ul li{
     display: inline-block;
 }
 nav li{
@@ -627,39 +627,7 @@ nav li:hover{
     background-color: deepskyblue;
     color: #ffffff;
 }
-/*footer*/
-footer{
-    width: 100%;
-    height: 60px;
-    background-color: #474756;
-    display: table;
-}
-footer>div{
-    display: table-cell;
-    vertical-align: middle;
-}
-footer>div span, footer>div a{
-    color: #ffffff;
-    font-size: 13px;
-}
-footer>div span{
-    float: left;
-    margin-left: 50px;
-}
-footer>div a{
-    float: right;
-    margin-right: 50px;
-    text-decoration: none;
 
-    transition: color 0.4s ease-in;
-    -o-transition: color 0.4s ease-in;
-    -webkit-transition: color 0.4s ease-in;
-    -moz-transition: color 0.4s ease-in;
-    -ms-transition: color 0.4s ease-in;
-}
-footer>div a:hover{
-    color: #999999;
-}
 /*section nine*/
 .nine{
     width: 100%;
@@ -732,4 +700,37 @@ font-size: 20px;
 }
 .nine .icon i:hover{
     font-size: 35px;
+}
+/*footer*/
+footer{
+    width: 100%;
+    height: 60px;
+    background-color: #474756;
+    display: table;
+}
+footer div{
+    display: table-cell;
+    vertical-align: middle;
+}
+footer>div span, footer>div a{
+    color: #ffffff;
+    font-size: 13px;
+}
+footer span{
+    float: left;
+    margin-left: 50px;
+}
+footer a{
+    float: right;
+    margin-right: 50px;
+    text-decoration: none;
+
+    transition: color 0.4s ease-in;
+    -o-transition: color 0.4s ease-in;
+    -webkit-transition: color 0.4s ease-in;
+    -moz-transition: color 0.4s ease-in;
+    -ms-transition: color 0.4s ease-in;
+}
+footer>div a:hover{
+    color: #999999;
 }
