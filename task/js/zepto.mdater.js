@@ -461,6 +461,9 @@
                             dateValue = '0' + dateValue;
                         }
                         option.onSelected(_this.value.year + '.' + monthValue + '.' + dateValue, F.getWeekDay(_this.value.year + '-' + monthValue + '-' + dateValue))
+
+                        $('.md_datearea li').click(function () {
+                        });
                     },
 
                 });
