@@ -166,7 +166,7 @@
             lastCheckedDate: '',
             init: function () {
                 this.renderHTML();
-                this.initListeners();
+                // this.initListeners();
                 this._showPanel();
             },
             renderHTML: function () {
