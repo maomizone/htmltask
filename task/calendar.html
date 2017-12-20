@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<meta charset="UTF-8" />
-<title>mdater</title>
-<link rel="stylesheet" href="css/zepto.mdater.css">
-<link rel="stylesheet" href="css/bootstrap.min.css">
-<script src="js/util/zepto.js"></script>
-<script src="js/zepto.mdater.js"></script>
-<script src="js/util/jquery-3.2.1.min.js"></script>
-<script>jQuery.noConflict()</script>
-<script src="js/util/bootstrap.min.js"></script>
-<script src="js/common/app.js"></script>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta charset="UTF-8"/>
+    <title>mdater</title>
+    <link rel="stylesheet" href="css/zepto.mdater.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/util/zepto.js"></script>
+    <script src="js/zepto.mdater.js"></script>
+    <script src="js/util/jquery-3.2.1.min.js"></script>
+    <script>jQuery.noConflict()</script>
+    <script src="js/util/bootstrap.min.js"></script>
+    <script src="js/common/app.js"></script>
 
 
 </head>
@@ -32,33 +33,35 @@
             <p class="text-center"><strong id="week">星期二</strong></p>
         </div>
         <div class="right">
-            <p >已有预约 <strong id="num">0</strong>  位</p>
-            <p class="text-center"><button id="look" type="button" class="btn btn-danger">查看预约</button></p>
+            <p>已有预约 <strong id="num">0</strong> 位</p>
+            <p class="text-center">
+                <button id="look" type="button" class="btn btn-danger">查看预约</button>
+            </p>
         </div>
     </div>
 </div>
 <script>
     var selectedDate;
 
-    var  data= [
+    var data = [
         {
             date: '2017/11/19',
             value: 'Christmas Eve',
-            type:0,
+            type: 0,
         },
         {
             date: '2017/11/11',
             value: 'Merry Christmas',
-            type:1,
+            type: 1,
         },
     ];
 
-    $(document).ready(function() {
+    $(document).ready(function () {
         $('#ca').mdater({
-            minDate : new Date(2015, 2, 10),
+            minDate: new Date(2015, 2, 10),
             data: [],
             onSelected: function (date, week) {
-                console.log("js回调--》"+date+week);
+                console.log("js回调--》" + date + week);
                 selectedDate = date;
                 $("#date").text(date);
                 $("#week").text(week);
@@ -73,19 +76,17 @@
         });
 
         $('#ca').initListeners();
-        $('#ca').click(function () {
 
-            console.log(111);
+        $('.md_datearea li').click(function () {
         });
-
-        console.log("屏幕宽度"+document.body.clientWidth);
+        console.log("屏幕宽度" + document.body.clientWidth);
         //手指接触屏幕
-        document.getElementById("container").addEventListener("touchstart", function(e) {
+        document.getElementById("container").addEventListener("touchstart", function (e) {
             startx = e.touches[0].pageX;
             starty = e.touches[0].pageY;
         }, false);
         //手指离开屏幕
-        document.getElementById("container").addEventListener("touchend", function(e) {
+        document.getElementById("container").addEventListener("touchend", function (e) {
             var endx, endy;
             endx = e.changedTouches[0].pageX;
             endy = e.changedTouches[0].pageY;
