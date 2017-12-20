@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta charset="UTF-8" />
+    <title>同意/拒绝</title>
+    <!--css-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/app.css">
+    <!--加载框-->
+    <link rel="stylesheet" href="css/iosOverlay.css">
+    <!--吐司-->
+    <link rel="stylesheet" href="css/toast.css">
+
+    <!--js-->
+    <script src="js/util/jquery-3.2.1.min.js"></script>
+    <script src="js/util/bootstrap.min.js"></script>
+    <!--加载框-->
+    <script src="js/util/spin.min.js"></script>
+    <script src="js/util/jquery.spin.js"></script>
+    <script src="js/util/iosOverlay.js"></script>
+    <!--吐司-->
+    <script src="js/util/toast.js"></script>
+    <!--vue-->
+    <script src="js/util/vue.min.js"></script>
+    <script src="js/common/component.js"></script>
+    <!--custom-->
+    <script src="js/common/app.js"></script>
+    <script src="js/common/tool.js"></script>
+    <script src="js/YesOrNo.js"></script>
+
+    <style type="text/css">
+        body{
+            width: 100%;
+            height:100%;
+            background-color: #f2f2f2;
+        }
+        .textarea{
+            width: 100%;
+            border: none;
+            padding: 16px;
+            display: inline-block;
+            outline: none;
+        }
+
+    </style>
+</head>
+<body>
+<div id="reason">
+
+    <header class="title-bar">
+        <div @click="back()" class="title-bar-left" ><span>返回</span></div>
+        <div class="title-bar-center">
+            <span class="title-bar-title">审批原由</span>
+        </div>
+        <div @click="send()" class="title-bar-right">
+            <span>发送</span>
+        </div>
+    </header>
+    <div class="content">
+
+       <textarea v-model="reasonTxt" rows="10" cols="20" class="font font-26-333 textarea" placeholder="说点什么吧..."></textarea>
+
+    </div>
+
+</div>
+
+</body>
+</html>

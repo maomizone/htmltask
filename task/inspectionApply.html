@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta charset="UTF-8" />
+    <title>总检申请</title>
+    <!--css-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/app.css">
+    <!--加载框-->
+    <link rel="stylesheet" href="css/iosOverlay.css">
+    <!--吐司-->
+    <link rel="stylesheet" href="css/toast.css">
+    <!--弹出框-->
+    <link rel="stylesheet" href="css/dialog.css">
+
+    <!--js-->
+    <script src="js/util/jquery-3.2.1.min.js"></script>
+    <script src="js/util/bootstrap.min.js"></script>
+    <!--加载框-->
+    <script src="js/util/spin.min.js"></script>
+    <script src="js/util/jquery.spin.js"></script>
+    <script src="js/util/iosOverlay.js"></script>
+    <!--吐司-->
+    <script src="js/util/toast.js"></script>
+    <!--弹出框-->
+    <script src="js/util/windowOpen.js"></script>
+    <!--vue-->
+    <script src="js/util/vue.min.js"></script>
+    <script src="js/common/component.js"></script>
+    <!--custom-->
+    <script src="js/common/app.js"></script>
+    <script src="js/common/tool.js"></script>
+    <script src="js/inspectionApply.js"></script>
+
+
+    <style type="text/css">
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            width: 100%;
+            height:100%;
+            background-color: #f2f2f2;
+        }
+
+        .content .center{
+            padding: 8px 12px;
+            background-color: white;
+        }
+        .content .top{
+            padding: 12px;
+            background-color: white;
+        }
+        .content .top{
+           display: flex;
+            align-items: center;
+        }
+        .content .flow{
+            background-color: white;
+            padding: 20px 12px;
+        }
+        .content .flow .head-container{
+            height: 30px;
+            display: flex;
+            align-items: center;
+        }
+        .head, .head2{
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            font-size: 13px;
+            background-color: lightseagreen;
+            color: white;
+            border-radius:20px;
+            margin: 0px 10px;
+        }
+        .head2{
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            margin: 0px;
+        }
+
+        #lookRepairOrder:active{
+            color: #333;
+        }
+
+        footer{
+            z-index: 10;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        footer .container{
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: white;
+            width: 100%;
+            height: 45px;
+        }
+        footer .container span{
+            width: 50%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: lightseagreen;
+        }
+        footer .container span:active{
+            color: #f0ad4e;
+        }
+
+    </style>
+</head>
+<body>
+<div id="inspectionApply" v-cloak>
+
+    <header class="title-bar">
+        <div class="title-bar-left" @click="back()"><span>返回</span></div>
+        <div class="title-bar-center">
+            <span class="title-bar-title">总检申请</span>
+        </div>
+        <div class="title-bar-right">
+        </div>
+    </header>
+
+    <div class="content">
+        <div class="top">
+            <span class="head2">{{inspectInfo.serviceUserName.substring(0,1)}}</span>
+            <div class="ml12" style="display:flex;flex-direction: column">
+                <span class="font font-26-333">{{inspectInfo.serviceUserName}}发起总检申请</span>
+                <span class="font font-24-999 mt8" v-if="inspectInfo.state == 0">等待审批</span>
+                <span class="font font-24-orange mt8" v-if="inspectInfo.state == 1">已通过</span>
+                <span class="font font-24-red mt8" v-if="inspectInfo.state == 2">已返工</span>
+
+            </div>
+        </div>
+
+        <divider></divider>
+
+        <div class="center">
+            <div>
+                <span class="font font-26-999">审批编号</span>
+                <span class="font font-26-333 ml12">{{inspectInfo.number}}</span>
+            </div>
+            <div class="mt12">
+                <span class="font font-26-999">所在部门</span>
+                <span class="font font-26-333 ml12">{{inspectInfo.groupName}}</span>
+            </div>
+            <div class="mt12">
+                <span class="font font-26-999">服务项目</span>
+                <span class="font font-26-333 ml12">{{inspectInfo.projectName}}</span>
+            </div>
+            <div class="mt12">
+                <span class="font font-26-999">维修车辆</span>
+                <span class="font font-26-333 ml12">{{inspectInfo.plateNumber}}</span>
+            </div>
+            <div class="mt12 mb8">
+                <span class="font font-26-999">维修项目</span>
+                <span @click="lookRepairOrder()" class="font font-26-orange ml12">查看维修单</span>
+            </div>
+        </div>
+
+        <space></space>
+
+        <!--流程图-->
+        <div class="flow" v-if="inspectInfo.state > 0">
+
+            <div class="head-container">
+                <span class="head">{{inspectInfo.serviceUserName.substring(0,1)}}</span>
+                <span class="font font-26-333" style="flex: 1">{{inspectInfo.serviceUserName}} 发起申请</span>
+                <span class="font font-22-999">{{inspectInfo.createTime}}</span>
+            </div>
+
+            <div style="width: 1px;height: 25px; background: #331D1D26;margin-left:25px"></div>
+
+            <div class="head-container">
+                <span class="head">{{inspectInfo.reviewUser.substring(0,1)}}</span>
+                <span class="font font-26-333">{{inspectInfo.reviewUser}}</span>
+                <span class="font font-26-999 ml6" v-if="inspectInfo.state == 0">等待审批</span>
+                <span class="font font-26-orange ml6" v-if="inspectInfo.state == 1" >已通过</span>
+                <span class="font font-26-red ml6" v-if="inspectInfo.state == 2">已返工</span>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <footer  v-if="inspectInfo.state == 0">
+        <div class="container">
+            <span @click="yes()">通过</span>
+            <div style="width: 1px;height: 25px; background: #331D1D26;margin: 5px 0"></div>
+            <span @click="no()">返工</span>
+        </div>
+    </footer>
+</div>
+
+</body>
+</html>
