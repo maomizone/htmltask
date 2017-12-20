@@ -75,13 +75,10 @@
             })
         });
 
-        $(function() {
-            $('#ca').initListeners();
+        $('#ca').initListeners();
+
+        $('.md_datearea li').click(function () {
         });
-
-
-//        $('.md_datearea li').click(function () {
-//        });
         console.log("屏幕宽度" + document.body.clientWidth);
         //手指接触屏幕
         document.getElementById("container").addEventListener("touchstart", function (e) {
