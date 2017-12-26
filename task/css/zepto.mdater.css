@@ -121,6 +121,7 @@ a{
 }
 .md_datearea li.current span{
 	border: 1px solid gainsboro;
+    border-radius: 6px;
 	color: #333;
 
 }
