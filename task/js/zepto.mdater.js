@@ -434,13 +434,13 @@
                             });
                         }
                     },
-                    '#now': function () {
-                        _this.refreshView();
-                        var data = new Date().format("yyyy-MM-dd");
-                        option.onSelected(new Date().format("yyyy.MM.dd"), F.getWeekDay(data));
-                        $('.md_datearea li').click(function () {
-                        });
-                    },
+                    // '#now': function () {
+                    //     _this.refreshView();
+                    //     var data = new Date().format("yyyy-MM-dd");
+                    //     option.onSelected(new Date().format("yyyy.MM.dd"), F.getWeekDay(data));
+                    //     $('.md_datearea li').click(function () {
+                    //     });
+                    // },
                     '.md_datearea li': function () {
                         var $this = $(this);
                         if ($this.hasClass('disabled')) {
