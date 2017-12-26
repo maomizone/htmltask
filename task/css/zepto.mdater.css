@@ -25,9 +25,13 @@ a{
 .md_panel a{
 	text-decoration: none;
 }
+.md_panel a:link{
+	text-decoration: none;
+}
 #now{
 	position: absolute;
 	right: 12px;
+    color: #333;
 }
 .md_selectarea{
 	display: flex;
