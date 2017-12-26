@@ -179,10 +179,10 @@
                     // '<a class="md_next change_year" href="javascript:void(0);">&gt;</a>' +
                     // '</div>' +
                     '<div class="md_selectarea">' +
-                    '<span class="md_prev change_month" href="javascript:void(0);">&lt;</span>' +
-                    '<span class="md_headtext monthtag" href="javascript:void(0);">月</span> ' +
-                    '<span class="md_next change_month" href="javascript:void(0);">&gt;</span>' +
-                    '<span id="now">今天</span>' +
+                    '<a class="md_prev change_month" href="javascript:void(0);">&lt;</a>' +
+                    '<a class="md_headtext monthtag" href="javascript:void(0);">月</a> ' +
+                    '<a class="md_next change_month" href="javascript:void(0);">&gt;</a>' +
+                    '<a id="now" href="javascript:void(0);">今天</a>' +
                     '</div>' +
                     '</div>' +
                     '<div class="divider"></div>' +
@@ -434,14 +434,14 @@
                             });
                         }
                     },
-                    '#now': function () {
-                        alert(111);
-                        _this.refreshView();
-                        var data = new Date().format("yyyy-MM-dd");
-                        option.onSelected(new Date().format("yyyy.MM.dd"), F.getWeekDay(data));
-                        $('.md_datearea li').click(function () {
-                        });
-                    },
+                    // '#now': function () {
+                    //     alert(111);
+                    //     _this.refreshView();
+                    //     var data = new Date().format("yyyy-MM-dd");
+                    //     option.onSelected(new Date().format("yyyy.MM.dd"), F.getWeekDay(data));
+                    //     $('.md_datearea li').click(function () {
+                    //     });
+                    // },
                     '.md_datearea li': function () {
                         var $this = $(this);
                         if ($this.hasClass('disabled')) {
