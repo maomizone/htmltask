@@ -31,19 +31,8 @@ $(document).ready(function() {
         },
         methods:{
             back:function () {
-                console.log(history.length);
-                if(type == 0){
-                    // 提交结算未申请时，申请未通过，撤销申请，
-                    // 都要经过申请页面才到提交成功界面，返回时需要跳过申请界面
-                    if(history.length > 2){
-                        saveRefreshSpecialDiscount(); // 提醒提交结算页面刷新
-                        window.history.go(-2);
-                    }
-                    // 提交结算申请中，直接跳转到此界面
-                    else
-                        window.history.go(-1);
-                } else
-                    window.history.go(-1);
+                window.dsBridge.call(CLOSE_PAGE_FROM_JS, {}, function (responseData) {
+                })
             },
             stringIsBlank:function (str) {
                 if (str == null || str == undefined || str == "") {

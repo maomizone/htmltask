@@ -81,7 +81,7 @@
     </style>
 </head>
 <body>
-<div id="pickingRecords">
+<div id="pickingRecords" v-cloak>
 
     <header class="title-bar">
         <div @click="back()" class="title-bar-left"><span>返回</span></div>
@@ -95,21 +95,24 @@
     <div class="content">
         <div class="top-bar-fix">
             <div class="top-bar" style="background-color: #f2f2f2">
-                <span class="font font-26-333">领料时间</span>
-                <span class="font font-26-333">商品编号</span>
-                <span class="font font-26-333">商品名称</span>
-                <span class="font font-26-333">数量</span>
+                <span class="font font-26-333" style="flex: 1.8;">领料时间</span>
+                <span class="font font-26-333" style="flex: 1.8;">商品编号</span>
+                <span class="font font-26-333" style="flex: 2;">商品名称</span>
+                <span class="font font-26-333" style="flex: 0.8;">数量</span>
             </div>
             <divider></divider>
         </div>
 
-        <div style="margin:35px 0  45px 0">
-            <template v-for="item in records">
+        <div style="margin:35px 0  45px 0" v-if="pickingList && pickingList.length > 0">
+            <template v-for="item in pickingList">
                 <div class="top-bar" @click="itemClick(item)" style="height: 50px">
-                    <span class="font font-26-999">{{item.time}}</span>
-                    <span class="font font-26-999">{{item.code}}</span>
-                    <span class="font font-26-999">{{item.name}}</span>
-                    <span class="font font-26-999">{{item.num}}</span>
+                    <span class="font font-26-999" style="flex: 1.8;">{{item.pickingTime}}</span>
+                    <span class="font font-26-999" style="flex: 1.8;">{{item.productNumber}}</span>
+                    <span class="font font-26-999" style="flex: 2;">{{item.productName}}</span>
+                    <span class="font font-26-999" style="flex: 0.8;">{{item.productNum}}</span>
+                </div>
+                <div v-if="item.pickingNum>1" style="background-color: white;display: flex;justify-content: center">
+                    <span class="font font-22-333">还有其他{{item.pickingNum - 1}}种商品</span>
                 </div>
                 <divider></divider>
             </template>
@@ -123,7 +126,7 @@
             <divider></divider>
             <div class="bottom2">
                 <span class="font font-26-333">总领取数量：</span>
-                <span class="font font-26-333">{{records.length}}</span>
+                <span class="font font-26-333">{{allNum}}</span>
             </div>
         </div>
 

@@ -4,7 +4,7 @@ a{
 
 }
 .md_container{
-	padding: 10px;
+	/*padding: 10px;*/
 }
 .md_panel {
     width:100%;
@@ -25,36 +25,40 @@ a{
 .md_panel a{
 	text-decoration: none;
 }
+#now{
+	position: absolute;
+	right: 12px;
+}
 .md_selectarea{
-	display: inline-block;
-	width: 50%;
-	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/*display: inline-block;*/
+	/*width: 50%;*/
+	/*position: relative;*/
 }
 .md_head{
-	height: 40px;
-	line-height: 40px;
+	height: 50px;
+	line-height: 50px;
 }
 .md_body{
 	position: relative;
 	height: 270px;
 }
 .md_headtext{
-	display: inline-block;
-	width: 100%;
-	text-align: center;
 	font-size: 1.1em;
 	color: #333;
 }
 .md_prev, .md_next{
-	position: absolute;
-	top: 0;
 	font-family: arial;
 	font-size: 1.3em;
-	display: inline-block;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	width: 30px;
-	height: 40px;
-	text-align: center;
-	margin: 0 30px;
+	height: 100%;
+	margin: 0 16px;
+
 }
 .md_prev{
 	left: 0;
@@ -68,9 +72,10 @@ a{
 	list-style-type: none;
 	/*border-bottom: 1px solid #4eccc4;*/
 	overflow: hidden;
+	background-color: #f2f2f2;
 }
 .md_weekarea li{
-	line-height:2.5em;
+	line-height:2em;
 	font-size:0.9em;
 }
 .md_weekarea li, .md_datearea li{
@@ -81,55 +86,56 @@ a{
 	text-align: center;
 }
 .md_weekarea li, .md_prev, .md_next{
-	color: #4eccc4;
+	color: #333;
 }
 .md_datearea{
 	position: absolute;
 	width: 100%;
 	list-style-type: none;
 	margin: 0;
-	padding: 0px;
 	overflow: hidden;
 	-webkit-transition: -webkit-transform .2s ease-in;
 	-webkit-transform: translate3d(0,0,0);
-	border: 1px solid gainsboro;
 	display: inline-block;
 }
 .md_datearea li{
 	box-sizing:border-box;
 	-moz-box-sizing:border-box; /* Firefox */
 	-webkit-box-sizing:border-box; /* Safari */
-	border: 1px solid gainsboro;
+	/*border: 1px solid gainsboro;*/
 	font-size: .8125em;
-	height: 3em;
-	line-height: 3em;
+	height: 4em;
+	line-height: 4em;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
-.md_datearea li.current{
-	border: 1px solid #FF808E;
-	color: #FF808E;
-
-}
-.md_datearea li.current1{
-	border: 1px solid #FF808E;
-}
-.md_datearea li.current2{
-	background-color: #FF808E;
-	color: #FFF;
-}
-.md_datearea li.current3{
-	background-color: #EE2C2C;
-	color: #FFF;
-}
-
 .md_datearea li span{
-	display: inline-block;
-	width: 100%;
-	height: 100%;
+	display: flex;
+	box-sizing: border-box;
+	align-items: center;
+	justify-content: center;
+	width: 60%;
+	height: 65%;
+	font-size: 1.2em;
 }
-.md_datearea li span.current{
-	background-color: #4eccc4;
-	color: #FFF;
+.md_datearea li.current span{
+	border: 1px solid gainsboro;
+	color: #333;
+
 }
+.md_datearea li.current2 span{
+	background-color: #FFD100;
+	border-radius: 6px;
+	color: #333;
+}
+.md_datearea li.current3 span{
+	background-color: #FF9000;
+	border-radius: 6px;
+	color: #333;
+}
+
+
 .md_foot{
 	margin-top: 10%;
 	margin-bottom: 10%;
@@ -163,31 +169,19 @@ a{
 #tip{
 	display: flex;
 	align-items: center;
-	justify-content: center;
+	justify-content: space-between;
+	background-color: #f2f2f2;
+	padding: 6px 36px;
 }
-#tip p{
-	 font-size: 0.7em;
-	 margin: 0 24px;
-	 position: relative;
-	 color: #999;
- }
-#tip p:before{
-	position: absolute;
-	bottom: -2px;
-	left: -20px;
+#tip span{
+	font-size: 0.7em;
 }
-#tip p:nth-of-type(1):before{
-	content: url("../img/no_appoint.png");
-}
-#tip p:nth-of-type(2):before{
-	content: url("../img/kuang_pink.png");
-}
-#tip p:nth-of-type(3):before{
-	content: url("../img/kuang_red.png");
+#tip img{
+	width: 10px;
 }
 
 .panel{
-	margin: 30px 12px;
+	margin: 25px 12px;
 }
 .panel .left{
 	margin-top: 10px;
@@ -206,12 +200,14 @@ a{
 	color: #999;
 }
 .panel .right button {
-	background-color: #EE2C2C;
+	background-color: #FFD100;
+	border: none;
+	color: #333;
 }
 
 #num{
 	font-size: 1.5em;
-	color: #EE2C2C;
+	color: #FF9000;
 }
 
 @media screen and (min-width:321px) and (max-width: 360px){
@@ -219,14 +215,14 @@ a{
 		margin: 0 10px;
 	}
 	.md_datearea li{
-		height: 4em;
-		line-height: 4em;
+		height: 4.8em;
+		line-height: 4.8em;
 	}
 }
 @media screen and (min-width:361px) and (max-width: 420px) {
 	.md_datearea li{
-		height: 4.2em;
-		line-height: 4.2em;
+		height: 5.2em;
+		line-height: 5.2em;
 	}
 }
 

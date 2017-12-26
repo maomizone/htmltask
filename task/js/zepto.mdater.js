@@ -62,7 +62,7 @@
             }
         };
         var option = $.extend(defaults, config);
-        console.log(option.data.length)
+        console.log(option.data.length);
 
         var input = this;
 
@@ -171,15 +171,24 @@
             },
             renderHTML: function () {
                 var $html = $('<div class="md_container">' +
-                    '<div class="md_panel"><div class="md_head"><div class="md_selectarea"><a class="md_prev change_year" href="javascript:void(0);">&lt;</a> <a class="md_headtext yeartag" href="javascript:void(0);"></a> ' +
-                    '<a class="md_next change_year" href="javascript:void(0);">&gt;</a></div>' +
+                    '<div class="md_panel">' +
+                    '<div class="md_head">' +
+                    // '<div class="md_selectarea">' +
+                    // '<a class="md_prev change_year" href="javascript:void(0);">&lt;</a> ' +
+                    // '<a class="md_headtext yeartag" href="javascript:void(0);"></a> ' +
+                    // '<a class="md_next change_year" href="javascript:void(0);">&gt;</a>' +
+                    // '</div>' +
                     '<div class="md_selectarea">' +
-                    '<a class="md_prev change_month" href="javascript:void(0);">&lt;</a>' +
-                    ' <a class="md_headtext monthtag" href="javascript:void(0);">月</a> ' +
-                    '<a class="md_next change_month" href="javascript:void(0);">&gt;</a>' +
-                    '</div></div>' +
+                    '<span class="md_prev change_month" href="javascript:void(0);">&lt;</span>' +
+                    '<span class="md_headtext monthtag" href="javascript:void(0);">月</span> ' +
+                    '<span class="md_next change_month" href="javascript:void(0);">&gt;</span>' +
+                    '<span id="now">今天</span>' +
+                    '</div>' +
+                    '</div>' +
+                    '<div class="divider"></div>' +
                     '<div class="md_body">' +
                     '<ul class="md_weekarea"><li>一</li><li>二</li><li>三</li><li>四</li><li>五</li><li>六</li><li>日</li></ul>' +
+                    '<div class="divider"></div>' +
                     '<ul class="md_datearea in"></ul></div>' +
                     '<div class="md_foot"></div>' +
                     '</div>' +
@@ -214,7 +223,7 @@
                 }
 
                 var nextMonth = F.getMonth(num) + '月';
-                monthTag.text(nextMonth).data('month', num);
+                monthTag.text(this.value.year + "年" + nextMonth).data('month', num);
                 this.value.month = num;
                 if (checkDate) {
                     this.value.date = checkDate;
@@ -264,9 +273,11 @@
                 var week = F.getWeekInMonth(y, m) == 0 ? 7 : F.getWeekInMonth(y, m);
                 var lastMonthDays = F.getDaysInMonth(y, m - 1);
 
+                var index = 0;
+
                 // djy change start
                 for (var j = week - 2; j >= 0; j--) {
-                    dayStr += '<li class="prevdate" data-day="' + (lastMonthDays - j) + '">' + (lastMonthDays - j) + '</li>';
+                    dayStr += '<li class="prevdate" data-day="' + (lastMonthDays - j) + '"><span>' + (lastMonthDays - j) + '</span></li>';
                 }
                 // djy change end
 
@@ -301,7 +312,7 @@
 
                 //将日期按允许的范围分三段拼接
                 for (var i = 1; i < startDay; i++) {
-                    dayStr += '<li class="disabled" data-day="' + i + '">' + i + '</li>';
+                    dayStr += '<li class="disabled" data-day="' + i + '"><span>' + i + '</span></li>';
                 }
                 for (var j = startDay; j <= endDay; j++) {
                     var current = '';
@@ -314,22 +325,22 @@
                     if (markData) {
                         for (var i = 0, len = markData.length; i < len; i++) {
                             var item = markData[i];
-                            var arr = item.date.split("/");
+                            var arr = item.day.split("-");
 
                             if (this.value.year == arr[0] && this.value.month == arr[1] - 1 && j == arr[2]) {
-                                if (item.type == 0)
+                                if (item.state == 1)
                                     current = 'current2';
-                                else
+                                else if(item.state == 2)
                                     current = 'current3';
                             }
                         }
                     }
 
-                    dayStr += '<li class="' + current + '" data-day="' + j + '">' + j + '</li>';
+                    dayStr += '<li class="' + current + '" data-day="' + j + '"><span>' + j + '</span></li>';
                     // djy add end
                 }
                 for (var k = endDay + 1; k <= currentMonthDays; k++) {
-                    dayStr += '<li class="disabled" data-day="' + k + '">' + k + '</li>';
+                    dayStr += '<li class="disabled" data-day="' + k + '"><span>' + k + '</span></li>';
                 }
 
                 //再补上下个月的开始几天
@@ -338,12 +349,12 @@
                 var nextMonthStartWeek = (currentMonthDays + F.getWeekInMonth(y, m)) % 7;
                 if (nextMonthStartWeek == 0) {
                     var i = 1;
-                    dayStr += '<li class="nextdate" data-day="' + i + '">' + i + '</li>';
+                    dayStr += '<li class="nextdate" data-day="' + i + '"><span>' + i + '</span></li>';
                 } else {
                     if (nextMonthStartWeek != 1) {
                         for (var i = 1; i <= 8 - nextMonthStartWeek; i++) {
 
-                            dayStr += '<li class="nextdate" data-day="' + i + '">' + i + '</li>';
+                            dayStr += '<li class="nextdate" data-day="' + i + '"><span>' + i + '</span></li>';
                         }
                     }
                 }
@@ -368,7 +379,7 @@
                 setTimeout(function () {
                     newDateArea.removeClass(c2).addClass('in');
                     dateArea.removeClass('in').addClass(c1);
-                }, 10);
+                }, 50);
                 // djy add start
                 console.log(newDateArea.height())
                 $('.md_body').height(newDateArea.height());
@@ -389,7 +400,7 @@
                     m = this.value.month = date.getMonth(),
                     d = this.value.date = date.getDate();
                 $('.yeartag').text(y).data('year', y);
-                $('.monthtag').text(F.getMonth(m) + '月').data('month', m);
+                $('.monthtag').text(y + "年" + F.getMonth(m) + '月').data('month', m);
                 var dayStr = this.getDateStr(y, m, d);
                 $('.md_datearea').html(dayStr);
 
@@ -408,25 +419,27 @@
                         var add = $(this).hasClass('md_next') ? 1 : -1;
                         _this._changeMonth(add);
                         $('.md_datearea li').click(function () {
-
                         });
                     },
                     '.change_year': function () {
                         var add = $(this).hasClass('md_next') ? 1 : -1;
                         _this._changeYear(add);
                         $('.md_datearea li').click(function () {
-
                         });
-
                     },
                     '.out_left, .out_right': {
                         'webkitTransitionEnd': function () {
                             $(this).remove();
                             $('.md_datearea li').click(function () {
-
                             });
-
                         }
+                    },
+                    '#now': function () {
+                        _this.refreshView();
+                        var data = new Date().format("yyyy-MM-dd");
+                        option.onSelected(new Date().format("yyyy.MM.dd"), F.getWeekDay(data));
+                        $('.md_datearea li').click(function () {
+                        });
                     },
                     '.md_datearea li': function () {
                         var $this = $(this);
@@ -461,9 +474,6 @@
                             dateValue = '0' + dateValue;
                         }
                         option.onSelected(_this.value.year + '.' + monthValue + '.' + dateValue, F.getWeekDay(_this.value.year + '-' + monthValue + '-' + dateValue))
-
-                        $('.md_datearea li').click(function () {
-                        });
                     },
 
                 });

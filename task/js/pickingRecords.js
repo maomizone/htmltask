@@ -1,7 +1,9 @@
 /**
  * Created by Administrator on 2017/6/26 0026.
  */
-const RECORDS_KEY = "RECORDS_KEY";
+var str = location.search;
+var serviceUserID = str.getQuery("serviceUserID");
+var repairID = str.getQuery("repairID");
 
 $(document).ready(function() {
 
@@ -18,9 +20,13 @@ $(document).ready(function() {
         el: '#pickingRecords',
 
         mounted: function () {
-            technician_picking_list();
-            if(this.getRecords()){
+            // technician_picking_list();
+
+            var obj = getPickingRecords();
+            if(obj){
                 console.log("已有数据，无需刷新");
+                this.allNum = obj.allNum;
+                this.pickingList = obj.pickingList;
             }else {
                 console.log("没有数据，需要刷新");
             }
@@ -29,47 +35,29 @@ $(document).ready(function() {
         computed: {
         },
         data: {
-            allNum: 0,
+            allNum: 11,
             pickingList: [
-                {id:'1', time:'2017-11-12\n1232', code:'123456', name:"金美孚1号 0W-40", num:5},
-                {id:'2', time:'2017-11-22\n1232', code:'123456', name:"金美孚2号 0W-40", num:3},
-                {id:'3', time:'2017-11-22\n1232', code:'123456', name:"金美孚2号 0W-40", num:3},
-                {id:'4', time:'2017-11-22\n1232', code:'123456', name:"金美孚2号 0W-40", num:3},
-                {id:'5', time:'2017-11-22\n1232', code:'123456', name:"金美孚2号 0W-40", num:3},
-                {id:'6', time:'2017-11-22\n1232', code:'123456', name:"金美孚2号 0W-40", num:3},
+                {pickingID:'1', pickingTime:'2017-11-12\n1232', pickingNum: 5, productID:123, productNumber:'123456', productName:"金美孚1号 0W-40", productNum:5},
+                {pickingID:'2', pickingTime:'2017-11-13\n1232', pickingNum: 1, productID:123, productNumber:'123456', productName:"金美孚1号 0W-40", productNum:5},
+                {pickingID:'2', pickingTime:'2017-11-13\n1232', pickingNum: 1, productID:123, productNumber:'123456', productName:"金美孚1号 0W-40", productNum:5},
+                {pickingID:'2', pickingTime:'2017-11-13\n1232', pickingNum: 2, productID:123, productNumber:'123456', productName:"金美孚1号 0W-40", productNum:5},
             ],
         },
         methods:{
             back:function () {
-                window.history.back();
+                window.dsBridge.call(CLOSE_PAGE_FROM_JS, {}, function (responseData) {
+                });
             },
             itemClick: function (item) {
-                this.saveRecords();
-                window.location.href="./pickingDetail.html?id="+item.id;
-            },
-            stringIsBlank:function (str) {
-                if (str == null || str == undefined || str == "") {
-                    return true;
-                }else {
-                    return false;
-                }
-            },
-            saveRecords: function () {
-                var objStr = JSON.stringify(this.records);
-                sessionStorage.setItem(RECORDS_KEY,objStr);
-            },
-            getRecords: function () {
-                var records =  eval('(' + sessionStorage.getItem(RECORDS_KEY) + ')');
-                if(records){
-                    this.records = records;
-                    return true;
-                }else {
-                    return false;
-                }
+                var obj = {};
+                obj.allNum = this.allNum;
+                obj.pickingList = this.pickingList;
+                savePickingRecords(obj);
+                window.location.href="./pickingDetail.html?serviceUserID="+ serviceUserID + "&pickingID = " + item.pickingID;
             },
         },
     });
-})
+});
 
 /**
  * 查看领料记录列表
