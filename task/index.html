@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
+
+<title>好享停道闸机引导页</title>
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="css/index.css" rel="stylesheet" type="text/css">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+
+<link href="css/font-awesome.css" rel="stylesheet" type="text/css">
+<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link href="css/font-awesome-ie7.min.css" rel="stylesheet" type="text/css">
+
+<link rel="stylesheet" type="text/css" media="all" href="css/daterangepicker-bs3.css" />
+
+    <!--加载框-->
+    <link rel="stylesheet" href="css/iosOverlay.css">
+
+
+
+<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.event.drag-1.5.min.js"></script>
+<script type="text/javascript" src="js/jquery.touchSlider.js"></script>
+
+
+<script type="text/javascript" src="js/jquery.event.drag-1.5.min.js"></script>
+<script type="text/javascript" src="js/jquery.touchSlider.js"></script>
+
+
+    <!--加载框-->
+    <script src="js/util/spin.min.js"></script>
+    <script src="js/util/jquery.spin.js"></script>
+    <script src="js/util/iosOverlay.js"></script>
+    <script type="text/javascript" src="js/common/app.js"></script>
+    <script type="text/javascript" src="js/common/tool.js"></script>
+
+
+<!--<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+--><!--代码部分end-->
+</head>
+
+<body> 
+  
+	<!--正文begin-->
+    <center>
+    	<div class="logo">
+        	<div><span><img src="images/logo.png" height="40"/></span><span><img src="images/p.png" height="40"/></span></div>
+            <div><h4><i class="fa fa-map-marker"></i>&nbsp;停车场坐标</h4></div>
+        </div>        
+        
+        
+		<!--手势滑动切换图begin-->
+        <div class="kePublic">
+            <!--效果html开始-->
+            <div class="main_visual">
+                <div class="flicking_con">
+                    <a href="#"></a>
+                    <a href="#"></a>
+                    <a href="#"></a>
+                </div>
+                <div class="main_image">
+                    <ul>
+                        <li><span class="img_1"></span></li>
+                        <li><span class="img_2"></span></li>
+                        <li><span class="img_3"></span></li>
+                    </ul>
+                    <a href="javascript:;" id="btn_prev"></a>
+                    <a href="javascript:;" id="btn_next"></a>
+                </div>
+            </div>
+            <!--效果html结束-->
+            <div class="clear"></div>
+		</div>
+		<!--手势滑动切换图end-->        
+        
+        
+        
+        
+        <hr>
+        <!--手机验证 begin-->
+        <div class="title"><strong>如需进场请输入手机进行验证</strong></div>
+        <hr>
+        <div class="text-list">
+        	<ul>
+            <li>
+                <label class="text-list-bg"><span><i class="glyphicon glyphicon-phone"></i></span><input name="tel" id="tel" type="text" maxlength="11" placeholder="请输入您的手机号" style="height: auto; border: none; box-shadow: none;margin: 0; font-size: 0.9rem; font-weight: initial; background-color: transparent;" >
+                    <a class="btn btn-small get-code" id="get_vcode_btn">获取验证码</a>
+                    <a class="btn btn-small reset-code" id="J_resetCode" style="display:none;"><span id="J_second">60</span>秒后重发</a>
+                </label>
+            </li>
+            <li>
+                <label class="text-list-bg"><span><i class="fa fa-unlock-alt"></i></span><input name="code" id="code" type="text" maxlength="6" placeholder="请输入验证码" >
+                </label>
+            </li>
+        	</ul>
+        </div>
+        <p class="usage">
+					<label for="checkbox_1"><input type="checkbox" id="checkbox_1" class="checkbox" checked="" style="margin: 0; display: inline-block; vertical-align: sub;"><small>我已阅读并同意<a style="color:#50d2c2;font-weight:bold;" href="#">《法律声明及隐私权政策》</a>内容</small></label>
+					 <a id="tr_password_4" style="display:none" href="#"><font class="forgetPassword">忘记密码</font></a>
+		</p>
+        <div style="padding: 0 .5rem .5rem;"><button type="button" class="btn btn-Determine on" id="confirm">确&nbsp;&nbsp;定</button></div>
+        <!--手机验证 end-->
+        <div class="title"><strong>停车缴费请下载APP</strong></div>
+        
+    	<div class="download">
+            <div class="wave"></div>
+        	<div class="download-list"><a href="http://www.5ycl.net:8000/getfile/soft/park.apk"><span><i class="fa fa-android"></i></span>Andriod版下载</a><a href="https://itunes.apple.com/us/app/%E5%B0%9A%E7%9B%88%E8%BD%A6%E8%81%94/id1269384006?mt=8"><span><i class="fa fa-apple"></i></span>IOS版下载</a></div>
+        </div>   
+    </center>
+    
+
+	<script type="text/javascript">
+        var InterValObj;  //timer变量，控制时间
+        var count = 60;   //间隔函数，1秒执行
+        var curCount;   //当前剩余秒数
+        var flag = 1, tel_valid = false, vcode_valid = false;
+    
+        function setVCodeBtn(){
+            $("#get_vcode_btn").html("" + curCount + "s");
+            InterValObj = window.setInterval(SetRemainTime, 1000); //启动计时器，1秒执行一次
+            $("#get_vcode_btn").addClass('gray_bg');
+//            ajax("http://wap.xbcare.com.cn/boting/api/getValidateCode",{phone:$("#tel").val(),codeType:1});
+        }
+    
+        function SetRemainTime() {
+            curCount--;
+            if (curCount == 0) {
+                flag = 1;
+                window.clearInterval(InterValObj);//停止计时器
+                $("#get_vcode_btn").removeAttr("disabled");//启用按钮
+                $("#get_vcode_btn").html("重新获取");
+                $("#get_vcode_btn").removeClass('gray_bg');
+            }
+            else {
+                $("#get_vcode_btn").html("" + curCount+"s" );
+            }
+        }
+    
+        // 验证手机号
+        function chkMobile(phoneNum){
+    //         var tel = $("#tel").val();
+            if(!phoneNum){
+                alert("请输入手机号");
+                return false;
+            }
+            var re = /^1[0-9]{10}$/;
+            if (!re.test(phoneNum)) {
+                alert("请正确填写手机号");
+                return false;
+            };
+            return true;
+        }
+        // 验证码
+        function chkCode(code){
+    //         var tel = $("#tel").val();
+            if(!code){
+                alert("请输入验证码");
+                return false;
+            }
+            var re = /^[0-9]{6}$/;
+            if (!re.test(code)) {
+                alert("请正确填写验证码");
+                return false;
+            };
+            return true;
+        }
+
+        var loginType=1;//判断是密码登录还是验证码登录
+        function changLoginType(tr1,tr2,type){//切换登录方式
+            loginType = type;
+            var size = 4;
+            for(var i=1; i<=size; i++){
+                $("#"+tr1+i).hide();
+                $("#"+tr2+i).show();
+             }
+        }
+        
+        function checkBlank(text,message){
+            if(String.isBlank(text)){
+                alert(message);
+                return false;
+             }
+            return true;
+        }
+    
+    $(document).ready(function() {
+        var $userTypeSelect = $("#userTypeSelect");
+        
+        $userTypeSelect.on('click', '.weui_navbar_item', function(){
+            $userTypeSelect.find(".weui_navbar_item").removeClass("weui_bar_item_on");
+            $(this).addClass("weui_bar_item_on");
+        });
+        
+        $("#binding").click(function(){
+            if(!$("#checkbox_1").is(":checked")){
+                alert("请同意《用户服务协议》");
+                return false;
+            }
+            
+            // 角色类型
+            var userType=$userTypeSelect.find(".weui_bar_item_on").data("type");
+            // 验证码登录    	
+            var codePhoneNum=$("#tel").val();
+            var code=$("#code").val();
+            // 密码登录
+            var passwordPhoneNum=$("#passwordPhoneNum").val();
+            var password=$("#loginPassword").val();
+     
+            if(loginType == 1){
+                if(!chkMobile(codePhoneNum)) return;
+                if(!checkBlank(code,"请输入验证码")) return;
+            }
+           
+            if(loginType == 2){
+                console.log(passwordPhoneNum);
+                if(!chkMobile(passwordPhoneNum)) return;
+                if(!checkBlank(password,"请输入密码")) return;
+                password = hex_md5(password);
+            }
+            
+            doLogin(codePhoneNum,code,passwordPhoneNum,password,loginType,userType);
+        });
+        
+        
+        // 获取验证码
+        // 监听手机号输入，设置输入法状态
+        $('#tel').on('input propertychange', function(){
+            if (tel_valid) {
+                $(this).blur();
+            }
+        });
+    
+        // 监听验证码输入，设置输入法状态
+        $('#code').on('input propertychange', function(){
+            if (vcode_valid) {
+                $(this).blur();
+            }
+        });
+        
+        // 获取验证码
+        $("#get_vcode_btn").click(function(){
+            if(!chkMobile($("#tel").val())){
+                return false;
+            }
+            common_sendcode();
+        });
+        // 确定
+        $("#confirm").click(function(){
+            if(!chkMobile($("#tel").val())){
+                return false;
+            }
+            if(!chkCode($("#code").val())){
+                return false;
+            }
+
+            common_checkcode();
+        });
+
+        // 密码登录
+//        if($.getQueryValue("loginType")==="2"){
+//            changLoginType('tr_code_','tr_password_','2')
+//        }
+    });
+
+
+        var msg_id;
+        var str =location.search;
+        var gateID = str.getQuery("gateID");
+        /**
+         * 发送短信验证码
+         */
+        function common_sendcode() {
+            showLoading();
+
+            var obj = {};
+            obj.phone = $("#tel").val();
+
+            $.ajax({
+                url:BASE_URL + "common_sendcode",
+                type:"POST",
+                data: obj,
+                timeout:1000*10,
+                dataType:"json",
+
+                success:function (data,textStatus,jqXHR) {
+                    hideLoading();
+                    // 返回结果状态值,值为0或1.(0表示请求失败；1表示请求成功)
+                    if(data.status == 1){
+                        alert("验证码已发送");
+                        msg_id = data.msg_id;
+                        if(flag == 1){
+                            flag = 0;
+                            curCount = count;
+                            setVCodeBtn();
+                        }
+                    }else {
+                        alert(data.info);
+                    }
+                },
+                error:function (xhr,textStatus) {
+                    hideLoading();
+                    alert(NET_ERROR);
+                    console.log("错误信息如下====================");
+                    console.log(xhr);
+                    console.log(textStatus);
+                },
+            });
+        }
+        /**
+         * 验证短信验证码
+         */
+        function common_checkcode() {
+            showLoading();
+
+            var obj = {};
+            obj.code = $("#code").val();
+            obj.msg_id = msg_id;
+
+            $.ajax({
+                url:BASE_URL + "common_checkcode",
+                type:"POST",
+                data: obj,
+                timeout:1000*10,
+                dataType:"json",
+
+                success:function (data,textStatus,jqXHR) {
+                    hideLoading();
+                    // 返回结果状态值,值为0或1.(0表示请求失败；1表示请求成功)
+                    if(data.status == 1){
+                        user_gate_record_user_add();
+                    }else {
+                        alert(data.info);
+                    }
+                },
+                error:function (xhr,textStatus) {
+                    hideLoading();
+                    alert(NET_ERROR);
+                    console.log("错误信息如下====================");
+                    console.log(xhr);
+                    console.log(textStatus);
+                },
+            });
+        }
+        /**
+         * 用户扫码开闸((h5页面)-先验证手机号)
+         */
+        function user_gate_record_user_add() {
+            showLoading();
+
+            var obj = {};
+            obj.phone = $("#tel").val();
+            obj.gateID = gateID;
+            obj.gateID = "68373E3C-4586-4E04-A73C-1511684E5B20";
+
+            console.log(JSON.stringify(obj));
+
+            $.ajax({
+                url:BASE_URL + "user_gate_record_user_add",
+                type:"POST",
+                data: obj,
+                timeout:1000*10,
+                dataType:"json",
+
+                success:function (data,textStatus,jqXHR) {
+                    hideLoading();
+                    // 返回结果状态值,值为0或1.(0表示请求失败；1表示请求成功)
+                    if(data.status == 1){
+                        alert("开闸成功");
+                    }else {
+                        alert(data.info);
+                    }
+                },
+                error:function (xhr,textStatus) {
+                    hideLoading();
+                    alert(NET_ERROR);
+                    console.log("错误信息如下====================");
+                    console.log(xhr);
+                    console.log(textStatus);
+                },
+            });
+        }
+    </script>
+	<!--导航条begin-->
+    <footer>
+    </footer>
+</body>
+</html>

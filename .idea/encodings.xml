@@ -13,15 +13,82 @@
     <file url="file://$PROJECT_DIR$/music.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mycss.css" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/position.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/task/YesOrNo.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/task/addressDetail.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/task/addressList.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/task/calendar.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/task/commitBalance.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/task/css/animate.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/task/css/app.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/task/css/base.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/task/css/bootstrap-fileinput.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/task/css/bootstrap-theme.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/task/css/bootstrap.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/task/css/bootstrap.min.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/task/css/common.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/task/css/dateRange.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/task/css/daterangepicker-bs3.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/task/css/demo.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/task/css/dialog.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/task/css/font-awesome-ie7.min.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/task/css/font-awesome.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/task/css/help.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/task/css/index.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/task/css/iosOverlay.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/task/css/iosOverlay.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/task/css/jquery-weui.min.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/task/css/pace-theme-barber-shop.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/task/css/style.css" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/task/css/task07.css" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/task/css/task08.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/task/css/toast.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/task/css/zepto.mdater.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/task/historyRepair.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/task/img/addPerson.png" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/task/img/arrowDown.png" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/task/img/arrowRight.png" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/task/img/arrow_down_grey.png" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/task/img/arrow_right.png" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/task/img/back.png" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/task/img/cat.png" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/task/img/default.png" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/task/img/kuang_appoint_full.png" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/task/img/kuang_has_appoint.png" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/task/img/no_appoint.png" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/task/img/right.png" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/task/img/search.png" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/task/img/select.png" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/task/img/unselect.png" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/task/index.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/task/inspectionApply.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/task/js/YesOrNo.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/task/js/addressDetail.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/task/js/addressList.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/task/js/commitBalance.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/task/js/inspectionApply.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/task/js/pickingDetail.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/task/js/pickingRecords.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/task/js/repair.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/task/js/specialDiscount.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/task/js/specialDiscountApply.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/task/js/specialDiscountRemind.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/task/js/task07.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/task/js/tongXunLu.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/task/js/zepto.mdater.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/task/pickingDetail.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/task/pickingRecords.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/task/sign.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/task/specialDiscount.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/task/specialDiscountApply.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/task/specialDiscountRemind.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/task/task02.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/task/task03.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/task/task04.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/task/task06.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/task/task07.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/task/task08.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/task/toast.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/task/tongXunLu.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/task02.html" charset="UTF-8" />
     <file url="PROJECT" charset="GBK" />
   </component>
