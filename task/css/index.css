@@ -165,7 +165,7 @@ footer {
 	background-color: #51d2c2;
     border-radius: 5px;
 	position: relative;
-	height: 42px;
+	height: 52px;
 	line-height: 35px;
 }
 .text-list-bg input { 
@@ -181,11 +181,11 @@ footer {
 }
 
 
-:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+#tel:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
     color: #fff; opacity:1; 
 }
 
-::-moz-placeholder { /* Mozilla Firefox 19+ */
+#tel::-moz-placeholder { /* Mozilla Firefox 19+ */
     color: #fff;opacity:1;
 }
 
@@ -232,7 +232,7 @@ center hr {
 	color: #fff;
 	display: inline;
 	border-left: 1px solid #fff;
-	padding: .2rem .5rem;
+	padding: .55rem .5rem;
 }
 .usage{
 	line-height:20px;
@@ -285,7 +285,7 @@ center hr {
 .btn-Determine.on {
 	background-color: #ff6041;
 	color: #fff;
-	height: 42px;
+	height: 52px;
 }
 
 /*分割线*/

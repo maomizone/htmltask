@@ -18,22 +18,20 @@
 
     <!--加载框-->
     <link rel="stylesheet" href="css/iosOverlay.css">
+    <!--吐司-->
+    <link rel="stylesheet" href="css/toast.css">
 
-
-
-<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+    <script src="js/util/jquery-3.2.1.min.js"></script>
+<!--<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>-->
 <script type="text/javascript" src="js/jquery.event.drag-1.5.min.js"></script>
 <script type="text/javascript" src="js/jquery.touchSlider.js"></script>
-
-
-<script type="text/javascript" src="js/jquery.event.drag-1.5.min.js"></script>
-<script type="text/javascript" src="js/jquery.touchSlider.js"></script>
-
 
     <!--加载框-->
     <script src="js/util/spin.min.js"></script>
     <script src="js/util/jquery.spin.js"></script>
     <script src="js/util/iosOverlay.js"></script>
+    <!--吐司-->
+    <script src="js/util/toast.js"></script>
     <script type="text/javascript" src="js/common/app.js"></script>
     <script type="text/javascript" src="js/common/tool.js"></script>
 
@@ -81,29 +79,33 @@
         
         
         <hr>
-        <!--手机验证 begin-->
-        <div class="title"><strong>如需进场请输入手机进行验证</strong></div>
-        <hr>
-        <div class="text-list">
-        	<ul>
-            <li>
-                <label class="text-list-bg"><span><i class="glyphicon glyphicon-phone"></i></span><input name="tel" id="tel" type="text" maxlength="11" placeholder="请输入您的手机号" style="height: auto; border: none; box-shadow: none;margin: 0; font-size: 0.9rem; font-weight: initial; background-color: transparent;" >
-                    <a class="btn btn-small get-code" id="get_vcode_btn">获取验证码</a>
-                    <a class="btn btn-small reset-code" id="J_resetCode" style="display:none;"><span id="J_second">60</span>秒后重发</a>
-                </label>
-            </li>
-            <li>
-                <label class="text-list-bg"><span><i class="fa fa-unlock-alt"></i></span><input name="code" id="code" type="text" maxlength="6" placeholder="请输入验证码" >
-                </label>
-            </li>
-        	</ul>
+        
+        <div id="layer" style="display: block;">
+            <!--手机验证 begin-->
+            <div class="title"><strong>如需进场请输入手机进行验证</strong></div>
+            <hr>
+            <div class="text-list">
+                <ul>
+                <li>
+                    <label class="text-list-bg"><span><i class="glyphicon glyphicon-phone"></i></span><input name="tel" id="tel" type="text" maxlength="11" placeholder="请输入您的手机号" style="height: auto; border: none; box-shadow: none;margin: 0; font-size: 0.9rem; font-weight: initial; background-color: transparent;" >
+                        <a class="btn btn-small get-code" id="get_vcode_btn">获取验证码</a>
+                        <a class="btn btn-small reset-code" id="J_resetCode" style="display:none;"><span id="J_second">60</span>秒后重发</a>
+                    </label>
+                </li>
+                <li>
+                    <label class="text-list-bg"><span><i class="fa fa-unlock-alt"></i></span><input name="code" id="code" type="text" maxlength="6" placeholder="请输入验证码" >
+                    </label>
+                </li>
+                </ul>
+            </div>
+            <p class="usage">
+                        <label for="checkbox_1"><input type="checkbox" id="checkbox_1" class="checkbox" checked="" style="margin: 0; display: inline-block; vertical-align: sub;"><small>我已阅读并同意<a style="color:#50d2c2;font-weight:bold;" href="#">《法律声明及隐私权政策》</a>内容</small></label>
+                         <a id="tr_password_4" style="display:none" href="#"><font class="forgetPassword">忘记密码</font></a>
+            </p>
+            <div style="padding: 0 .5rem .5rem;"><button type="button" class="btn btn-Determine on" id="confirm">确&nbsp;&nbsp;定</button></div>
+            <!--手机验证 end-->
         </div>
-        <p class="usage">
-					<label for="checkbox_1"><input type="checkbox" id="checkbox_1" class="checkbox" checked="" style="margin: 0; display: inline-block; vertical-align: sub;"><small>我已阅读并同意<a style="color:#50d2c2;font-weight:bold;" href="#">《法律声明及隐私权政策》</a>内容</small></label>
-					 <a id="tr_password_4" style="display:none" href="#"><font class="forgetPassword">忘记密码</font></a>
-		</p>
-        <div style="padding: 0 .5rem .5rem;"><button type="button" class="btn btn-Determine on" id="confirm">确&nbsp;&nbsp;定</button></div>
-        <!--手机验证 end-->
+        
         <div class="title"><strong>停车缴费请下载APP</strong></div>
         
     	<div class="download">
@@ -144,7 +146,8 @@
         function chkMobile(phoneNum){
     //         var tel = $("#tel").val();
             if(!phoneNum){
-                alert("请输入手机号");
+//                alert("请输入手机号");
+                showMessage("请输入手机号");
                 return false;
             }
             var re = /^1[0-9]{10}$/;
@@ -266,10 +269,16 @@
 //        }
     });
 
-
         var msg_id;
         var str =location.search;
         var gateID = str.getQuery("gateID");
+        var type = str.getQuery("type");
+        if( type == 2){
+            $("#layer").hide();
+        }else{
+            $("#layer").show();
+        }
+
         /**
          * 发送短信验证码
          */
