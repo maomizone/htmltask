@@ -6,7 +6,7 @@
 
 <title>好享停道闸机引导页</title>
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
-<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="cssWXPay.html/bootstrap.min.css" rel="stylesheet" type="text/css">
 <link href="css/index.css" rel="stylesheet" type="text/css">
 <link href="css/style.css" rel="stylesheet" type="text/css">
 
@@ -41,16 +41,16 @@
 --><!--代码部分end-->
 </head>
 
-<body> 
-  
+<body>
+
 	<!--正文begin-->
     <center>
     	<div class="logo">
         	<div><span><img src="images/logo.png" height="40"/></span><span><img src="images/p.png" height="40"/></span></div>
             <div><h4><i class="fa fa-map-marker"></i>&nbsp;停车场坐标</h4></div>
-        </div>        
-        
-        
+        </div>
+
+
 		<!--手势滑动切换图begin-->
         <div class="kePublic">
             <!--效果html开始-->
@@ -73,13 +73,13 @@
             <!--效果html结束-->
             <div class="clear"></div>
 		</div>
-		<!--手势滑动切换图end-->        
-        
-        
-        
-        
+		<!--手势滑动切换图end-->
+
+
+
+
         <hr>
-        
+
         <div id="layer" style="display: block;">
             <!--手机验证 begin-->
             <div class="title"><strong>如需进场请输入手机进行验证</strong></div>
@@ -105,29 +105,29 @@
             <div style="padding: 0 .5rem .5rem;"><button type="button" class="btn btn-Determine on" id="confirm">确&nbsp;&nbsp;定</button></div>
             <!--手机验证 end-->
         </div>
-        
+
         <div class="title"><strong>停车缴费请下载APP</strong></div>
-        
+
     	<div class="download">
             <div class="wave"></div>
         	<div class="download-list"><a href="http://www.5ycl.net:8000/getfile/soft/park.apk"><span><i class="fa fa-android"></i></span>Andriod版下载</a><a href="https://itunes.apple.com/us/app/%E5%B0%9A%E7%9B%88%E8%BD%A6%E8%81%94/id1269384006?mt=8"><span><i class="fa fa-apple"></i></span>IOS版下载</a></div>
-        </div>   
+        </div>
     </center>
-    
+
 
 	<script>
         var InterValObj;  //timer变量，控制时间
         var count = 60;   //间隔函数，1秒执行
         var curCount;   //当前剩余秒数
         var flag = 1, tel_valid = false, vcode_valid = false;
-    
+
         function setVCodeBtn(){
             $("#get_vcode_btn").html("" + curCount + "s");
             InterValObj = window.setInterval(SetRemainTime, 1000); //启动计时器，1秒执行一次
             $("#get_vcode_btn").addClass('gray_bg');
 //            ajax("http://wap.xbcare.com.cn/boting/api/getValidateCode",{phone:$("#tel").val(),codeType:1});
         }
-    
+
         function SetRemainTime() {
             curCount--;
             if (curCount == 0) {
@@ -141,7 +141,7 @@
                 $("#get_vcode_btn").html("" + curCount+"s" );
             }
         }
-    
+
         // 验证手机号
         function chkMobile(phoneNum){
     //         var tel = $("#tel").val();
@@ -181,7 +181,7 @@
                 $("#"+tr2+i).show();
              }
         }
-        
+
         function checkBlank(text,message){
             if(String.isBlank(text)){
                 alert(message);
@@ -189,46 +189,46 @@
              }
             return true;
         }
-    
+
     $(document).ready(function() {
         var $userTypeSelect = $("#userTypeSelect");
-        
+
         $userTypeSelect.on('click', '.weui_navbar_item', function(){
             $userTypeSelect.find(".weui_navbar_item").removeClass("weui_bar_item_on");
             $(this).addClass("weui_bar_item_on");
         });
-        
+
         $("#binding").click(function(){
             if(!$("#checkbox_1").is(":checked")){
                 alert("请同意《用户服务协议》");
                 return false;
             }
-            
+
             // 角色类型
             var userType=$userTypeSelect.find(".weui_bar_item_on").data("type");
-            // 验证码登录    	
+            // 验证码登录
             var codePhoneNum=$("#tel").val();
             var code=$("#code").val();
             // 密码登录
             var passwordPhoneNum=$("#passwordPhoneNum").val();
             var password=$("#loginPassword").val();
-     
+
             if(loginType == 1){
                 if(!chkMobile(codePhoneNum)) return;
                 if(!checkBlank(code,"请输入验证码")) return;
             }
-           
+
             if(loginType == 2){
                 console.log(passwordPhoneNum);
                 if(!chkMobile(passwordPhoneNum)) return;
                 if(!checkBlank(password,"请输入密码")) return;
                 password = hex_md5(password);
             }
-            
+
             doLogin(codePhoneNum,code,passwordPhoneNum,password,loginType,userType);
         });
-        
-        
+
+
         // 获取验证码
         // 监听手机号输入，设置输入法状态
         $('#tel').on('input propertychange', function(){
@@ -236,14 +236,14 @@
                 $(this).blur();
             }
         });
-    
+
         // 监听验证码输入，设置输入法状态
         $('#code').on('input propertychange', function(){
             if (vcode_valid) {
                 $(this).blur();
             }
         });
-        
+
         // 获取验证码
         $("#get_vcode_btn").click(function(){
             if(!chkMobile($("#tel").val())){
