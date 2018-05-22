@@ -1,31 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ddd6af18-c37f-4057-88a2-c15fe42b7ac4" name="Default" comment="djy">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/js/util/md5.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/app.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/bootstrap.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/common.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/common/app.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/common/tool.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/iosOverlay.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/jquery-1.11.0.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/jquery-1.7.1.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/jquery-3.2.1.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/jquery.event.drag-1.5.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/jquery.spin.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/jquery.touchSlider.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/spin.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/toast.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/tool.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/util/iosOverlay.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/util/jquery-3.2.1.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/util/jquery.spin.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/util/spin.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/util/toast.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+    <list default="true" id="ddd6af18-c37f-4057-88a2-c15fe42b7ac4" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task/index.html" afterPath="$PROJECT_DIR$/task/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task/js/common/app.js" afterPath="$PROJECT_DIR$/task/js/common/app.js" />
     </list>
     <ignored path="test.iws" />
@@ -72,7 +49,7 @@
         <entry file="file://$PROJECT_DIR$/task/js/common/app.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="480">
-              <caret line="16" column="64" lean-forward="true" selection-start-line="16" selection-start-column="64" selection-end-line="16" selection-end-column="64" />
+              <caret line="16" column="34" lean-forward="false" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -447,7 +424,7 @@
       <workItem from="1520407018667" duration="722000" />
       <workItem from="1520593941387" duration="499000" />
       <workItem from="1520990918095" duration="2496000" />
-      <workItem from="1526967848116" duration="1183000" />
+      <workItem from="1526967848116" duration="1976000" />
     </task>
     <task id="LOCAL-00001" summary="djy">
       <created>1513738994904</created>
@@ -610,11 +587,18 @@
       <option name="project" value="LOCAL" />
       <updated>1520992781419</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="djy">
+      <created>1526973754652</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1526973754652</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="119745000" />
+    <option name="totallyTimeSpent" value="120538000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -865,7 +849,7 @@
     <entry file="file://$PROJECT_DIR$/task/js/common/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
-          <caret line="16" column="64" lean-forward="true" selection-start-line="16" selection-start-column="64" selection-end-line="16" selection-end-column="64" />
+          <caret line="16" column="34" lean-forward="false" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
           <folding />
         </state>
       </provider>
