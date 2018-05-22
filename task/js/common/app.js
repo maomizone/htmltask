@@ -1,7 +1,7 @@
 /**
  * Created by Administrator on 2017/6/14 0014.
  */
- 
+
  window.alert = function (name) {
     var iframe = document.createElement("IFRAME");
     iframe.style.display = "none";
@@ -13,7 +13,8 @@
 
 
 // 测试
-const BASE_URL = 'http://192.168.10.201:8089/Lock/inter_json/';
+// const BASE_URL = 'http://192.168.10.201:8089/Lock/inter_json/';
+const BASE_URL = 'http://172.5.10.31:189:8080/Lock/inter_json/';
 // 正式
 // const BASE_URL = 'http://www.5ycl.net:8000/Lock/inter_json/';
 

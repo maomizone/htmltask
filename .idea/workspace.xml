@@ -2,147 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ddd6af18-c37f-4057-88a2-c15fe42b7ac4" name="Default" comment="djy">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/fonts/glyphicons-halflings-regular.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/fonts/glyphicons-halflings-regular.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/fonts/glyphicons-halflings-regular.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/fonts/glyphicons-halflings-regular.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/icon/a1@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/icon/a1@3x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/icon/a2@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/icon/a2@3x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/icon/a3@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/icon/a3@3x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/icon/a4@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/icon/a4@3x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/images/B2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/images/B3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/images/B4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/images/logo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/images/p.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/css/base.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/css/bootstrap-fileinput.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/css/bootstrap-theme.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/css/bootstrap.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/css/common.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/css/dateRange.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/css/daterangepicker-bs3.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/css/demo.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/css/font-awesome-ie7.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/css/font-awesome.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/css/help.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/css/index.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/css/jquery-weui.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/css/pace-theme-barber-shop.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/css/style.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/fonts/glyphicons-halflings-regular.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/js/bootstrap.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/js/common.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/js/jquery-1.11.0.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/js/jquery-1.7.1.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/js/jquery.event.drag-1.5.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/js/jquery.touchSlider.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/js/login.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/YesOrNo.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/addressDetail.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/addressList.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/calendar.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/commitBalance.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/css/animate.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/css/app.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/css/dialog.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/css/normalize.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/css/task07.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/css/task08.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/css/toast.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/css/zepto.mdater.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/fonts/fontawesome-webfont.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/historyRepair.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/images/task07/icon-1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/images/task07/icon-2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/images/task07/icon-3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/images/task07/icon-4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/images/task07/icon-5.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/images/task07/icon-6.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/images/task07/icon-7.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/images/task07/icon-8.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/images/task07/pic01.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/images/task07/pic02.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/images/task07/pic03.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/images/task07/pic04.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/images/task07/pic05.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/images/task07/pic06.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/images/task07/pic07.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/images/task07/pic08.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/img/addPerson.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/img/arrowDown.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/img/arrowRight.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/img/arrow_down_grey.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/img/arrow_right.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/img/back.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/img/cat.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/img/default.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/img/kuang_appoint_full.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/img/kuang_has_appoint.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/img/kuang_pink.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/img/kuang_red.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/img/no_appoint.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/img/right.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/img/search.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/img/select.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/img/unselect.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/inspectionApply.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/js/YesOrNo.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/js/addressDetail.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/js/addressList.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/js/commitBalance.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/js/common/component.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/js/inspectionApply.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/js/pickingDetail.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/js/pickingRecords.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/js/repair.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/js/specialDiscount.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/js/specialDiscountApply.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/js/specialDiscountRemind.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/js/task07.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/js/tongXunLu.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/js/util/bootstrap.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/js/util/jSignature.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/js/util/jquery.charfirst.pinyin.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/js/util/jquery.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/js/util/jquery.tree.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/js/util/sort.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/js/util/toast.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/js/util/vue.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/js/util/vue.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/js/util/windowOpen.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/js/util/zepto.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/js/zepto.mdater.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/pickingDetail.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/pickingRecords.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/sign.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/specialDiscount.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/specialDiscountApply.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/specialDiscountRemind.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/task02.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/task03.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/task04.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/task06.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/task07.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/task08.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/toast.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/tongXunLu.html" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task/fonts/FontAwesome.otf" afterPath="$PROJECT_DIR$/task/fonts/FontAwesome.otf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task/fonts/fontawesome-webfont.eot" afterPath="$PROJECT_DIR$/task/fonts/fontawesome-webfont.eot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task/fonts/fontawesome-webfont.ttf" afterPath="$PROJECT_DIR$/task/fonts/fontawesome-webfont.ttf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task/fonts/fontawesome-webfont.woff" afterPath="$PROJECT_DIR$/task/fonts/fontawesome-webfont.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/js/util/md5.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/task/app.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/task/bootstrap.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/task/common.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/task/common/app.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/task/common/tool.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/task/iosOverlay.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/task/jquery-1.11.0.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/task/jquery-1.7.1.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/task/jquery-3.2.1.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/task/jquery.event.drag-1.5.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/task/jquery.spin.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/task/jquery.touchSlider.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/task/spin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/task/toast.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/task/tool.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/task/util/iosOverlay.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/task/util/jquery-3.2.1.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/task/util/jquery.spin.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/task/util/spin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/task/util/toast.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task/css/font-awesome.min.css" afterPath="$PROJECT_DIR$/task/css/font-awesome.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task/fonts/fontawesome-webfont.svg" afterPath="$PROJECT_DIR$/task/fonts/fontawesome-webfont.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task/index.html" afterPath="$PROJECT_DIR$/task/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task/js/common/app.js" afterPath="$PROJECT_DIR$/task/js/common/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task/js/common/tool.js" afterPath="$PROJECT_DIR$/task/js/common/tool.js" />
     </list>
     <ignored path="test.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -164,11 +48,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/task/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="6" column="24" lean-forward="true" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
+            <state relative-caret-position="-780">
+              <caret line="76" column="8" lean-forward="true" selection-start-line="76" selection-start-column="8" selection-end-line="76" selection-end-column="8" />
+              <folding>
+                <element signature="n#style#0;n#div#2;n#center#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#label#0;n#li#0;n#ul#0;n#div#1;n#div#2;n#center#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#1;n#label#0;n#li#0;n#ul#0;n#div#1;n#div#2;n#center#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#label#0;n#p#0;n#div#2;n#center#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#small#0;n#label#0;n#p#0;n#div#2;n#center#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#p#0;n#div#2;n#center#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#2;n#center#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="e#4520#4526#0" expanded="true" />
+                <element signature="e#4526#4532#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/task/js/common/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="480">
+              <caret line="16" column="64" lean-forward="true" selection-start-line="16" selection-start-column="64" selection-end-line="16" selection-end-column="64" />
               <folding />
             </state>
           </provider>
@@ -209,6 +113,10 @@
         <option value="$PROJECT_DIR$/task/calendar.html" />
         <option value="$PROJECT_DIR$/task/css/zepto.mdater.css" />
         <option value="$PROJECT_DIR$/task/js/zepto.mdater.js" />
+        <option value="$PROJECT_DIR$/task/paySuccess.html" />
+        <option value="$PROJECT_DIR$/task/app.js" />
+        <option value="$PROJECT_DIR$/task/index.html" />
+        <option value="$PROJECT_DIR$/task/js/common/app.js" />
       </list>
     </option>
   </component>
@@ -247,8 +155,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -258,20 +164,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="htmltask" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="htmltask" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -397,34 +289,14 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="task" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fonts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="htmltask" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="task" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
+              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -444,7 +316,6 @@
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="LayoutCode.rearrangeEntriesHTML" value="false" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="FullScreen" value="false" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -452,17 +323,17 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\IdeaProjects\htmltask\task" />
+      <recent name="E:\IdeaProjects\htmltask\task\css" />
+      <recent name="E:\IdeaProjects\htmltask\task\js" />
+      <recent name="E:\IdeaProjects\htmltask\task\img" />
+      <recent name="E:\IdeaProjects\htmltask\myCa" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\admin\IdeaProjects\test\task" />
       <recent name="C:\Users\admin\IdeaProjects\test\images\task07" />
       <recent name="C:\Users\admin\IdeaProjects\test\src" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\IdeaProjects\htmltask\task\css" />
-      <recent name="E:\IdeaProjects\htmltask\task" />
-      <recent name="E:\IdeaProjects\htmltask\task\js" />
-      <recent name="E:\IdeaProjects\htmltask\task\img" />
-      <recent name="E:\IdeaProjects\htmltask\myCa" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -570,7 +441,13 @@
       <workItem from="1483668529647" duration="14264000" />
       <workItem from="1513738825876" duration="5541000" />
       <workItem from="1514275340301" duration="2273000" />
-      <workItem from="1519977188729" duration="284000" />
+      <workItem from="1519977188729" duration="1618000" />
+      <workItem from="1520228707928" duration="105000" />
+      <workItem from="1520238475001" duration="1265000" />
+      <workItem from="1520407018667" duration="722000" />
+      <workItem from="1520593941387" duration="499000" />
+      <workItem from="1520990918095" duration="2496000" />
+      <workItem from="1526967848116" duration="1183000" />
     </task>
     <task id="LOCAL-00001" summary="djy">
       <created>1513738994904</created>
@@ -670,18 +547,81 @@
       <option name="project" value="LOCAL" />
       <updated>1514276931740</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="djy">
+      <created>1519977545209</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1519977545209</updated>
+    </task>
+    <task id="LOCAL-00016" summary="djy">
+      <created>1519979824119</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1519979824119</updated>
+    </task>
+    <task id="LOCAL-00017" summary="djy">
+      <created>1520238539993</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1520238539993</updated>
+    </task>
+    <task id="LOCAL-00018" summary="djy">
+      <created>1520407121969</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1520407121969</updated>
+    </task>
+    <task id="LOCAL-00019" summary="djy">
+      <created>1520594056775</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1520594056775</updated>
+    </task>
+    <task id="LOCAL-00020" summary="djy">
+      <created>1520991071668</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1520991071668</updated>
+    </task>
+    <task id="LOCAL-00021" summary="djy">
+      <created>1520991134254</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1520991134254</updated>
+    </task>
+    <task id="LOCAL-00022" summary="djy">
+      <created>1520991584602</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1520991584602</updated>
+    </task>
+    <task id="LOCAL-00023" summary="djy">
+      <created>1520992781419</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1520992781419</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="112141000" />
+    <option name="totallyTimeSpent" value="119745000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3045311" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30400422" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32911393" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -776,20 +716,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/learnFloat.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="33" column="24" lean-forward="false" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/position.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -804,52 +730,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/task/task02.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="8" column="10" lean-forward="false" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/task/task04.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="11" column="33" lean-forward="false" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/task/task06.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/task/images/task07/icon-4.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/task/images/task07/pic05.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/task/images/task07/pic06.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/task/images/task07/icon-2.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/task/images/task07/icon-1.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/task/task02.html" />
+    <entry file="file://$PROJECT_DIR$/task/task04.html" />
+    <entry file="file://$PROJECT_DIR$/task/task06.html" />
+    <entry file="file://$PROJECT_DIR$/task/images/task07/icon-4.jpg" />
+    <entry file="file://$PROJECT_DIR$/task/images/task07/pic05.jpg" />
+    <entry file="file://$PROJECT_DIR$/task/images/task07/pic06.jpg" />
+    <entry file="file://$PROJECT_DIR$/task/images/task07/icon-2.jpg" />
+    <entry file="file://$PROJECT_DIR$/task/images/task07/icon-1.png" />
     <entry file="file://$PROJECT_DIR$/css/task04.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -857,11 +745,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/task/images/task07/icon-3.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/task/images/task07/icon-3.jpg" />
     <entry file="file://$PROJECT_DIR$/css/task06.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -869,13 +753,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/task/task03.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="2" column="16" lean-forward="false" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/task/task03.html" />
     <entry file="file://$PROJECT_DIR$/css3_01.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -918,56 +796,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/task/images/task07/pic07.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/task/images/task07/icon-5.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/task/images/task07/icon-6.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/task/images/task07/icon-7.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/task/images/task07/icon-8.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/task/images/task07/pic08.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/task/images/task07/pic01.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/task/images/task07/pic02.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/task/images/task07/pic03.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/task/images/task07/pic04.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/task/images/task07/pic07.jpg" />
+    <entry file="file://$PROJECT_DIR$/task/images/task07/icon-5.jpg" />
+    <entry file="file://$PROJECT_DIR$/task/images/task07/icon-6.jpg" />
+    <entry file="file://$PROJECT_DIR$/task/images/task07/icon-7.png" />
+    <entry file="file://$PROJECT_DIR$/task/images/task07/icon-8.png" />
+    <entry file="file://$PROJECT_DIR$/task/images/task07/pic08.jpg" />
+    <entry file="file://$PROJECT_DIR$/task/images/task07/pic01.jpg" />
+    <entry file="file://$PROJECT_DIR$/task/images/task07/pic02.jpg" />
+    <entry file="file://$PROJECT_DIR$/task/images/task07/pic03.jpg" />
+    <entry file="file://$PROJECT_DIR$/task/images/task07/pic04.jpg" />
     <entry file="file://$PROJECT_DIR$/task/css/font-awesome.min.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -975,126 +813,59 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/task/css/normalize.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="251" column="2" lean-forward="false" selection-start-line="251" selection-start-column="0" selection-end-line="251" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/task/js/task07.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="18" column="71" lean-forward="false" selection-start-line="18" selection-start-column="71" selection-end-line="18" selection-end-column="71" />
-          <folding>
-            <element signature="n#!!doc;n#changeTxt#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/task/css/task07.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="599" column="13" lean-forward="false" selection-start-line="599" selection-start-column="13" selection-end-line="599" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/task/task08.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="4" column="49" lean-forward="false" selection-start-line="4" selection-start-column="49" selection-end-line="4" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/task/css/task08.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="20" column="1" lean-forward="false" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/task/css/normalize.css" />
+    <entry file="file://$PROJECT_DIR$/task/js/task07.js" />
+    <entry file="file://$PROJECT_DIR$/task/css/task07.css" />
+    <entry file="file://$PROJECT_DIR$/task/task08.html" />
+    <entry file="file://$PROJECT_DIR$/task/css/task08.css" />
     <entry file="file://$PROJECT_DIR$/myCa/addressDetail.html" />
     <entry file="file://$PROJECT_DIR$/myCa/css/app.css" />
-    <entry file="file://$PROJECT_DIR$/task/task07.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="499">
-          <caret line="279" column="19" lean-forward="false" selection-start-line="279" selection-start-column="19" selection-end-line="279" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/task/js/common/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/task/js/addressList.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8940">
-          <caret line="298" column="23" lean-forward="false" selection-start-line="296" selection-start-column="17" selection-end-line="298" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/task/css/animate.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/task/addressDetail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="3" column="114" lean-forward="false" selection-start-line="3" selection-start-column="114" selection-end-line="3" selection-end-column="114" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/task/js/addressDetail.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/task/calendar.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2310">
-          <caret line="77" column="25" lean-forward="false" selection-start-line="77" selection-start-column="25" selection-end-line="77" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/task/css/zepto.mdater.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="990">
-          <caret line="33" column="16" lean-forward="true" selection-start-line="33" selection-start-column="16" selection-end-line="33" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/task/js/zepto.mdater.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="538">
-          <caret line="404" column="47" lean-forward="true" selection-start-line="404" selection-start-column="47" selection-end-line="404" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/task/task07.html" />
+    <entry file="file://$PROJECT_DIR$/task/js/addressList.js" />
+    <entry file="file://$PROJECT_DIR$/task/css/animate.css" />
+    <entry file="file://$PROJECT_DIR$/task/addressDetail.html" />
+    <entry file="file://$PROJECT_DIR$/task/js/addressDetail.js" />
+    <entry file="file://$PROJECT_DIR$/task/calendar.html" />
+    <entry file="file://$PROJECT_DIR$/task/css/zepto.mdater.css" />
+    <entry file="file://$PROJECT_DIR$/task/js/zepto.mdater.js" />
     <entry file="file://$PROJECT_DIR$/task/css/base.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task/paySuccess.html" />
+    <entry file="file://$PROJECT_DIR$/task/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="17" column="18" lean-forward="false" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/task/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="6" column="24" lean-forward="true" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
+        <state relative-caret-position="-780">
+          <caret line="76" column="8" lean-forward="true" selection-start-line="76" selection-start-column="8" selection-end-line="76" selection-end-column="8" />
+          <folding>
+            <element signature="n#style#0;n#div#2;n#center#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#label#0;n#li#0;n#ul#0;n#div#1;n#div#2;n#center#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#1;n#label#0;n#li#0;n#ul#0;n#div#1;n#div#2;n#center#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#label#0;n#p#0;n#div#2;n#center#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#small#0;n#label#0;n#p#0;n#div#2;n#center#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#p#0;n#div#2;n#center#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#2;n#center#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#4520#4526#0" expanded="true" />
+            <element signature="e#4526#4532#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task/js/common/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="16" column="64" lean-forward="true" selection-start-line="16" selection-start-column="64" selection-end-line="16" selection-end-column="64" />
           <folding />
         </state>
       </provider>
