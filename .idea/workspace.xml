@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="ddd6af18-c37f-4057-88a2-c15fe42b7ac4" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task/calendar.html" afterPath="$PROJECT_DIR$/task/calendar.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task/css/zepto.mdater.css" afterPath="$PROJECT_DIR$/task/css/zepto.mdater.css" />
     </list>
     <ignored path="test.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,60 +35,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="zepto.mdater.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="zepto.mdater.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/task/css/zepto.mdater.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3240">
-              <caret line="108" column="0" lean-forward="false" selection-start-line="108" selection-start-column="0" selection-end-line="112" selection-end-column="28" />
-              <folding>
-                <marker date="1551859537294" expanded="true" signature="1972:1974" ph="{...}" />
-                <marker date="1551859537294" expanded="true" signature="2225:2227" ph="{...}" />
-                <marker date="1551859537294" expanded="true" signature="2257:2323" ph="{...}" />
-                <marker date="1551859537294" expanded="true" signature="2353:2419" ph="{...}" />
-                <marker date="1551859537294" expanded="true" signature="2449:2542" ph="{...}" />
-                <marker date="1551859537294" expanded="true" signature="2553:2616" ph="{...}" />
-                <marker date="1551859537294" expanded="true" signature="2627:2649" ph="{...}" />
-                <marker date="1551859537294" expanded="true" signature="2768:2815" ph="{...}" />
-                <marker date="1551859537294" expanded="true" signature="2826:2872" ph="{...}" />
-                <marker date="1551859537294" expanded="true" signature="2893:2910" ph="{...}" />
-                <marker date="1551859537294" expanded="true" signature="2920:2939" ph="{...}" />
-                <marker date="1551859537294" expanded="true" signature="2951:2984" ph="{...}" />
-                <marker date="1551859537294" expanded="true" signature="2990:3112" ph="{...}" />
-                <marker date="1551859537294" expanded="true" signature="3122:3163" ph="{...}" />
-                <marker date="1551859537294" expanded="true" signature="3172:3189" ph="{...}" />
-                <marker date="1551859537294" expanded="true" signature="3197:3344" ph="{...}" />
-                <marker date="1551859537294" expanded="true" signature="3350:3389" ph="{...}" />
-                <marker date="1551859537294" expanded="true" signature="3776:4395" ph="{...}" />
-                <marker date="1551859537294" expanded="true" signature="3797:3819" ph="{...}" />
-                <marker date="1551859537294" expanded="true" signature="3836:3879" ph="{...}" />
-                <marker date="1551859537294" expanded="true" signature="4007:4032" ph="{...}" />
-                <marker date="1551859537294" expanded="true" signature="4040:4062" ph="{...}" />
-                <marker date="1551859537294" expanded="true" signature="4077:4098" ph="{...}" />
-                <marker date="1551859537294" expanded="true" signature="4106:4145" ph="{...}" />
-                <marker date="1551859537294" expanded="true" signature="4271:4295" ph="{...}" />
-                <marker date="1551859537294" expanded="true" signature="4318:4362" ph="{...}" />
-                <marker date="1551859537294" expanded="true" signature="4372:4393" ph="{...}" />
-                <marker date="1551859537294" expanded="true" signature="4434:5058" ph="{...}" />
-                <marker date="1551859537294" expanded="true" signature="4455:4478" ph="{...}" />
-                <marker date="1551859537294" expanded="true" signature="4495:4539" ph="{...}" />
-                <marker date="1551859537294" expanded="true" signature="4573:4600" ph="{...}" />
-                <marker date="1551859537294" expanded="true" signature="4667:4692" ph="{...}" />
-                <marker date="1551859537294" expanded="true" signature="4700:4724" ph="{...}" />
-                <marker date="1551859537294" expanded="true" signature="4739:4760" ph="{...}" />
-                <marker date="1551859537294" expanded="true" signature="4768:4808" ph="{...}" />
-                <marker date="1551859537294" expanded="true" signature="4936:4958" ph="{...}" />
-                <marker date="1551859537294" expanded="true" signature="4981:5025" ph="{...}" />
-                <marker date="1551859537294" expanded="true" signature="5035:5056" ph="{...}" />
-              </folding>
+            <state relative-caret-position="677">
+              <caret line="130" column="30" lean-forward="false" selection-start-line="130" selection-start-column="30" selection-end-line="130" selection-end-column="30" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="calendar.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="calendar.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/task/calendar.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="334">
-              <caret line="163" column="4" lean-forward="false" selection-start-line="163" selection-start-column="4" selection-end-line="163" selection-end-column="4" />
+            <state relative-caret-position="694">
+              <caret line="106" column="16" lean-forward="false" selection-start-line="106" selection-start-column="16" selection-end-line="106" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -97,27 +58,11 @@
       <file leaf-file-name="zepto.mdater.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/task/js/zepto.mdater.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3870">
-              <caret line="129" column="8" lean-forward="false" selection-start-line="129" selection-start-column="8" selection-end-line="129" selection-end-column="8" />
+            <state relative-caret-position="12599">
+              <caret line="422" column="32" lean-forward="true" selection-start-line="422" selection-start-column="32" selection-end-line="422" selection-end-column="32" />
               <folding>
-                <marker date="1551865036143" expanded="true" signature="2713:22008" ph="{...}" />
-                <marker date="1551865036143" expanded="true" signature="2752:22006" ph="{...}" />
-                <marker date="1551865036143" expanded="true" signature="6796:7071" ph="{...}" />
-                <marker date="1551865036143" expanded="true" signature="6837:7071" ph="{...}" />
-                <marker date="1551865036143" expanded="true" signature="20161:20165" ph="//..." />
-                <marker date="1551865036143" expanded="true" signature="20161:20187" ph="{...}" />
-                <marker date="1551865036143" expanded="true" signature="20161:21950" ph="{...}" />
-                <marker date="1551865036143" expanded="true" signature="20161:21967" ph="{...}" />
-                <marker date="1551865036143" expanded="true" signature="20161:21977" ph="{&quot;lastCheckedDate&quot;: ''...}" />
-                <marker date="1551865036143" expanded="true" signature="20240:21930" ph="{...}" />
-                <marker date="1551865036143" expanded="true" signature="20343:20406" ph="{...}" />
-                <marker date="1551865036143" expanded="true" signature="20607:20671" ph="{...}" />
-                <marker date="1551865036143" expanded="true" signature="20733:20798" ph="{...}" />
-                <marker date="1551865036143" expanded="true" signature="20839:20937" ph="{...}" />
-                <marker date="1551865036143" expanded="true" signature="20967:21093" ph="{...}" />
-                <marker date="1551865036143" expanded="true" signature="21205:21291" ph="{...}" />
-                <marker date="1551865036143" expanded="true" signature="21396:21485" ph="{...}" />
-                <marker date="1551865036143" expanded="true" signature="21530:21614" ph="{...}" />
+                <marker date="1551865036143" expanded="true" signature="8967:8971" ph="&lt;" />
+                <marker date="1551865036143" expanded="true" signature="9149:9153" ph="&gt;" />
               </folding>
             </state>
           </provider>
@@ -159,9 +104,9 @@
         <option value="$PROJECT_DIR$/task/app.js" />
         <option value="$PROJECT_DIR$/task/index.html" />
         <option value="$PROJECT_DIR$/task/js/common/app.js" />
-        <option value="$PROJECT_DIR$/task/css/zepto.mdater.css" />
         <option value="$PROJECT_DIR$/task/js/zepto.mdater.js" />
         <option value="$PROJECT_DIR$/task/calendar.html" />
+        <option value="$PROJECT_DIR$/task/css/zepto.mdater.css" />
       </list>
     </option>
   </component>
@@ -400,7 +345,7 @@
       <workItem from="1520990918095" duration="2496000" />
       <workItem from="1526967848116" duration="3795000" />
       <workItem from="1551857074516" duration="5548000" />
-      <workItem from="1551865209501" duration="2000" />
+      <workItem from="1551865209501" duration="967000" />
     </task>
     <task id="LOCAL-00001" summary="djy">
       <created>1513738994904</created>
@@ -633,11 +578,18 @@
       <option name="project" value="LOCAL" />
       <updated>1551863285730</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="djy">
+      <created>1551865219474</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1551865219474</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="127907000" />
+    <option name="totallyTimeSpent" value="128872000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -647,6 +599,7 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30400422" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32911393" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -671,7 +624,6 @@
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -854,84 +806,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/task/css/zepto.mdater.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3240">
-          <caret line="108" column="0" lean-forward="false" selection-start-line="108" selection-start-column="0" selection-end-line="112" selection-end-column="28" />
-          <folding>
-            <marker date="1551859537294" expanded="true" signature="1972:1974" ph="{...}" />
-            <marker date="1551859537294" expanded="true" signature="2225:2227" ph="{...}" />
-            <marker date="1551859537294" expanded="true" signature="2257:2323" ph="{...}" />
-            <marker date="1551859537294" expanded="true" signature="2353:2419" ph="{...}" />
-            <marker date="1551859537294" expanded="true" signature="2449:2542" ph="{...}" />
-            <marker date="1551859537294" expanded="true" signature="2553:2616" ph="{...}" />
-            <marker date="1551859537294" expanded="true" signature="2627:2649" ph="{...}" />
-            <marker date="1551859537294" expanded="true" signature="2768:2815" ph="{...}" />
-            <marker date="1551859537294" expanded="true" signature="2826:2872" ph="{...}" />
-            <marker date="1551859537294" expanded="true" signature="2893:2910" ph="{...}" />
-            <marker date="1551859537294" expanded="true" signature="2920:2939" ph="{...}" />
-            <marker date="1551859537294" expanded="true" signature="2951:2984" ph="{...}" />
-            <marker date="1551859537294" expanded="true" signature="2990:3112" ph="{...}" />
-            <marker date="1551859537294" expanded="true" signature="3122:3163" ph="{...}" />
-            <marker date="1551859537294" expanded="true" signature="3172:3189" ph="{...}" />
-            <marker date="1551859537294" expanded="true" signature="3197:3344" ph="{...}" />
-            <marker date="1551859537294" expanded="true" signature="3350:3389" ph="{...}" />
-            <marker date="1551859537294" expanded="true" signature="3776:4395" ph="{...}" />
-            <marker date="1551859537294" expanded="true" signature="3797:3819" ph="{...}" />
-            <marker date="1551859537294" expanded="true" signature="3836:3879" ph="{...}" />
-            <marker date="1551859537294" expanded="true" signature="4007:4032" ph="{...}" />
-            <marker date="1551859537294" expanded="true" signature="4040:4062" ph="{...}" />
-            <marker date="1551859537294" expanded="true" signature="4077:4098" ph="{...}" />
-            <marker date="1551859537294" expanded="true" signature="4106:4145" ph="{...}" />
-            <marker date="1551859537294" expanded="true" signature="4271:4295" ph="{...}" />
-            <marker date="1551859537294" expanded="true" signature="4318:4362" ph="{...}" />
-            <marker date="1551859537294" expanded="true" signature="4372:4393" ph="{...}" />
-            <marker date="1551859537294" expanded="true" signature="4434:5058" ph="{...}" />
-            <marker date="1551859537294" expanded="true" signature="4455:4478" ph="{...}" />
-            <marker date="1551859537294" expanded="true" signature="4495:4539" ph="{...}" />
-            <marker date="1551859537294" expanded="true" signature="4573:4600" ph="{...}" />
-            <marker date="1551859537294" expanded="true" signature="4667:4692" ph="{...}" />
-            <marker date="1551859537294" expanded="true" signature="4700:4724" ph="{...}" />
-            <marker date="1551859537294" expanded="true" signature="4739:4760" ph="{...}" />
-            <marker date="1551859537294" expanded="true" signature="4768:4808" ph="{...}" />
-            <marker date="1551859537294" expanded="true" signature="4936:4958" ph="{...}" />
-            <marker date="1551859537294" expanded="true" signature="4981:5025" ph="{...}" />
-            <marker date="1551859537294" expanded="true" signature="5035:5056" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/task/js/zepto.mdater.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3870">
-          <caret line="129" column="8" lean-forward="false" selection-start-line="129" selection-start-column="8" selection-end-line="129" selection-end-column="8" />
+        <state relative-caret-position="12599">
+          <caret line="422" column="32" lean-forward="true" selection-start-line="422" selection-start-column="32" selection-end-line="422" selection-end-column="32" />
           <folding>
-            <marker date="1551865036143" expanded="true" signature="2713:22008" ph="{...}" />
-            <marker date="1551865036143" expanded="true" signature="2752:22006" ph="{...}" />
-            <marker date="1551865036143" expanded="true" signature="6796:7071" ph="{...}" />
-            <marker date="1551865036143" expanded="true" signature="6837:7071" ph="{...}" />
-            <marker date="1551865036143" expanded="true" signature="20161:20165" ph="//..." />
-            <marker date="1551865036143" expanded="true" signature="20161:20187" ph="{...}" />
-            <marker date="1551865036143" expanded="true" signature="20161:21950" ph="{...}" />
-            <marker date="1551865036143" expanded="true" signature="20161:21967" ph="{...}" />
-            <marker date="1551865036143" expanded="true" signature="20161:21977" ph="{&quot;lastCheckedDate&quot;: ''...}" />
-            <marker date="1551865036143" expanded="true" signature="20240:21930" ph="{...}" />
-            <marker date="1551865036143" expanded="true" signature="20343:20406" ph="{...}" />
-            <marker date="1551865036143" expanded="true" signature="20607:20671" ph="{...}" />
-            <marker date="1551865036143" expanded="true" signature="20733:20798" ph="{...}" />
-            <marker date="1551865036143" expanded="true" signature="20839:20937" ph="{...}" />
-            <marker date="1551865036143" expanded="true" signature="20967:21093" ph="{...}" />
-            <marker date="1551865036143" expanded="true" signature="21205:21291" ph="{...}" />
-            <marker date="1551865036143" expanded="true" signature="21396:21485" ph="{...}" />
-            <marker date="1551865036143" expanded="true" signature="21530:21614" ph="{...}" />
+            <marker date="1551865036143" expanded="true" signature="8967:8971" ph="&lt;" />
+            <marker date="1551865036143" expanded="true" signature="9149:9153" ph="&gt;" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/task/calendar.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="163" column="4" lean-forward="false" selection-start-line="163" selection-start-column="4" selection-end-line="163" selection-end-column="4" />
+        <state relative-caret-position="694">
+          <caret line="106" column="16" lean-forward="false" selection-start-line="106" selection-start-column="16" selection-end-line="106" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task/css/zepto.mdater.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="677">
+          <caret line="130" column="30" lean-forward="false" selection-start-line="130" selection-start-column="30" selection-end-line="130" selection-end-column="30" />
           <folding />
         </state>
       </provider>
