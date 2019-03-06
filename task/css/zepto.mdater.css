@@ -113,24 +113,20 @@ a{
 	justify-content: center;
 }
 .md_datearea li span{
-    box-sizing: border-box;
+	box-sizing: border-box;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-    text-align: center;
+	text-align: center;
 	width: 65%;
 	height: 78%;
 	font-size: 1.2em;
-    /**/
-    background-color: #dddddd;
 }
 .md_datearea li.current span{
 	border: 2px solid gray;
     border-radius: 6px;
 	color: #333;
 
-    /**/
-    background-color: #FFD100;
 }
 .md_datearea li.current2 span{
 	background-color: #FFD100;

@@ -156,12 +156,16 @@
             });
         });
 
-        $('#ca').initListeners();
+//        $('#ca').initListeners();
+//
+//        $('.md_datearea li').click(function () {
+//        });
 
-        $('.md_datearea li').click(function () {
-        });
-
-        work_calendar_list();
+        if(type == 7 || isManager == 1){
+            // 线上订单和管理者日历，等待app传日期再调用
+        }else {
+            work_calendar_list();
+        }
 
         console.log("屏幕宽度" + document.body.clientWidth);
         //手指接触屏幕
@@ -256,10 +260,8 @@
                 if(data.status == 1){
                     console.log("djy" + JSON.stringify(data));
                     if(data.dayList && data.dayList.length > 0){
-                        alert("changeData" + type)
                         $('#ca').changeData(data.dayList, selectedDate);
                     }else {
-                        alert("setSelectedDate" + type)
                         $('#ca').setSelectedDate(selectedDate);
                     }
                 }else {
@@ -267,11 +269,6 @@
                 }
             },
             error:function (xhr,textStatus) {
-                // 测试用
-//                if(selectedDate){
-//                    $('#ca').setSelectedDate(selectedDate);
-//                }
-                // 测试用
                 console.log("错误信息如下====================");
                 console.log(xhr);
                 console.log(textStatus);
