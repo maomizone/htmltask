@@ -1,0 +1,300 @@
+/*
+ * 在实际项目开发时，建议为App单独写一个css文件，从而实现项目的自定义皮肤功能；
+ * 
+ * */
+*{
+	padding: 0;
+	margin: 0;
+}
+
+hr{
+	border:none;
+	border-top:1px solid gainsboro;
+}
+
+.title-bar{
+	background-color: white;
+	display: flex;
+	position: fixed;
+	z-index: 10;
+	right: 0;
+	left: 0;
+	top:0;
+	height: 48px;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: solid 1px #e6e6e6;
+	/*box-shadow: 0 1px 6px #ccc;*/
+}
+.title-bar-left{
+	box-sizing: border-box;
+	width: 30%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	padding-left: 25px;
+	background:url("../img/back.png") no-repeat 5px white;
+	background-size: 20px;
+}
+.title-bar-center{
+	box-sizing: border-box;
+	flex: 1;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.title-bar-title{
+	font-size: 18px;
+	font-weight: 600;
+}
+.title-bar-right{
+	box-sizing: border-box;
+	width: 30%;
+	height: 100%;
+	padding-right: 12px;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+.title-bar-left span:active, .title-bar-right span:active{
+	color: #FF9000;
+}
+
+[v-cloak]{
+	display:none
+}
+.content{
+	box-sizing: border-box;
+	padding-top: 48px;
+}
+.content .title{
+	height: 30px;
+	line-height: 30px;
+	box-sizing: border-box;
+	padding-left: 12px;
+}
+.space{
+	height: 12px;
+	background-color: #f2f2f2;
+}
+.divider{
+	height: 1px;
+	background-color:#f2f2f2;
+}
+
+.font{
+	word-wrap:break-word;
+	white-space: pre-line;
+}
+.font-22-333{
+	font-size: 11px;
+	color: #333333;
+}
+.font-24-333{
+	font-size: 12px;
+	color: #333333;
+}
+.font-26-333{
+	font-size: 13px;
+	color: #333;
+}
+.font-28-333{
+	font-size: 14px;
+	color: #333;
+}
+.font-30-333{
+	font-size: 15px;
+	color: #333;
+}
+.font-32-333{
+	font-size: 16px;
+	color: #333;
+}
+
+.font-22-666{
+	font-size: 11px;
+	color: #666666;
+}
+.font-24-666{
+	font-size: 12px;
+	color: #666666;
+}
+.font-26-666{
+	font-size: 13px;
+	color: #666;
+}
+.font-28-666{
+	font-size: 14px;
+	color: #666;
+}
+.font-30-666{
+	font-size: 15px;
+	color: #666;
+}
+
+
+.font-22-999{
+	font-size: 11px;
+	color: #999999;
+}
+.font-24-999{
+	font-size: 12px;
+	color: #999999;
+}
+.font-26-999{
+	font-size: 13px;
+	color: #999;
+}
+
+
+.font-26-blue{
+	font-size: 13px;
+	color: #31b4ff;
+}
+.font-36-000{
+	font-size: 18px;
+	color: black;
+}
+
+
+
+.font-22-aaa{
+	font-size: 11px;
+	color: #aaaaaa;
+}
+.font-24-aaa{
+	font-size: 12px;
+	color: #aaaaaa;
+}
+
+
+
+.font-22-orange{
+	font-size: 11px;
+	color: #FF9000;
+}
+.font-24-orange{
+	font-size: 12px;
+	color: #FF9000;
+}
+.font-26-orange{
+	font-size: 13px;
+	color: #FF9000;
+}
+.font-28-orange{
+	font-size: 14px;
+	color: #FF9000;
+}
+.font-30-orange{
+	font-size: 15px;
+	color: #FF9000;
+}
+.font-22-blue{
+	font-size: 11px;
+	color: #4FD2C2;
+}
+.font-24-blue{
+	font-size: 12px;
+	color: #4FD2C2;
+}
+.font-26-blue{
+	font-size: 13px;
+	color: #4FD2C2;
+}
+.font-28-blue{
+	font-size: 14px;
+	color: #4FD2C2;
+}
+.font-30-blue{
+	font-size: 15px;
+	color: #4FD2C2;
+}
+.font-22-red{
+	font-size: 11px;
+	color: red;
+}
+.font-24-red{
+	font-size: 12px;
+	color: red;
+}
+.font-26-red{
+	font-size: 13px;
+	color: red;
+}
+.font-28-red{
+	font-size: 14px;
+	color: red;
+}
+.font-30-red{
+	font-size: 15px;
+	color: red;
+}
+.font-22-green{
+	font-size: 11px;
+	color: #13b15c;
+}
+.font-24-green{
+	font-size: 12px;
+	color: #13b15c;
+}
+.font-26-green{
+	font-size: 13px;
+	color: #13b15c;
+}
+.font-28-green{
+	font-size: 14px;
+	color: #13b15c;
+}
+.font-30-green{
+	font-size: 15px;
+	color: #13b15c;
+}
+
+.btn:focus{
+	outline: none;
+}
+.ml6{
+	margin-left: 6px;
+}
+.mt6{
+	margin-top: 6px;
+}
+.mr6{
+	margin-right: 6px;
+}
+.mb6{
+	margin-bottom: 6px;
+}
+.ml8{
+	margin-left: 8px;
+}
+.mt8{
+	margin-top: 8px;
+}
+.mr8{
+	margin-right: 8px;
+}
+.mb8{
+	margin-bottom: 8px;
+}
+.ml12{
+	margin-left: 12px;
+}
+.mt12{
+	margin-top: 12px;
+}
+.mr12{
+	margin-right: 12px;
+}
+.mb12{
+	margin-bottom: 12px;
+}
+.padding12{
+	padding: 12px;
+}
+
+
+
+
+

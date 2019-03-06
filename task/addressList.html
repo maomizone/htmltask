@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta charset="UTF-8" />
+    <title>通讯录</title>
+
+    <!--css-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/app.css">
+    <!--加载框-->
+    <link rel="stylesheet" href="css/iosOverlay.css">
+    <!--吐司-->
+    <link rel="stylesheet" href="css/toast.css">
+
+    <!--js-->
+    <script src="js/util/jquery-3.2.1.min.js"></script>
+    <script src="js/util/bootstrap.min.js"></script>
+    <!--加载框-->
+    <script src="js/util/spin.min.js"></script>
+    <script src="js/util/jquery.spin.js"></script>
+    <script src="js/util/iosOverlay.js"></script>
+    <!--吐司-->
+    <script src="js/util/toast.js"></script>
+    <script src="js/util/jquery.charfirst.pinyin.js"></script>
+    <script src="js/common/app.js"></script>
+    <script src="js/common/tool.js"></script>
+    <script src="js/util/sort.js"></script>
+    <script src="js/util/vue.js"></script>
+    <script src="js/common/component.js"></script>
+    <script src="js/addressList.js"></script>
+</head>
+
+
+<style type="text/css">
+    body{
+        width: 100%;
+        height: 100%;
+        background-color: #f2f2f2;
+    }
+    .top-fix{
+        position: fixed;
+        width: 100%;
+        top:48px;
+        height: 95px;
+        z-index: 100;
+    }
+    .content{
+        padding-top: 143px;
+    }
+    .sort_letter{
+        color: #333;
+        padding: 8px 12px;
+        font-size: 14px;
+        background-color: #f2f2f2;
+    }
+    .sort_list{
+        height: 50px;
+        background-color: white;
+    }
+    .head{
+        display: inline-block;
+        width: 35px;
+        height: 35px;
+        text-align: center;
+        line-height: 35px;
+        font-size: 14px;
+        background-color: #FFD100;
+        color: #333;
+        border-radius:20px;
+        margin: 5px 10px;
+    }
+    .content .search-container{
+        background-color: gainsboro;
+        box-sizing: border-box;
+        padding: 0px 12px;
+        display: flex;
+        align-items: center;
+        height: 55px;
+    }
+    .content .search-container img{
+        width: 15px;
+    }
+    .content .search-container input{
+        border: none;
+        flex: 1;
+        height: 30px;
+        background-color: transparent;
+    }
+    .content .input-container {
+        padding:0px 12px;
+        border-radius: 12px;
+        flex: 1;
+        height: 35px;
+        background-color: white;
+        display: flex;
+        align-items: center;
+    }
+    .content .spiner{
+        width: 6vw;
+        position: fixed;
+        top:30%;
+        right: 2%;
+        height: 100%;
+        /*display: flex;*/
+        /*flex-direction: column;*/
+        /*justify-content: center;*/
+        /*text-align: center;*/
+        font-weight: 800;
+        color: #007AFF;
+        font-size: 12px;
+    }
+    /*.biaoqian {*/
+        /*background: rgba(0, 0, 0, 0.6);*/
+        /*color: #FFFFFF;*/
+        /*position: fixed;*/
+        /*TOP: 40%;*/
+        /*left: 41.5%;*/
+        /*padding: 5% 0;*/
+        /*width: 17%;*/
+        /*text-align: center;*/
+        /*border-radius: 20%;*/
+    /*}*/
+    footer .bottom{
+        z-index: 102;
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+        background-color: white;
+    }
+
+    footer span:nth-of-type(3){
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        width: 120px;
+        height: 100%;
+        background-color: #FFD100;
+        color: #333;
+    }
+    .grey-bg{
+        z-index: 101;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        background-color: #000000;
+        opacity: 0.3;
+    }
+    .sort_item:active{
+        background-color: #f2f2f2;
+    }
+
+    input[type="checkbox"]{
+        appearance: none;
+        -webkit-appearance: none;
+        outline: none;
+        display:none;
+    }
+    label{
+        width:18px;
+        height:18px;
+        display:inline-block;
+        margin-left: 12px;
+    }
+    label input[type="checkbox"] + span{
+        width:18px;
+        height:18px;
+        display:inline-block;
+        background-image: url(img/unselect.png);
+        background-size: 18px;
+    }
+    label input[type="checkbox"]:checked + span{
+        background-image: url(img/select.png);
+        background-size: 18px;
+    }
+</style>
+
+
+<body>
+<div id="tongXunLun" v-cloak>
+    <header class="title-bar">
+        <div @click="back()" class="title-bar-left"><span>返回</span></div>
+        <div class="title-bar-center">
+            <span class="title-bar-title">通讯录</span>
+        </div>
+        <div class="title-bar-right">
+        </div>
+    </header>
+
+    <div class="content">
+
+        <div class="top-fix">
+            <!--搜索框-->
+            <div class="search-container">
+                <div class="input-container">
+                    <img src="img/search.png">
+                    <input  v-model="searchName" v-on:input="search()" type="text" placeholder="输入人员姓名" maxlength="5"
+                            style="margin-left: 12px;border: none;outline: none" />
+                </div>
+                <!--<span @click="search()" class="font font-26-blue" style="margin-left: 12px">搜索</span>-->
+            </div>
+
+            <!--公司-->
+            <div class="title" style=";height: 40px;line-height: 40px;background-color: white">
+                <strong class="font font-24-333">{{organizeName}}</strong>
+            </div>
+
+        </div>
+
+
+        <!--通讯录列表-->
+        <div id="list" style="display: none" class="sort_box">
+            <template v-for="item in personsShow">
+
+                <div class="sort_list">
+                    <div class="sort_item" @click="itemClick(item)" style="display: flex;align-items: center;height: 49px;">
+
+                        <label v-if="type==2">
+                            <input type="checkbox" v-bind:checked="item.checked" @click="checkClick(item)" />
+                            <span></span>
+                        </label>
+
+                        <span class="head">{{item.serviceUserName.substring(0,1)}}</span>
+                        <span class="num_name font font-26-333">{{item.serviceUserName}}</span>
+                        <span class="font font-22-999" style="margin: 0 0 -2px 6px">({{item.groupName}})</span>
+                        <span class="recent" style="display: none">{{item.recent}}</span>
+                    </div>
+                    <divider></divider>
+                </div>
+
+            </template>
+
+        </div>
+
+        <!--spiner-->
+        <div class="spiner">
+        </div>
+        <div class="biaoqian" style="display: none;">
+            A
+        </div>
+
+    </div>
+
+
+    <footer style="display: none">
+        <!--用来填充，以免遮挡通讯录-->
+        <div style="height: 60px">
+        </div>
+
+        <div @click="togglePop()" class="grey-bg" v-if="showPop">
+
+        </div>
+
+        <div class="bottom">
+            <divider></divider>
+            <!--弹出框-->
+            <div class="pop" v-if="showPop">
+
+                <div  v-if="selectedPersons.length>0">
+                    <div style="display: flex;align-items: center;background-color: #f2f2f2;padding:8px 12px">
+                        <span class="font font-24-666" style="flex: 1">维修人员</span>
+                        <span @click="clearAll()" class="font font-24-666">全部清空</span>
+                    </div>
+
+                    <template v-for="item in selectedPersons">
+                        <div style="display: flex;align-items: center;background-color: white;padding:5px 16px">
+                            <div style="flex: 1;">
+                                <span class="font font-30-333" >{{item.serviceUserName}}</span><br/>
+                                <span class="font font-24-999">{{item.groupName}}</span>
+                            </div>
+
+                            <span @click="clearOne(item)" class="font font-24-333" style="color: red">删除</span>
+                        </div>
+                        <divider></divider>
+                    </template>
+
+                </div>
+
+            </div>
+
+            <!--完成派工-->
+            <divider></divider>
+            <div style="display: flex;align-items: center;height: 50px;margin-left: 16px;width: 100%">
+
+                <span  @click="togglePop()" class="font font-32-333">已选{{selectedPersons.length}}人</span>
+                <img @click="togglePop()" src="img/arrow_down_grey.png" style="width: 35px;margin-left: -8px">
+                <span style="flex: 1;"></span>
+                <span @click="completeDispatch()">确认选择</span>
+
+            </div>
+        </div>
+
+    </footer>
+
+
+</div>
+</body>
+</html>

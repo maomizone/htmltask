@@ -1,0 +1,313 @@
+a{
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+	-webkit-tap-highlight-color: transparent;
+
+}
+.md_container{
+	/*padding: 10px;*/
+}
+.md_panel {
+    width:100%;
+    height: auto;
+    z-index: 11;
+    background-color: white;
+	font-family: Tahoma,arial,verdana,sans-serif;
+	-webkit-user-select : none;
+	display: inline-block;
+}
+.md_panel.show{
+	-ms-transform: translate3d(0,0,0);
+	-moz-transform: translate3d(0,0,0);
+	-webkit-transform: translate3d(0,0,0);
+	-o-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+.md_panel a{
+	text-decoration: none;
+}
+.md_panel a:link{
+	text-decoration: none;
+}
+.md_panel a:active{
+	color: #FF9000;
+}
+#now{
+	position: absolute;
+	right: 12px;
+    color: #333;
+}
+.md_selectarea{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/*display: inline-block;*/
+	/*width: 50%;*/
+	/*position: relative;*/
+}
+.md_head{
+	height: 50px;
+	line-height: 50px;
+}
+.md_body{
+	position: relative;
+	height: 270px;
+}
+.md_headtext{
+	font-size: 1.1em;
+	color: #333;
+}
+.md_prev, .md_next{
+	font-family: arial;
+	font-size: 1.3em;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 30px;
+	height: 100%;
+	margin: 0 16px;
+
+}
+.md_prev{
+	left: 0;
+}
+.md_next{
+	right: 0;
+}
+.md_weekarea{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	/*border-bottom: 1px solid #4eccc4;*/
+	overflow: hidden;
+	background-color: #f2f2f2;
+}
+.md_weekarea li{
+	line-height:2em;
+	font-size:0.9em;
+}
+.md_weekarea li, .md_datearea li{
+	display: inline-block;
+	float: left;
+	width: 14.2857%;
+	font-weight: 400;
+	text-align: center;
+}
+.md_weekarea li, .md_prev, .md_next{
+	color: #333;
+}
+.md_datearea{
+	position: absolute;
+	width: 100%;
+	list-style-type: none;
+	margin: 0;
+	overflow: hidden;
+	-webkit-transition: -webkit-transform .2s ease-in;
+	-webkit-transform: translate3d(0,0,0);
+	display: inline-block;
+}
+.md_datearea li{
+	box-sizing:border-box;
+	-moz-box-sizing:border-box; /* Firefox */
+	-webkit-box-sizing:border-box; /* Safari */
+	font-size: .8125em;
+	height: 4.2em;
+	line-height: 4.2em;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.md_datearea li span{
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 65%;
+	height: 78%;
+	font-size: 1.2em;
+}
+.md_datearea li.current span{
+	border: 2px solid gray;
+    border-radius: 6px;
+	color: #333;
+
+}
+.md_datearea li.current2 span{
+	background-color: #FFD100;
+	border-radius: 6px;
+	color: #333;
+}
+.md_datearea li.current3 span{
+	background-color: #FF9000;
+	border-radius: 6px;
+	color: #333;
+}
+.md_datearea li.needDeal span{
+	background:#FFD100 url(../img/deal.png) bottom right no-repeat ;
+	background-size: 20px;
+}
+
+
+.md_foot{
+	margin-top: 10%;
+	margin-bottom: 10%;
+	text-align: center;
+}
+.md_cancel{
+	margin-left: 16%;
+}
+.md_ok:link, .md_ok:visited, .md_cancel:link, .md_cancel:visited{
+	color: #4eccc4;
+	text-decoration: none;
+}
+.out_left{
+	-webkit-transform: translate3d(-100%,0,0);
+}
+.out_right{
+	-webkit-transform: translate3d(100%,0,0);
+}
+.prevdate, .nextdate{
+	color: #999;
+}
+.disabled{
+	color:#C6C6C6;
+}
+
+#container{
+	display: block;
+	height:70%;
+}
+
+#tip{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: #f2f2f2;
+	padding: 6px 36px;
+}
+#tip span{
+	font-size: 0.7em;
+	font-weight: 400;
+}
+#tip img{
+	width: 10px;
+}
+.bottom{
+	margin: 20px 12px;
+	border: 1px solid gainsboro;
+	display: flex;
+	align-items: center;
+	height: 100px;
+	border-radius: 12px;
+	padding: 0 16px;
+}
+
+#num{
+	font-size: 1.5em;
+	color: #FF9000;
+}
+
+/*@media screen and (min-width:321px) and (max-width: 360px){*/
+	/*.md_prev, .md_next{*/
+		/*margin: 0 10px;*/
+	/*}*/
+	/*.md_datearea li{*/
+		/*height: 4.2em;*/
+		/*line-height: 4.2em;*/
+	/*}*/
+/*}*/
+/*@media screen and (min-width:361px) and (max-width: 420px) {*/
+	/*.md_datearea li{*/
+		/*height: 4.6em;*/
+		/*line-height: 4.6em;*/
+	/*}*/
+/*}*/
+
+@media screen and (min-width: 768px) {
+	.md_prev, .md_next{
+		margin: 0 90px;
+	}
+	.md_datearea li{
+		height: 5.8em;
+		line-height: 5.8em;
+	}
+	.md_weekarea li, .md_datearea li{
+		font-size: 1.1125em;
+	}
+	.md_headtext, .md_prev, .md_next{
+		font-size: 1.3125em;
+	}
+	#tip{
+		margin-top: -60px;
+	}
+	#tip p{
+		font-size: 1em;
+	}
+	.md_container{
+		padding: 50px;
+	}
+	.panel{
+		width: 70%;
+		margin: 60px auto;
+	}
+	.panel .left p:nth-of-type(1){
+		font-size: 2em;
+	}
+	.panel .left p:nth-of-type(2){
+		font-size: 1.8em;
+	}
+	.panel .right p {
+		font-size: 1.6em;
+	}
+	.panel .right button {
+		padding: 6px 16px;
+		font-size: 18px;
+	}
+	.md_body{
+		height: 430px;
+	}
+}
+@media screen and (min-width: 1000px) {
+	.md_prev, .md_next{
+		margin: 0 140px;
+	}
+	.md_datearea li{
+		height: 6.8em;
+		line-height: 6.8em;
+
+	}
+	.md_weekarea li, .md_datearea li{
+		font-size: 1.3125em;
+	}
+	.md_headtext, .md_prev, .md_next{
+		font-size: 1.8125em;
+	}
+	#tip{
+		margin-top: -70px;
+	}
+	#tip p{
+		font-size: 1.2em;
+	}
+	.md_container{
+		padding: 50px;
+	}
+	.panel{
+		width: 70%;
+		margin: 100px auto;
+	}
+	.panel .left p:nth-of-type(1){
+		font-size: 2.4em;
+	}
+	.panel .left p:nth-of-type(2){
+		font-size: 2.2em;
+	}
+	.panel .right p {
+		font-size: 2em;
+	}
+	.panel .right button {
+		padding: 6px 16px;
+		font-size: 20px;
+	}
+	.md_body{
+		height: 700px;
+	}
+}
