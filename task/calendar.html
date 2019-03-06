@@ -114,7 +114,6 @@
             minDate: new Date(2015, 2, 10),
             data: [],
             onSelected: function (date, week, appointNum) {
-
                 $("#date").text(date);
                 $("#week").text(week);
                 $("#num").text(appointNum);
@@ -257,10 +256,10 @@
                 if(data.status == 1){
                     console.log("djy" + JSON.stringify(data));
                     if(data.dayList && data.dayList.length > 0){
+                        alert("changeData" + type)
                         $('#ca').changeData(data.dayList, selectedDate);
-                        $('.md_datearea li').click(function () {
-                        });
                     }else {
+                        alert("setSelectedDate" + type)
                         $('#ca').setSelectedDate(selectedDate);
                     }
                 }else {

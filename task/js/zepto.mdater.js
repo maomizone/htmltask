@@ -157,7 +157,7 @@
                 var arr = dateStr.split('-');
                 var date = new Date(arr[0], arr[1] - 1, arr[2]).format("yyyy-MM-dd");
                 option.onSelected(date, F.getWeekDay(date), F.getAppointNum(date));
-                mdater.refreshView(dateStr);
+                // mdater.refreshView(dateStr);
             }else {
                 var date = new Date().format("yyyy-MM-dd");
                 option.onSelected(date, F.getWeekDay(date), F.getAppointNum(date));
@@ -317,7 +317,7 @@
                     endDay = currentMonthDays,
                     thisDate = new Date(y, m, d),
                     firstDate = new Date(y, m, 1);
-                    lastDate = new Date(y, m, currentMonthDays),
+                lastDate = new Date(y, m, currentMonthDays),
                     minDateDay = option.minDate.getDate();
 
 
@@ -443,6 +443,8 @@
                 // djy add start
                 console.log($('.md_datearea').height())
                 $('.md_body').height($('.md_datearea').height());
+                // $('.md_datearea li').click(function () {
+                // });
                 // djy add end
             },
             initListeners: function () {
@@ -454,28 +456,28 @@
                     '.change_month': function () {
                         var add = $(this).hasClass('md_next') ? 1 : -1;
                         _this._changeMonth(add);
-                        $('.md_datearea li').click(function () {
-                        });
+                        // $('.md_datearea li').click(function () {
+                        // });
                     },
                     '.change_year': function () {
                         var add = $(this).hasClass('md_next') ? 1 : -1;
                         _this._changeYear(add);
-                        $('.md_datearea li').click(function () {
-                        });
+                        // $('.md_datearea li').click(function () {
+                        // });
                     },
                     '.out_left, .out_right': {
                         'webkitTransitionEnd': function () {
                             $(this).remove();
-                            $('.md_datearea li').click(function () {
-                            });
+                            // $('.md_datearea li').click(function () {
+                            // });
                         }
                     },
                     '#now': function () {
                         _this.refreshView();
                         var data = new Date().format("yyyy-MM-dd");
                         option.onSelected(data, F.getWeekDay(data),  F.getAppointNum(data));
-                        $('.md_datearea li').click(function () {
-                        });
+                        // $('.md_datearea li').click(function () {
+                        // });
                     },
                     '.md_datearea li': function () {
                         var $this = $(this);
