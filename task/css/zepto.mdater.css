@@ -112,9 +112,9 @@ a{
 	font-size: .8125em;
 	height: 4.2em;
 	line-height: 4.2em;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+	/*display: flex;*/
+	/*align-items: center;*/
+	/*justify-content: center;*/
 }
 .md_datearea li span{
 	box-sizing: border-box;
