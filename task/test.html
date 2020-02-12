@@ -13,11 +13,11 @@
             height:100%;
             z-index:100;
         }
-        .wtips img{
-            width:90%;
-            height:50%;
-            margin:1% 5%;
-        }
+        /*.wtips img{*/
+            /*width:90%;*/
+            /*height:50%;*/
+            /*margin:1% 5%;*/
+        /*}*/
     </style>
 
 </head>
@@ -31,34 +31,31 @@
         var u = navigator.userAgent;
         isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1; //g
         isIOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
-//        var micromessenger = ua.match(/MicroMessenger/i);
-//        var weixin = micromessenger == 'micromessenger'?true:false;
+        var micromessenger = ua.match(/MicroMessenger/i);
+        var weixin = micromessenger == 'micromessenger'?true:false;
 
-        // 判断是否是微信内置浏览器，是就显示tipsdiv
-//        if (weixin) {
-//            alert("是微信内置浏览器");
-//            var u = navigator.userAgent;
-//            isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1; //g
-//            isIOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
-//            if (isAndroid) {
-//                //这个是安卓操作系统
-//                document.getElementById("tips_weix").src="./img/android.png"
-//            }
-//            if (isIOS) {
-//                //这个是ios操作系统
-//                document.getElementById("tips_weix").src="./img/ios.png"
-//            }
-//            document.getElementById("tipsdiv").style.display="";
-//        }
+        // 判断是否是微信内置浏览器，是就显示在浏览器中打开
+        if (weixin) {
+            alert("是微信内置浏览器");
+            var u = navigator.userAgent;
+            isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1; //g
+            isIOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+            if (isAndroid) {
+                //这个是安卓操作系统
+                document.getElementById("tips_weix").src="./img/android.png"
+            }
+            if (isIOS) {
+                //这个是ios操作系统
+                document.getElementById("tips_weix").src="./img/ios.png"
+            }
+            document.getElementById("tipsdiv").style.display="";
+        }
 
         // Safari 浏览器跳转IOS下载页
         if (/webkit/i.test(ua) && !(/chrome/i.test(ua) && /webkit/i.test(ua) && /mozilla/i.test(ua))) {
 
             document.getElementById("down").href = "苹果同事提供下载地址";
         }
-
-        var down = document.getElementById("down");
-        down.onclick = openApp("scheme1://host1:8080/path1?query1=1&query2=true");
 
 //        if(!weixin){
 //            var src = window.location.href;
@@ -75,9 +72,12 @@
 //            test.onclick=openApp("scheme1://host1:8080/path1?query1=1&query2=true");
 //        }
 //    }
+//        var down = document.getElementById("down");
+//        down.onclick = openApp("scheme1://host1:8080/path1?query1=1&query2=true");
 
         //判断手机上是否安装了app，如果安装直接打开，如果没安装，跳转到下载页面
-        function openApp(url) {
+        function openApp() {
+            var url = "scheme1://host1:8080/path1?query1=1&query2=true";
             if (isAndroid) {
                 alert("是Android");
                 var timeout, t = 1000, hasApp = true;
@@ -88,7 +88,7 @@
                         window.location.href = durl;
                     }
                     document.body.removeChild(ifr);
-                }, 2000)
+                }, 2000);
 
                 var t1 = Date.now();
                 var ifr = document.createElement("iframe");
@@ -114,11 +114,11 @@
 </script>
 <body onload="load()"  style="height: 100%" id="body">
 <a id='test' href="javascript:void(0);" style="display: none;" ></a>
-<a id='down' href="安卓下载的APK地址"  ><img height="64px" width="64px" src="./img/cat.png"></a>
+<a id='down' onclick="openApp"><img height="64px" width="64px" src="./img/cat.png"></a>
 
 <!--如果是微信内置浏览器会显示以下图标-->
 <div id="tipsdiv" class="wtips" style="display: none">
-    <img id="tips_weix" src="./img/ios.png">
+    <p>请在浏览器中打开</p>
 </div>
 </body>
 </html>
