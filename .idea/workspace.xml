@@ -2,90 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ddd6af18-c37f-4057-88a2-c15fe42b7ac4" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/img/android.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/img/ios.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/test.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/YesOrNo.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/aboutUs.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/addressDetail.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/addressList.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/backOrderDetail.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/calendar.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/chargeOrder.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/commitBalance.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/contactUs.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/css/animate.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/css/app.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/css/bootstrap.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/css/dialog.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/css/iosOverlay.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/css/toast.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/css/zepto.mdater.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/customerConfirm.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/historyRepair.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/img/addPerson.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/img/arrowDown.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/img/arrowRight.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/img/arrow_down_grey.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/img/arrow_right.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/img/back.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/img/changarrow.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/img/deal.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/img/default.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/img/kuang_appoint_full.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/img/kuang_has_appoint.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/img/logo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/img/no_appoint.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/img/right.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/img/search.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/img/select.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/img/unselect.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/inspectionApply.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/js/YesOrNo.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/js/addressDetail.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/js/addressList.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/js/backOrder.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/js/chargeOrder.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/js/commitBalance.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/js/common/app.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/js/common/component.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/js/common/tool.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/js/customerConfirm.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/js/inspectionApply.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/js/pickingDetail.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/js/pickingRecords.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/js/repair.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/js/repairOrderDetail.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/js/specialDiscount.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/js/specialDiscountApply.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/js/specialDiscountRemind.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/js/tongXunLu.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/js/util/bootstrap.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/js/util/iosOverlay.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/js/util/jSignature.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/js/util/jquery-3.2.1.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/js/util/jquery.charfirst.pinyin.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/js/util/jquery.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/js/util/jquery.spin.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/js/util/jquery.tree.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/js/util/sort.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/js/util/spin.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/js/util/toast.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/js/util/vue.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/js/util/windowOpen.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/js/util/zepto.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/js/zepto.mdater.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/pickingDetail.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/pickingRecords.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/repairOrderDetial.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/sign.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/specialDiscount.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/specialDiscountApply.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/specialDiscountRemind.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/toast.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task/tongXunLu.html" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task/img/cat.png" afterPath="$PROJECT_DIR$/task/img/cat.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task/test.html" afterPath="$PROJECT_DIR$/task/test.html" />
     </list>
     <ignored path="test.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -111,7 +29,7 @@
         <entry file="file://$PROJECT_DIR$/task/test.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="439">
-              <caret line="77" column="22" lean-forward="true" selection-start-line="77" selection-start-column="22" selection-end-line="77" selection-end-column="22" />
+              <caret line="95" column="23" lean-forward="false" selection-start-line="95" selection-start-column="16" selection-end-line="95" selection-end-column="23" />
               <folding>
                 <element signature="n#style#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -134,6 +52,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>tipsdiv</find>
+      <find>micromessenger</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -396,7 +315,7 @@
       <workItem from="1551857074516" duration="5548000" />
       <workItem from="1551865209501" duration="1505000" />
       <workItem from="1581422533058" duration="2931000" />
-      <workItem from="1581484562401" duration="1487000" />
+      <workItem from="1581484562401" duration="1941000" />
     </task>
     <task id="LOCAL-00001" summary="djy">
       <created>1513738994904</created>
@@ -657,11 +576,18 @@
       <option name="project" value="LOCAL" />
       <updated>1551866720197</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="djy">
+      <created>1581486060069</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1581486060069</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="133828000" />
+    <option name="totallyTimeSpent" value="134282000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1932" height="1056" extended-state="0" />
@@ -870,7 +796,7 @@
     <entry file="file://$PROJECT_DIR$/task/test.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="439">
-          <caret line="77" column="22" lean-forward="true" selection-start-line="77" selection-start-column="22" selection-end-line="77" selection-end-column="22" />
+          <caret line="95" column="23" lean-forward="false" selection-start-line="95" selection-start-column="16" selection-end-line="95" selection-end-column="23" />
           <folding>
             <element signature="n#style#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
