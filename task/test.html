@@ -36,15 +36,6 @@
 
         // 判断是否是微信内置浏览器，是就显示在浏览器中打开
         if (weixin) {
-            alert("是微信内置浏览器");
-            if (isAndroid) {
-                //这个是安卓操作系统
-                document.getElementById("tips_weix").src = "./img/android.png"
-            }
-            if (isIOS) {
-                //这个是ios操作系统
-                document.getElementById("tips_weix").src = "./img/ios.png"
-            }
             document.getElementById("tipsdiv").style.display = "";
         }
     }
@@ -61,7 +52,7 @@
                     //应用宝下载地址
                     window.location.href ="https://fir.im/mwcp";
                 }
-            }, 2500);
+            }, 2000);
         }
         //这个是ios操作系统
         if (isIOS) {
@@ -74,14 +65,14 @@
                     window.location.href =
                         "https://itunes.apple.com/us/app/zhe-jiang-yi-dong-shou-ji/id898243566#weixin.qq.com";
                 }
-            }, 2500);
+            }, 2000);
             return false;
         }
     }
 </script>
 
 <body onload="load()"  style="height: 100%" id="body">
-<div id='down' onclick="openApp()" ><img height="120px" width="120px" src="./img/cat.png"></div>
+<div id='down' onclick="openApp()"><img height="120px" width="120px" src="./img/cat.png"></div>
 
 <!--如果是微信内置浏览器会显示以下图标-->
 <div id="tipsdiv" class="wtips" style="display: none">
