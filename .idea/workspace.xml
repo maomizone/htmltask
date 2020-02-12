@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ddd6af18-c37f-4057-88a2-c15fe42b7ac4" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/js/jquery-3.2.1.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task/test.html" afterPath="$PROJECT_DIR$/task/test.html" />
     </list>
@@ -30,8 +28,8 @@
       <file leaf-file-name="test.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/task/test.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="455">
-              <caret line="126" column="140" lean-forward="false" selection-start-line="126" selection-start-column="140" selection-end-line="126" selection-end-column="140" />
+            <state relative-caret-position="1775">
+              <caret line="83" column="66" lean-forward="false" selection-start-line="83" selection-start-column="66" selection-end-line="83" selection-end-column="66" />
               <folding>
                 <element signature="n#style#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -329,7 +327,7 @@
       <workItem from="1551857074516" duration="5548000" />
       <workItem from="1551865209501" duration="1505000" />
       <workItem from="1581422533058" duration="2931000" />
-      <workItem from="1581484562401" duration="4821000" />
+      <workItem from="1581484562401" duration="5118000" />
     </task>
     <task id="LOCAL-00001" summary="djy">
       <created>1513738994904</created>
@@ -625,11 +623,18 @@
       <option name="project" value="LOCAL" />
       <updated>1581487879759</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="djy">
+      <created>1581489393752</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1581489393752</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="137162000" />
+    <option name="totallyTimeSpent" value="137459000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1932" height="1056" extended-state="0" />
@@ -731,7 +736,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/task/task02.html" />
     <entry file="file://$PROJECT_DIR$/task/task04.html" />
     <entry file="file://$PROJECT_DIR$/task/task06.html" />
     <entry file="file://$PROJECT_DIR$/task/images/task07/icon-4.jpg" />
@@ -836,10 +840,15 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/task/img/android.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/task/test.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="455">
-          <caret line="126" column="140" lean-forward="false" selection-start-line="126" selection-start-column="140" selection-end-line="126" selection-end-column="140" />
+        <state relative-caret-position="1775">
+          <caret line="83" column="66" lean-forward="false" selection-start-line="83" selection-start-column="66" selection-end-line="83" selection-end-column="66" />
           <folding>
             <element signature="n#style#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
