@@ -1,10 +1,91 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ddd6af18-c37f-4057-88a2-c15fe42b7ac4" name="Default" comment="djy">
+    <list default="true" id="ddd6af18-c37f-4057-88a2-c15fe42b7ac4" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/img/android.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/img/ios.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/test.html" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/task/YesOrNo.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/task/aboutUs.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/task/addressDetail.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/task/addressList.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/task/backOrderDetail.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/task/calendar.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/task/chargeOrder.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/task/commitBalance.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/task/contactUs.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/task/css/animate.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/task/css/app.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/task/css/bootstrap.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/task/css/dialog.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/task/css/iosOverlay.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/task/css/toast.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/task/css/zepto.mdater.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/task/customerConfirm.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/task/historyRepair.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/task/img/addPerson.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/task/img/arrowDown.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/task/img/arrowRight.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/task/img/arrow_down_grey.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/task/img/arrow_right.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/task/img/back.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/task/img/changarrow.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/task/img/deal.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/task/img/default.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/task/img/kuang_appoint_full.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/task/img/kuang_has_appoint.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/task/img/logo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/task/img/no_appoint.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/task/img/right.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/task/img/search.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/task/img/select.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/task/img/unselect.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/task/inspectionApply.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/task/js/YesOrNo.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/task/js/addressDetail.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/task/js/addressList.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/task/js/backOrder.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/task/js/chargeOrder.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/task/js/commitBalance.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/task/js/common/app.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/task/js/common/component.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/task/js/common/tool.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/task/js/customerConfirm.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/task/js/inspectionApply.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/task/js/pickingDetail.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/task/js/pickingRecords.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/task/js/repair.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/task/js/repairOrderDetail.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/task/js/specialDiscount.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/task/js/specialDiscountApply.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/task/js/specialDiscountRemind.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/task/js/tongXunLu.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/task/js/util/bootstrap.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/task/js/util/iosOverlay.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/task/js/util/jSignature.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/task/js/util/jquery-3.2.1.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/task/js/util/jquery.charfirst.pinyin.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/task/js/util/jquery.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/task/js/util/jquery.spin.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/task/js/util/jquery.tree.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/task/js/util/sort.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/task/js/util/spin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/task/js/util/toast.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/task/js/util/vue.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/task/js/util/windowOpen.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/task/js/util/zepto.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/task/js/zepto.mdater.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/task/pickingDetail.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/task/pickingRecords.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/task/repairOrderDetial.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/task/sign.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/task/specialDiscount.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/task/specialDiscountApply.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/task/specialDiscountRemind.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/task/toast.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/task/tongXunLu.html" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task/img/cat.png" afterPath="$PROJECT_DIR$/task/img/cat.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task/calendar.html" afterPath="$PROJECT_DIR$/task/calendar.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task/css/zepto.mdater.css" afterPath="$PROJECT_DIR$/task/css/zepto.mdater.css" />
     </list>
     <ignored path="test.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,50 +107,34 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/task/js/common/app.js">
+      <file leaf-file-name="test.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/task/test.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2760">
-              <caret line="92" column="0" lean-forward="false" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="zepto.mdater.css" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/task/css/zepto.mdater.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="497">
-              <caret line="130" column="33" lean-forward="false" selection-start-line="130" selection-start-column="33" selection-end-line="130" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="calendar.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/task/calendar.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="394">
-              <caret line="165" column="26" lean-forward="false" selection-start-line="165" selection-start-column="8" selection-end-line="165" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="zepto.mdater.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/task/js/zepto.mdater.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7003">
-              <caret line="468" column="60" lean-forward="true" selection-start-line="468" selection-start-column="60" selection-end-line="468" selection-end-column="60" />
+            <state relative-caret-position="439">
+              <caret line="77" column="22" lean-forward="true" selection-start-line="77" selection-start-column="22" selection-end-line="77" selection-end-column="22" />
               <folding>
-                <marker date="1551865036143" expanded="true" signature="8967:8971" ph="&lt;" />
-                <marker date="1551865036143" expanded="true" signature="9149:9153" ph="&gt;" />
+                <element signature="n#style#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>tipsdiv</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -106,8 +171,9 @@
         <option value="$PROJECT_DIR$/task/index.html" />
         <option value="$PROJECT_DIR$/task/js/common/app.js" />
         <option value="$PROJECT_DIR$/task/js/zepto.mdater.js" />
-        <option value="$PROJECT_DIR$/task/calendar.html" />
         <option value="$PROJECT_DIR$/task/css/zepto.mdater.css" />
+        <option value="$PROJECT_DIR$/task/calendar.html" />
+        <option value="$PROJECT_DIR$/task/test.html" />
       </list>
     </option>
   </component>
@@ -127,7 +193,7 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1936" />
+    <option name="width" value="1932" />
     <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -146,7 +212,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -173,27 +239,9 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="htmltask" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="task" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -207,7 +255,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="editorconfig.notification" value="Applied .editorconfig settings" />
-    <property name="DefaultHtmlFileTemplate" value="Html5" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="options.lastSelected" value="editor.preferences.appearance" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
@@ -220,17 +268,17 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\IdeaProjects\htmltask\task" />
-      <recent name="E:\IdeaProjects\htmltask\task\css" />
-      <recent name="E:\IdeaProjects\htmltask\task\js" />
-      <recent name="E:\IdeaProjects\htmltask\task\img" />
-      <recent name="E:\IdeaProjects\htmltask\myCa" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\admin\IdeaProjects\test\task" />
       <recent name="C:\Users\admin\IdeaProjects\test\images\task07" />
       <recent name="C:\Users\admin\IdeaProjects\test\src" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\IdeaProjects\htmltask\task\img" />
+      <recent name="E:\IdeaProjects\htmltask\task" />
+      <recent name="E:\IdeaProjects\htmltask\task\css" />
+      <recent name="E:\IdeaProjects\htmltask\task\js" />
+      <recent name="E:\IdeaProjects\htmltask\myCa" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -346,7 +394,9 @@
       <workItem from="1520990918095" duration="2496000" />
       <workItem from="1526967848116" duration="3795000" />
       <workItem from="1551857074516" duration="5548000" />
-      <workItem from="1551865209501" duration="1309000" />
+      <workItem from="1551865209501" duration="1505000" />
+      <workItem from="1581422533058" duration="2931000" />
+      <workItem from="1581484562401" duration="1487000" />
     </task>
     <task id="LOCAL-00001" summary="djy">
       <created>1513738994904</created>
@@ -600,21 +650,27 @@
       <option name="project" value="LOCAL" />
       <updated>1551866502712</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="djy">
+      <created>1551866720197</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1551866720197</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="129214000" />
+    <option name="totallyTimeSpent" value="133828000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1932" height="1056" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30400422" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3035903" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32911393" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -639,6 +695,7 @@
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -706,13 +763,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="3" column="30" lean-forward="false" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/task02.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -813,38 +863,20 @@
     <entry file="file://$PROJECT_DIR$/task/paySuccess.html" />
     <entry file="file://$PROJECT_DIR$/task/app.js" />
     <entry file="file://$PROJECT_DIR$/task/index.html" />
-    <entry file="file://$PROJECT_DIR$/task/js/common/app.js">
+    <entry file="file://$PROJECT_DIR$/task/js/common/app.js" />
+    <entry file="file://$PROJECT_DIR$/task/js/zepto.mdater.js" />
+    <entry file="file://$PROJECT_DIR$/task/css/zepto.mdater.css" />
+    <entry file="file://$PROJECT_DIR$/task/calendar.html" />
+    <entry file="file://$PROJECT_DIR$/task/test.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2760">
-          <caret line="92" column="0" lean-forward="false" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/task/js/zepto.mdater.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7003">
-          <caret line="468" column="60" lean-forward="true" selection-start-line="468" selection-start-column="60" selection-end-line="468" selection-end-column="60" />
+        <state relative-caret-position="439">
+          <caret line="77" column="22" lean-forward="true" selection-start-line="77" selection-start-column="22" selection-end-line="77" selection-end-column="22" />
           <folding>
-            <marker date="1551865036143" expanded="true" signature="8967:8971" ph="&lt;" />
-            <marker date="1551865036143" expanded="true" signature="9149:9153" ph="&gt;" />
+            <element signature="n#style#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/task/calendar.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="394">
-          <caret line="165" column="26" lean-forward="false" selection-start-line="165" selection-start-column="8" selection-end-line="165" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/task/css/zepto.mdater.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="497">
-          <caret line="130" column="33" lean-forward="false" selection-start-line="130" selection-start-column="33" selection-end-line="130" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
