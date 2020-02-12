@@ -79,10 +79,12 @@
         //判断手机上是否安装了app，如果安装直接打开，如果没安装，跳转到下载页面
         function openApp(url) {
             if (isAndroid) {
+                alert("是Android");
                 var timeout, t = 1000, hasApp = true;
                 var openScript = setTimeout(function () {
                     if (!hasApp) {
-                        var durl = "安卓同事提供下载地址";
+//                        var durl = "安卓同事提供下载地址";
+                        var durl = "https://fir.im/mwcp";
                         window.location.href = durl;
                     }
                     document.body.removeChild(ifr);
