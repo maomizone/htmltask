@@ -13,26 +13,7 @@
     <file url="file://$PROJECT_DIR$/music.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mycss.css" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/position.html" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/task/css/base.css" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/task/css/bootstrap-fileinput.css" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/task/css/bootstrap-theme.css" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/task/css/bootstrap.css" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/task/css/bootstrap.min.css" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/task/css/common.css" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/task/css/dateRange.css" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/task/css/daterangepicker-bs3.css" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/task/css/demo.css" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/task/css/font-awesome-ie7.min.css" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/task/css/font-awesome.css" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/task/css/help.css" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/task/css/index.css" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/task/css/iosOverlay.css" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/task/css/jquery-weui.min.css" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/task/css/pace-theme-barber-shop.css" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/task/css/style.css" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/task/css/toast.css" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/task/css/zepto.mdater.css" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/task/index.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/task/js/jquery-3.2.1.min.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/task02.html" charset="UTF-8" />
     <file url="PROJECT" charset="GBK" />
   </component>

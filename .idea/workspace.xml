@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ddd6af18-c37f-4057-88a2-c15fe42b7ac4" name="Default" comment="djy">
+    <list default="true" id="ddd6af18-c37f-4057-88a2-c15fe42b7ac4" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/js/jquery-3.2.1.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task/test.html" afterPath="$PROJECT_DIR$/task/test.html" />
     </list>
@@ -28,14 +30,23 @@
       <file leaf-file-name="test.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/task/test.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="19" selection-end-column="9" />
+            <state relative-caret-position="455">
+              <caret line="126" column="140" lean-forward="false" selection-start-line="126" selection-start-column="140" selection-end-line="126" selection-end-column="140" />
               <folding>
                 <element signature="n#style#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="jquery-3.2.1.min.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/task/js/jquery-3.2.1.min.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -55,6 +66,7 @@
       <find>micromessenger</find>
       <find>openScript</find>
       <find>id</find>
+      <find>t</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -195,10 +207,10 @@
       <recent name="C:\Users\admin\IdeaProjects\test\src" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\IdeaProjects\htmltask\task\js" />
       <recent name="E:\IdeaProjects\htmltask\task\img" />
       <recent name="E:\IdeaProjects\htmltask\task" />
       <recent name="E:\IdeaProjects\htmltask\task\css" />
-      <recent name="E:\IdeaProjects\htmltask\task\js" />
       <recent name="E:\IdeaProjects\htmltask\myCa" />
     </key>
   </component>
@@ -317,7 +329,7 @@
       <workItem from="1551857074516" duration="5548000" />
       <workItem from="1551865209501" duration="1505000" />
       <workItem from="1581422533058" duration="2931000" />
-      <workItem from="1581484562401" duration="3311000" />
+      <workItem from="1581484562401" duration="4821000" />
     </task>
     <task id="LOCAL-00001" summary="djy">
       <created>1513738994904</created>
@@ -606,11 +618,18 @@
       <option name="project" value="LOCAL" />
       <updated>1581487768998</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="djy">
+      <created>1581487879759</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1581487879759</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="135652000" />
+    <option name="totallyTimeSpent" value="137162000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1932" height="1056" extended-state="0" />
@@ -712,13 +731,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/task02.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="156" column="38" lean-forward="false" selection-start-line="156" selection-start-column="38" selection-end-line="156" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/task/task02.html" />
     <entry file="file://$PROJECT_DIR$/task/task04.html" />
     <entry file="file://$PROJECT_DIR$/task/task06.html" />
@@ -816,15 +828,22 @@
     <entry file="file://$PROJECT_DIR$/task/js/zepto.mdater.js" />
     <entry file="file://$PROJECT_DIR$/task/css/zepto.mdater.css" />
     <entry file="file://$PROJECT_DIR$/task/calendar.html" />
+    <entry file="file://$PROJECT_DIR$/task/js/jquery-3.2.1.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/task/test.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="19" selection-end-column="9" />
+        <state relative-caret-position="455">
+          <caret line="126" column="140" lean-forward="false" selection-start-line="126" selection-start-column="140" selection-end-line="126" selection-end-column="140" />
           <folding>
             <element signature="n#style#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
