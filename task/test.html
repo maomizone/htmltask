@@ -49,14 +49,15 @@
             setTimeout(function(){
                 var hidden = window.document.hidden || window.document.mozHidden || window.document.msHidden ||window.document.webkitHidden;
                 if(typeof hidden =="undefined" || hidden ==false){
-                    //应用宝下载地址
+                    // app下载地址
                     window.location.href ="https://fir.im/mwcp";
                 }
             }, 2000);
         }
         //这个是ios操作系统
         if (isIOS) {
-            var url = "scheme1://host1:8080/path1?query1=1&query2=true";
+            var url = "schemeDemo://host1:8080/path1?query1=1&query2=true";
+            alert(url);
             var timeout, t = 1000, hasApp = true;
             var openScript = setTimeout(function () {
                 if (!hasApp) {
