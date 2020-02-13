@@ -47,12 +47,15 @@
 
     //判断手机上是否安装了app，如果安装直接打开，如果没安装，跳转到下载页面
     function openApp() {
+        var timeOut;
         // 尝试打开 scheme
         if(isAndroid) {
             window.location.href = andScheme;
+            timeOut = 2000;
         }
         if(isIOS) {
             window.location.href = iosScheme;
+            timeOut = 3000;
         }
 
         // 设置2秒的定时下载任务，3秒之后下载app
@@ -63,7 +66,7 @@
             if(isIOS) {
                 window.location.href = iosDownload;
             }
-        }, 2000);
+        }, timeOut);
     }
 
     document.addEventListener('visibilitychange webkitvisibilitychange', function () {
@@ -75,14 +78,6 @@
     window.addEventListener('pagehide', function() {
         clearTimeout(downloader);
     });
-
-
-
-
-
-
-
-
 
 
 //        //这个是安卓操作系统
@@ -135,8 +130,9 @@
 </script>
 
 <body onload="load()"  style="height: 100%" id="body">
-<!--<a id='down' href="schemeDemo://host1:8080/path1?query1=1&query2=true" onclick="openApp()"><img height="120px" width="120px" src="./img/cat.png"></a>-->
-<a id='down' href="schemeDemo://host1:8080/path1?query1=1&query2=true"><img height="120px" width="120px" src="./img/cat.png"></a>
+<div id='down' onclick="openApp()"><img height="120px" width="120px" src="./img/cat.png"></div>
+<br/>
+<a href="schemeDemo://host1:8080/path1?query1=1&query2=true"><img height="120px" width="120px" src="./img/android.png"></a>
 
 <!--如果是微信内置浏览器会显示以下图标-->
 <div id="tipsdiv" class="wtips" style="display: none">
