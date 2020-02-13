@@ -58,26 +58,37 @@
         if (isIOS) {
             var url = "schemeDemo://host1:8080/path1?query1=1&query2=true";
             alert(url);
-            var timeout, t = 1000, hasApp = true;
-            var openScript = setTimeout(function () {
-                if (!hasApp) {
+
+            window.location.href = url;
+            setTimeout(function(){
+                var hidden = window.document.hidden || window.document.mozHidden || window.document.msHidden ||window.document.webkitHidden;
+                if(typeof hidden =="undefined" || hidden ==false){
+                    // app下载地址
                     var durl = "https://itunes.apple.com/us/app/zhe-jiang-yi-dong-shou-ji/id898243566#weixin.qq.com";
                     window.location.href = durl;
                 }
-                document.body.removeChild(ifr);
             }, 2000);
 
-            var t1 = Date.now();
-            var ifr = document.createElement("iframe");
-            ifr.setAttribute('src', url);
-            ifr.setAttribute('style', 'display:none');
-            document.body.appendChild(ifr);
-            timeout = setTimeout(function () {
-                var t2 = Date.now();
-                if (!t1 || t2 - t1 < t + 100) {
-                    hasApp = false;
-                }
-            }, t);
+//            var timeout, t = 1000, hasApp = true;
+//            var openScript = setTimeout(function () {
+//                if (!hasApp) {
+//                    var durl = "https://itunes.apple.com/us/app/zhe-jiang-yi-dong-shou-ji/id898243566#weixin.qq.com";
+//                    window.location.href = durl;
+//                }
+//                document.body.removeChild(ifr);
+//            }, 2000);
+//
+//            var t1 = Date.now();
+//            var ifr = document.createElement("iframe");
+//            ifr.setAttribute('src', url);
+//            ifr.setAttribute('style', 'display:none');
+//            document.body.appendChild(ifr);
+//            timeout = setTimeout(function () {
+//                var t2 = Date.now();
+//                if (!t1 || t2 - t1 < t + 100) {
+//                    hasApp = false;
+//                }
+//            }, t);
         }
     }
 </script>
