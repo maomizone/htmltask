@@ -33,7 +33,6 @@
     var isIOS;
     var downloader;
     var andScheme = 'scheme1://host1:8080/path1?query1=1&query2=true';  // 需要打开的app scheme 地址
-    var iosScheme = 'schemeDemo://host1:8080/path1?query1=1&query2=true';  // 需要打开的app scheme 地址
     var iosDownload='https://hxjdown.ychel.com/sycl';  // 如果打开scheme失效的app下载地址
     var andDownload = 'https://fir.im/mwcp';
 
@@ -71,8 +70,7 @@
             }, timeOut);
         }
         if(isIOS) {
-            window.location.href = iosScheme;
-            timeOut = 3000;
+            window.location.href = iosDownload;
         }
     }
 
