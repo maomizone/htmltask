@@ -14,10 +14,16 @@
             height:100%;
             z-index:100;
         }
-        .wtips img{
-            width:90%;
-            height:50%;
-            margin:1% 5%;
+        .wtips p{
+            font-size: 40px;
+            margin-top: 45%;
+            margin-left: 30%;
+        }
+        #down{
+            padding-top: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
     </style>
 
@@ -28,7 +34,7 @@
     var downloader;
     var andScheme = 'scheme1://host1:8080/path1?query1=1&query2=true';  // 需要打开的app scheme 地址
     var iosScheme = 'schemeDemo://host1:8080/path1?query1=1&query2=true';  // 需要打开的app scheme 地址
-    var iosDownload='https://itunes.apple.com/us/app/zhe-jiang-yi-dong-shou-ji/id898243566#weixin.qq.com';  // 如果打开scheme失效的app下载地址
+    var iosDownload='https://hxjdown.ychel.com/sycl';  // 如果打开scheme失效的app下载地址
     var andDownload = 'https://fir.im/mwcp';
 
     function load() {
@@ -42,6 +48,8 @@
         // 判断是否是微信内置浏览器，是就显示在浏览器中打开
         if (weixin) {
             document.getElementById("tipsdiv").style.display = "";
+            document.getElementById("tipsp").innerHTML= isIOS ? "请用Safari浏览器打开" : "请用其他浏览器打开";
+            document.getElementById("tipsp").innerHTML= "请用Safari浏览器打开";
         }
     }
 
@@ -52,31 +60,35 @@
         if(isAndroid) {
             window.location.href = andScheme;
             timeOut = 2000;
+
+            // 设置2秒的定时下载任务，2秒之后下载app
+            downloader = setTimeout(function(){
+                if(isAndroid) {
+                    window.location.href = andDownload;
+                }
+                if(isIOS) {
+                    window.location.href = iosDownload;
+                }
+            }, timeOut);
         }
         if(isIOS) {
             window.location.href = iosScheme;
             timeOut = 3000;
         }
-
-        // 设置2秒的定时下载任务，3秒之后下载app
-        downloader = setTimeout(function(){
-            if(isAndroid) {
-                window.location.href = andDownload;
-            }
-            if(isIOS) {
-                window.location.href = iosDownload;
-            }
-        }, timeOut);
     }
 
     document.addEventListener('visibilitychange webkitvisibilitychange', function () {
         // 如果页面隐藏，推测打开scheme成功，清除下载任务
         if (window.document.hidden || window.document.mozHidden || window.document.msHidden ||window.document.webkitHidden) {
-            clearTimeout(downloader);
+            if(downloader){
+                clearTimeout(downloader);
+            }
         }
     });
     window.addEventListener('pagehide', function() {
-        clearTimeout(downloader);
+        if(downloader){
+            clearTimeout(downloader);
+        }
     });
 
 
@@ -130,11 +142,11 @@
 </script>
 
 <body onload="load()"  style="height: 100%" id="body">
-<div id='down' onclick="openApp()"><img height="120px" width="120px" src="./img/cat.png"></div>
+<div id='down' onclick="openApp()"><img height="120px" width="120px" src="./img/cat.png"><span style="font-size: 26px">尚盈车联</span></div>
 
 <!--如果是微信内置浏览器会显示以下图标-->
 <div id="tipsdiv" class="wtips" style="display: none">
-    <img src="./img/android.png">
+    <p id="tipsp">请用其他浏览器打开</p>
 </div>
 </body>
 </html>
