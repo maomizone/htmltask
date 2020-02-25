@@ -31,10 +31,9 @@
 <script type="text/javascript">
     var isAndroid;
     var isIOS;
-    var downloader;
-    var andScheme = 'scheme1://host1:8080/path1?query1=1&query2=true';  // 需要打开的app scheme 地址
-    var iosDownload='https://hxjdown.ychel.com/sycl';  // 如果打开scheme失效的app下载地址
-    var andDownload = 'https://fir.im/mwcp';
+    var androidScheme = 'scheme1://host1:8080/path1?query1=1&query2=true';  // 需要打开的app scheme 地址
+    var iosDownload='https://hxjdown.ychel.com/sycl';  // ios下载地址
+    var androidDownload = 'https://fir.im/mwcp'; // 安卓下载地址
 
     function load() {
         var ua = window.navigator.userAgent.toLowerCase();
@@ -53,40 +52,22 @@
 
     //判断手机上是否安装了app，如果安装直接打开，如果没安装，跳转到下载页面
     function openApp() {
-        var timeOut;
         // 尝试打开 scheme
         if(isAndroid) {
-            window.location.href = andScheme;
-            timeOut = 2000;
-
-            // 设置2秒的定时下载任务，2秒之后下载app
-            downloader = setTimeout(function(){
-                if(isAndroid) {
-                    window.location.href = andDownload;
+            //安卓app的scheme协议
+            window.location.href = androidScheme;
+            setTimeout(function(){
+                var hidden = window.document.hidden || window.document.mozHidden || window.document.msHidden ||window.document.webkitHidden;
+                if(typeof hidden =="undefined" || hidden ==false){
+                    // app下载地址
+                    window.location.href =androidDownload;
                 }
-                if(isIOS) {
-                    window.location.href = iosDownload;
-                }
-            }, timeOut);
+            }, 2000);
         }
         if(isIOS) {
             window.location.href = iosDownload;
         }
     }
-
-    document.addEventListener('visibilitychange webkitvisibilitychange', function () {
-        // 如果页面隐藏，推测打开scheme成功，清除下载任务
-        if (window.document.hidden || window.document.mozHidden || window.document.msHidden ||window.document.webkitHidden) {
-            if(downloader){
-                clearTimeout(downloader);
-            }
-        }
-    });
-    window.addEventListener('pagehide', function() {
-        if(downloader){
-            clearTimeout(downloader);
-        }
-    });
 
 
 //        //这个是安卓操作系统
