@@ -118,7 +118,7 @@
 <script type="text/javascript">
     var str =location.search;
     var headUrl = str.getQuery("headUrl");
-    var name = decodeURI(str.getQuery("name"));
+    var name = decodeURIComponent(str.getQuery("name"));
 
     var isAndroid;
     var isIOS;
