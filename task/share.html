@@ -117,9 +117,9 @@
 </head>
 <script type="text/javascript">
     var str =location.search;
-    alert(str);
+//    str = "http://dev.5ycl.net:30008/htmls/share.html?headUrl=http://www.ychel.com:8000/getfile/head/38d73a5f0c2545af89651c9a8c62dada.jpeg&name=%E6%B5%8B%E8%AF%95%E8%B4%A6%E5%8F%B749&from=singlemessage";
     var headUrl = str.getQuery("headUrl");
-    var name = str.getQuery("name");
+    var name = str.split("?")[1].split("&")[1].split("=")[1];
     alert(name);
     var name = decodeURIComponent(name);
 
