@@ -121,7 +121,7 @@
     var headUrl = str.getQuery("headUrl");
     var name = str.split("?")[1].split("&")[1].split("=")[1];
     alert(name);
-    var name = decodeURIComponent(name);
+    var name = decodeURI(name);
 
     var isAndroid;
     var isIOS;
