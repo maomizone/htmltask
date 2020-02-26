@@ -2,8 +2,68 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ddd6af18-c37f-4057-88a2-c15fe42b7ac4" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/fonts/fontawesome-webfont.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/fonts/fontawesome-webfont.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/fonts/fontawesome-webfont.woff2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/fonts/glyphicons-halflings-regular.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/fonts/glyphicons-halflings-regular.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/fonts/glyphicons-halflings-regular.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/fonts/glyphicons-halflings-regular.woff2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/images/2x - 副本 (2).png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/images/2x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/images/3x - 副本 (2).png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/images/3x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/images/cha.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/images/cha_tri.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/images/fxjf-bg.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/images/head.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/images/hengxian.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/images/jiaoCha.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/images/lianghao.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/images/lianghao_tri.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/images/recommend.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/images/sfmx_01.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/images/sfmx_02.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/images/sfmx_03.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/images/share.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/images/ts.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/images/yb.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/images/youxiu-san.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/images/youxiu.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/images/youxiu_tri.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/images/zhongdeng.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/images/zhongdeng_tri.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/appointOuttimePay.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/chart.meter.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/css/bootstrap-theme.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/css/bootstrap-theme.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/css/bootstrap.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/css/bootstrap.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/fonts/fontawesome-webfont.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/fonts/glyphicons-halflings-regular.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/gxxy.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/gywm.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/jquery-3.2.1.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/js/chart.meter.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/js/tool.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/ljf.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/lxwm.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/memberProtocol.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/pointsNote.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/rechargeProtocol.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/recommend.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/share.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/ssf.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/tool.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/yejf.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/yhxy.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/zlxy.html" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/task/img/android.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/task/img/cat.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/task/img/ios.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/task/test.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task/test.html" afterPath="$PROJECT_DIR$/task/test.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task/js/jquery-3.2.1.min.js" afterPath="$PROJECT_DIR$/task/js/jquery-3.2.1.min.js" />
     </list>
     <ignored path="test.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,33 +84,7 @@
     <favorites_list name="test" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="test.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/task/test.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="514">
-              <caret line="36" column="40" lean-forward="false" selection-start-line="36" selection-start-column="40" selection-end-line="36" selection-end-column="40" />
-              <folding>
-                <element signature="n#style#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="jquery-3.2.1.min.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/task/js/jquery-3.2.1.min.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -170,6 +204,78 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="task" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="htmltask" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="task" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="htmltask" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="task" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="htmltask" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="task" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fonts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="htmltask" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="task" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -335,14 +441,8 @@
       <workItem from="1581907892273" duration="1246000" />
       <workItem from="1582358719419" duration="4350000" />
       <workItem from="1582547967805" duration="642000" />
-      <workItem from="1582598217674" duration="3073000" />
-    </task>
-    <task id="LOCAL-00008" summary="djy">
-      <created>1513747137486</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1513747137486</updated>
+      <workItem from="1582598217674" duration="6736000" />
+      <workItem from="1582694666811" duration="3007000" />
     </task>
     <task id="LOCAL-00009" summary="djy">
       <created>1514275472244</created>
@@ -680,18 +780,24 @@
       <option name="project" value="LOCAL" />
       <updated>1582600516103</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="djy">
+      <created>1582601988118</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1582601988118</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="158891000" />
+    <option name="totallyTimeSpent" value="165561000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3024236" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3024236" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32911393" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -922,25 +1028,20 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/task/syclIosDownloader.html" />
+    <entry file="file://$PROJECT_DIR$/task/test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3364">
+          <caret line="132" column="0" lean-forward="true" selection-start-line="132" selection-start-column="0" selection-end-line="132" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/task/js/jquery-3.2.1.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/task/syclIosDownloader.html" />
-    <entry file="file://$PROJECT_DIR$/task/test.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="514">
-          <caret line="36" column="40" lean-forward="false" selection-start-line="36" selection-start-column="40" selection-end-line="36" selection-end-column="40" />
-          <folding>
-            <element signature="n#style#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
