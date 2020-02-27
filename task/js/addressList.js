@@ -43,10 +43,29 @@ $(function() {
         mounted: function () {
             this.personsShow = this.personsAll.clone();
 
-            get_organize_name(this);
+            // get_organize_name(this);
 
             if(type == 0){
-                service_mail_list(this);
+                // service_mail_list(this);
+                this.personsAll = [
+                    {serviceUserName:"张三"},{serviceUserName:"李四"},
+                    {serviceUserName:"王五"},{serviceUserName:"网六"},
+                    {serviceUserName:"第三个感受到"},{serviceUserName:"版本"},
+                    {serviceUserName:"第三个感受到"},{serviceUserName:"正在"},
+                    {serviceUserName:"第三个感受到"},{serviceUserName:"吧v"},
+                    {serviceUserName:"感受到"},{serviceUserName:"预约"},
+                    {serviceUserName:"三个感受到"},{serviceUserName:"看看"},
+                    {serviceUserName:"个感受到"},{serviceUserName:"都是"},
+                    {serviceUserName:"感受到"},{serviceUserName:"什么"},
+                    {serviceUserName:"呵呵"},{serviceUserName:"shemale"},
+                    ];
+                this.personsShow = this.personsAll.clone();
+
+                console.log(this.personsAll.length)
+                $(function() {
+                    initials();
+                    getSpiner();
+                });
             }
             else if(type == 1){
                 service_admin_cc_list(this);
