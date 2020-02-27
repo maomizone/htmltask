@@ -14,7 +14,9 @@ var type = 0;
 var serviceUserID = "001038b9-0000-0000-0000-0000add4f9ca";
 var organizeOID = "000bef06-0000-0003-0000-0000a0547eef";
 // var departID = "0006c839-0000-0003-0000-00000a870718";
-setUrl("http://222.185.244.186:8401/App/jkgl/BusinessUnit/MerchantInterface/", "http://222.185.244.186:8401");
+setUrl("http://syclhxf.zhyinfo.cn/hxfwebsh_demo/App/jkgl/BusinessUnit/MerchantInterface/", "http://syclhxf.zhyinfo.cn/hxfwebsh_demo");
+
+
 
 
 if(stringIsBlank(type)){
