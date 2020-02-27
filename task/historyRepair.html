@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta charset="UTF-8" />
+    <title>历史维修</title>
+
+    <!--css-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/app.css">
+    <!--加载框-->
+    <link rel="stylesheet" href="css/iosOverlay.css">
+    <!--吐司-->
+    <link rel="stylesheet" href="css/toast.css">
+
+    <!--js-->
+    <script src="js/util/jquery-3.2.1.min.js"></script>
+    <script src="js/util/bootstrap.min.js"></script>
+    <!--加载框-->
+    <script src="js/util/spin.min.js"></script>
+    <script src="js/util/jquery.spin.js"></script>
+    <script src="js/util/iosOverlay.js"></script>
+    <!--吐司-->
+    <script src="js/util/toast.js"></script>
+    <!--vue-->
+    <script src="js/util/vue.min.js"></script>
+    <script src="js/common/component.js"></script>
+    <!--custom-->
+    <script src="js/common/app.js"></script>
+    <script src="js/common/tool.js"></script>
+    <script src="js/repair.js"></script>
+
+    <style type="text/css">
+        body{
+            width: 100%;
+            height:100%;
+            background-color: #f2f2f2;
+        }
+        .appoint-info{
+            background-color: white;
+        }
+        .appoint-info-1{
+            box-sizing: border-box;
+            padding: 5px 12px 1px 12px;
+            display: flex;
+        }
+        appoint-info-1 span{
+            display: inline-block;
+        }
+        .appoint-info-1 .left{
+            width: 45%;
+        }
+        .appoint-info-1 .right{
+            width: 45%;
+        }
+        .orange-block{
+            display: inline-block;
+            width: 10px;
+            height: 100%;
+            background-color: #FF9000;
+        }
+        .yellow-block{
+            display: inline-block;
+            width: 10px;
+            height: 100%;
+            background-color: #FFD100;
+        }
+        #repairHistory{
+            background-color: white;padding: 12px
+        }
+        #repairHistory:active{
+            background-color: #f8f8f8;
+        }
+    </style>
+</head>
+<body>
+<div id="repair" v-cloak>
+
+    <header class="title-bar">
+        <div @click="back()" class="title-bar-left"><span>返回</span></div>
+        <div class="title-bar-center">
+            <span class="title-bar-title">历史维修</span>
+        </div>
+        <div class="title-bar-right">
+        </div>
+    </header>
+    <div class="content">
+        <!--服务信息-->
+        <div class="title">
+            <span class="font font-26-666">服务信息</span>
+        </div>
+        <div class="appoint-info">
+            <div class="appoint-info-1">
+                <div class="left">
+                    <p class="font font-24-aaa">车辆类别</p>
+                    <p class="font font-30-333 ml12">{{serviceInfo.carKindName}}</p>
+                </div>
+                <div style="float:left;width: 1px;height: 35px; background: #f2f2f2;margin: 5px 12px"></div>
+                <div class="right">
+                    <p class="font font-24-aaa">车辆身份</p>
+                    <p class="font font-30-orange ml12">{{serviceInfo.AgreementName}}</p>
+                </div>
+            </div>
+            <divider></divider>
+
+            <div class="appoint-info-1">
+                <div class="left">
+                    <p class="font font-24-aaa">当前里程</p>
+                    <p class="font font-30-333 ml12">{{serviceInfo.nowMileage}}km</p>
+                </div>
+                <div style="float:left;width: 1px;height: 35px; background: #f2f2f2;margin: 5px 12px"></div>
+                <div class="right" style="word-wrap: break-word">
+                    <p class="font font-24-aaa">上次保养里程（时间）</p>
+                    <p v-if="serviceInfo.lastTime"  class="font font-30-333 ml12">{{serviceInfo.lastMileage + "km（" + serviceInfo.lastTime + "）"}}</p>
+                    <p v-if="!serviceInfo.lastTime" class="font font-30-333 ml12">{{serviceInfo.lastMileage + "km"}}</p>
+                </div>
+            </div>
+            <divider></divider>
+
+            <div class="appoint-info-1">
+                <div class="left">
+                    <p class="font font-24-aaa">服务内容</p>
+                    <p class="font font-30-333 ml12">{{serviceInfo.name}}</p>
+                </div>
+                <div style="float:left;width: 1px;height: 35px; background: #f2f2f2;margin: 5px 12px"></div>
+                <div class="right">
+                    <p id="serviceName" class="font font-24-aaa">服务时间</p>
+                    <p id="serviceTime" class="font font-30-333 ml12">{{serviceInfo.serviceTime}}</p>
+                </div>
+            </div>
+
+            <divider></divider>
+
+            <div class="appoint-info-1">
+                <div class="left">
+                    <p class="font font-24-aaa">客户接待</p>
+                    <p class="font font-30-333 ml12">{{serviceInfo.customName}}</p>
+                </div>
+                <div style="float:left;width: 1px;height: 30px; background: #f2f2f2;margin: 5px 12px"></div>
+                <div class="right">
+                    <p id="kehuDaibiao" class="font font-24-aaa">高级技师</p>
+                    <p id="jishi" class="font font-30-333 ml12" >{{serviceInfo.personName? serviceInfo.personName :"无"}}</p>
+                </div>
+            </div>
+        </div>
+
+        <!--维修及预检项目-->
+        <div class="title">
+            <span class="font font-26-666">维修及预检项目</span>
+        </div>
+        <div id="repairHistory" @click="lookRepairRecords()">
+            <span class="font font-28-333">维修记录</span>
+            <img src="img/right.png" style="float: right;width: 18px">
+        </div>
+
+        <!--服务明细-->
+        <div class="title">
+            <span class="font font-26-666">服务明细</span>
+        </div>
+
+        <div style="background-color: white;padding: 12px">
+            <strong class="font font-28-333">{{orderInfo.companyName}}</strong>
+        </div>
+        <divider></divider>
+
+        <!--服务/商品列表-->
+        <div>
+            <div v-if="repairInfo.serviceList && repairInfo.serviceList.length>0">
+                <template v-for="item in repairInfo.serviceList">
+
+                    <div v-if="!(item.serviceName== null || item.serviceName == undefined || item.serviceName == '')"  style="background-color: white;height: 30px;display: flex;align-items: center">
+                        <span class="yellow-block"></span>
+                        <span class="font font-28-333 ml8">{{item.serviceName}}</span>
+                    </div>
+
+
+                    <div v-if="item.projectList && item.projectList.length>0">
+                        <template v-for="project in item.projectList">
+                            <project-template v-bind:project="project" v-bind:member="repairInfo.isMember"></project-template>
+
+
+                            <div v-if="project.productList && project.productList.length>0">
+                                <template v-for="good in project.productList">
+                                    <product-template v-bind:product="good" v-bind:member="repairInfo.isMember"></product-template>
+                                </template>
+                            </div>
+                        </template>
+                    </div>
+
+                </template>
+            </div>
+
+            <div v-if="repairInfo.productList && repairInfo.productList.length>0">
+
+                <div style="background-color: white;height: 30px;display: flex;align-items: center">
+                    <span class="orange-block"></span>
+                    <span class="font font-28-333 ml8">商品</span>
+                </div>
+                <template v-for="good in repairInfo.productList">
+                    <product-template v-bind:product="good" v-bind:member="repairInfo.isMember"></product-template>
+                </template>
+            </div>
+        </div>
+
+        <!--价格-->
+        <charge2-template v-if="!isNaN(repairInfo.allMoney)" v-bind:info="repairInfo"></charge2-template>
+
+        <!--支付方式-->
+        <!--<paytype-template v-if="!isNaN(repairInfo.payType)" v-bind:paytype="repairInfo.payType"></paytype-template>-->
+
+        <space></space>
+
+        <!--收费明细-->
+        <charge-template v-if="!isNaN(repairInfo.productMoneys)" v-bind:info="repairInfo" v-bind:state="1"></charge-template>
+
+    </div>
+
+
+
+    <footer>
+        <div style="padding: 12px;">
+            <div>
+                <span class="font font-26-666">订单编号:</span>
+                <span class="font font-26-666">{{orderInfo.orderNumber}}</span>
+            </div>
+            <div>
+                <span class="font font-26-666">创建时间:</span>
+                <span class="font font-26-666">{{orderInfo.createTime}}</span>
+            </div>
+            <div v-if="orderInfo.payTime">
+                <span class="font font-26-666">付款时间:</span>
+                <span class="font font-26-666">{{orderInfo.payTime}}</span>
+            </div>
+            <div v-if="orderInfo.remark">
+                <span class="font font-26-666">交易号:</span>
+                <span class="font font-26-666">{{orderInfo.remark}}</span>
+            </div>
+        </div>
+    </footer>
+
+
+</div>
+
+</body>
+</html>

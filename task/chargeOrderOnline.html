@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta charset="UTF-8" />
+    <title>线上维修美容结算单</title>
+
+    <!--css-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/app.css">
+    <!--加载框-->
+    <link rel="stylesheet" href="css/iosOverlay.css">
+    <!--吐司-->
+    <link rel="stylesheet" href="css/toast.css">
+
+    <!--js-->
+    <script src="js/util/jquery-3.2.1.min.js"></script>
+    <script src="js/util/bootstrap.min.js"></script>
+    <!--加载框-->
+    <script src="js/util/spin.min.js"></script>
+    <script src="js/util/jquery.spin.js"></script>
+    <script src="js/util/iosOverlay.js"></script>
+    <!--吐司-->
+    <script src="js/util/toast.js"></script>
+    <!--签名-->
+    <script type="text/javascript" src="js/util/jSignature.js"></script>
+    <!--vue-->
+    <script src="js/util/vue.min.js"></script>
+    <script src="js/common/component.js"></script>
+    <!--custom-->
+    <script src="js/common/app.js"></script>
+    <script src="js/common/tool.js"></script>
+    <script src="js/chargeOrderOnline.js"></script>
+
+    <style type="text/css">
+        body{
+            width: 100%;
+            height:100%;
+            background-color: #f2f2f2;
+        }
+        footer .bottom{
+            z-index: 102;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            background-color: white;
+        }
+        .orange-block{
+            display: inline-block;
+            width: 10px;
+            height: 100%;
+            background-color: #FF9000;
+        }
+        .yellow-block{
+            display: inline-block;
+            width: 6px;
+            height: 70%;
+            margin-left: 12px;
+            margin-right: 8px;
+            background-color: #FFD100;
+        }
+
+    </style>
+</head>
+<body>
+<div id="chargeOrderOnline" v-cloak>
+    <header class="title-bar">
+        <div @click="back()" class="title-bar-left"><span>返回</span></div>
+        <div class="title-bar-center">
+            <span class="title-bar-title">结算单</span>
+        </div>
+        <div class="title-bar-right">
+        </div>
+    </header>
+
+    <div class="content">
+        <div v-if="payInfo.AgreementName" style="padding:8px 12px;background-color: #FFD100">
+            <strong class="font font-30-333">当前车辆身份：{{payInfo.AgreementName}}</strong>
+        </div>
+        <div style="padding:8px 12px;background-color: #F2F2F2">
+            <strong class="font font-30-333">{{payInfo.componyName}}</strong>
+        </div>
+        <divider></divider>
+
+        <!--线上订单-->
+        <div v-if="onlineService">
+            <div v-if="onlineService.orderServiceList && onlineService.orderServiceList.length>0">
+                <template v-for="item in onlineService.orderServiceList">
+                    <div v-if="!(item.serviceName== null || item.serviceName == undefined || item.serviceName == '')"  style="background-color: white;height: 30px;display: flex;align-items: center">
+                        <span class="font font-30-333 ml12">{{item.serviceName}}</span>
+                    </div>
+
+                    <div v-if="item.projectList && item.projectList.length>0">
+                        <template v-for="project in item.projectList">
+                            <project-template v-bind:project="project"></project-template>
+                        </template>
+                    </div>
+
+                    <div v-if="item.productList && item.productList.length>0">
+                        <template v-for="product in item.productList">
+                            <product-template v-bind:product="product"></product-template>
+                        </template>
+                    </div>
+                </template>
+            </div>
+
+            <div style="background-color: white;padding: 12px;display: flex;align-items: center">
+                <div style="flex: 1">
+                    <span>共{{onlineService.serviceNum}}项服务，合计<strong class="font-22-orange" style="font-size: 1.5em" >￥{{parseFloat(onlineService.money).toFixed(2)}}</strong>(含运费￥0.00)</span>
+                </div>
+                <span v-if="onlineService.payState == 0" class="font font-30-red">待支付</span>
+                <span v-if="onlineService.payState == 1" class="font font-30-orange">已支付</span>
+            </div>
+        </div>
+
+        <!--线下订单-->
+        <div v-if="offlineService">
+            <space></space>
+
+            <div style="background-color: white;padding: 12px;display: flex;align-items: center">
+                <strong style="flex: 1" class="font font-30-333">线下服务</strong>
+                <span v-if="offlineService.payState == 0" class="font font-30-red">待支付</span>
+                <span v-if="offlineService.payState == 1" class="font font-30-orange">已支付</span>
+            </div>
+            <divider></divider>
+
+            <div v-if="offlineService.projectList && offlineService.projectList.length>0">
+                <template v-for="project in offlineService.projectList">
+                    <project-template v-bind:project="project"></project-template>
+                    <div v-if="project.productList && project.productList.length>0">
+                        <template v-for="good in project.productList">
+                            <product-template v-bind:product="good"></product-template>
+                        </template>
+                    </div>
+                </template>
+            </div>
+
+            <!--商品-->
+            <div v-if="offlineService.productList && offlineService.productList.length>0">
+
+                <div style="background-color: white;height: 30px;display: flex;align-items: center">
+                    <span class="font font-28-333 ml12">商品</span>
+                </div>
+                <template v-for="product in offlineService.productList">
+                    <product-template v-bind:product="product"></product-template>
+                </template>
+            </div>
+
+            <!--收费明细-->
+            <charge-template-online v-bind:info="offlineService" v-bind:state="payInfo.state"></charge-template-online>
+        </div>
+
+        <!--订单编号等-->
+        <div style="display: flex;flex-direction: column;padding: 12px">
+            <span class="font font-26-666">订单编号：{{payInfo.orderCode}}</span>
+            <span class="font font-26-666 mt6">创建时间：{{payInfo.createTime}}</span>
+
+            <div v-if="payInfo && payInfo.payList && payInfo.payList.length > 0" style="display: flex;flex-direction: column;">
+                <template v-for="item in payInfo.payList">
+                    <span class="font font-26-666 mt6">付款时间：{{item.payTime}}</span>
+                    <span v-if="item.payCode" class="font font-26-666 mt6">{{item.payType + "交易号：" + item.payCode}}</span>
+                </template>
+            </div>
+        </div>
+
+        <!--客户授权-->
+        <div v-if="payInfo.authorizeWay == 1 || payInfo.authorizeWay == 2" style="margin-top: 12px;background-color: white">
+            <div style="padding: 8px 12px">
+                <span class="font font-28-333">客户授权</span>
+                <span v-if="payInfo.authorizeWay==1" class="font font-28-333" style="float: right;">扫码授权成功</span>
+                <span v-if="payInfo.authorizeWay==2" class="font font-28-333" style="float: right;">签字授权成功</span>
+            </div>
+        </div>
+
+        <!--占位-->
+        <div style="height: 108px"></div>
+    </div>
+
+    <!--状态（0:部分支付,1:已支付）-->
+    <footer v-if="payInfo.state == 0">
+        <div class="bottom">
+            <!--完成派工-->
+            <divider></divider>
+            <div style="display: flex;align-items: center;height: 60px;margin-left: 16px;width: 100%">
+                <div style="flex:1;display: flex;flex-direction:column;justify-content:center;height: 100%;">
+                    <div>
+                        <strong class="font font-30-333">应付总计：</strong>
+                        <strong class="font font-30-red">￥{{parseFloat(offlineService.realMoney).toFixed(2)}}</strong>
+                    </div>
+                    <span class="font font-24-999">包含工时/安装费</span>
+                </div>
+
+                <div style="width: 125px; height:100%;display: flex;align-items: center;justify-content: center;background-color: #FFD100">
+                    <span class="font font-30-333 mr6" >部分支付</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</div>
+
+</body>
+</html>

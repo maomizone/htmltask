@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="zh-cn" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta charset="UTF-8" />
+    <title>维修单详情</title>
+
+    <!--css-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/app.css">
+    <!--加载框-->
+    <link rel="stylesheet" href="css/iosOverlay.css">
+    <!--吐司-->
+    <link rel="stylesheet" href="css/toast.css">
+
+    <!--js-->
+    <script src="js/util/jquery-3.2.1.min.js"></script>
+    <script src="js/util/bootstrap.min.js"></script>
+    <!--加载框-->
+    <script src="js/util/spin.min.js"></script>
+    <script src="js/util/jquery.spin.js"></script>
+    <script src="js/util/iosOverlay.js"></script>
+    <!--吐司-->
+    <script src="js/util/toast.js"></script>
+    <!--签名-->
+    <script type="text/javascript" src="js/util/jSignature.js"></script>
+    <!--vue-->
+    <script src="js/util/vue.min.js"></script>
+    <script src="js/common/component.js"></script>
+    <!--custom-->
+    <script src="js/common/app.js"></script>
+    <script src="js/common/tool.js"></script>
+    <script src="js/repairOrderDetail.js"></script>
+
+    <style type="text/css">
+        body{
+            width: 100%;
+            height:100%;
+            background-color: #f2f2f2;
+        }
+        .appoint-info{
+            background-color: white;
+        }
+        .appoint-info-1{
+            box-sizing: border-box;
+            padding: 5px 12px 1px 12px;
+            display: flex;
+        }
+        appoint-info-1 span{
+            display: inline-block;
+        }
+        .appoint-info-1 .left{
+            width: 47%;
+        }
+        .orange-block{
+            display: inline-block;
+            width: 10px;
+            height: 100%;
+            background-color: #FF9000;
+        }
+        .yellow-block{
+            display: inline-block;
+            width: 6px;
+            height: 70%;
+            margin-left: 12px;
+            margin-right: 8px;
+            background-color: #FFD100;
+        }
+        .sign{
+            padding: 12px;
+            width: 100%;
+            background-color: white;
+        }
+        .jSignature {
+            height: 200px!important;
+            border: 1px solid gainsboro!important;
+
+        }
+        .btn-container{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            margin-top: 16px;
+        }
+        .btn-container button:nth-of-type(1){
+            flex:1;
+            background-color: white;
+            color: #999;
+            border-color:#999;
+        }
+        .btn-container button:nth-of-type(2){
+            flex:2;
+            color: #333;
+            background-color: #FFD100;
+            border-color: #FFD100;
+        }
+    </style>
+</head>
+<body>
+<div id="repairOrder" v-cloak>
+
+    <header class="title-bar">
+        <div @click="back()" class="title-bar-left"><span>返回</span></div>
+        <div class="title-bar-center">
+            <span class="title-bar-title">结算单</span>
+        </div>
+        <div class="title-bar-right">
+        </div>
+    </header>
+    <div class="content">
+        <!--客户信息-->
+        <div class="title">
+            <span class="font font-26-666">客户信息</span>
+        </div>
+
+        <div  style="height: 80px;background-color: white;display: flex;align-items: center">
+
+            <div style="display: flex;flex-direction: column;width: 25%;align-items: center">
+                <img v-if="appointInfo.carInfo.carPic" style="width: 35px" v-bind:src="appointInfo.carInfo.carPic">
+                <img v-if="!appointInfo.carInfo.carPic" src="img/default.png" style="width: 35px" >
+                <span class="font font-26-333 mt6">{{appointInfo.carInfo.autoModelsName}}</span>
+            </div>
+
+            <div style="float:left;width: 1px;height: 55px; background: #f2f2f2;margin: 5px 12px"></div>
+
+            <div style="display: flex;flex-direction: column;margin-left: 12px;">
+                <div>
+                    <span class="font font-26-333">{{appointInfo.carInfo.plateNumber}}</span>
+                    <!--<span class="font font-26-333 ml8">2上海大众</span>-->
+                </div>
+                <div class="mt8" >
+                    <span class="font font-24-999">{{appointInfo.carInfo.carNote}}</span>
+                </div>
+
+            </div>
+        </div>
+
+        <divider></divider>
+
+        <div class="appoint-info">
+            <div class="appoint-info-1">
+                <div class="left">
+                    <p class="font font-24-aaa">客户姓名</p>
+                    <p class="font font-30-333 ml12">{{appointInfo.carInfo.userName}}</p>
+                </div>
+                <div style="float:left;width: 1px;height: 35px; background: #f2f2f2;margin: 5px 12px"></div>
+                <div class="right">
+                    <p id="serviceName" class="font font-24-aaa">联系方式</p>
+                    <p id="serviceTime" class="font font-30-333 ml12">{{appointInfo.carInfo.telephone}}</p>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!--服务明细-->
+
+        <div style="padding: 12px">
+            <strong class="font font-28-333">{{appointInfo.companyName}}</strong>
+        </div>
+        <divider></divider>
+
+        <!--服务/商品列表-->
+        <div>
+            <div v-if="appointInfo.serviceList && appointInfo.serviceList.length>0">
+                <template v-for="item in appointInfo.serviceList">
+
+                    <div v-if="!(item.serviceName== null || item.serviceName == undefined || item.serviceName == '')"  style="background-color: white;height: 30px;display: flex;align-items: center">
+                        <span class="yellow-block"></span>
+                        <span class="font font-28-333">{{item.serviceName}}</span>
+                    </div>
+
+
+                    <div v-if="item.projectList && item.projectList.length>0">
+                        <template v-for="project in item.projectList">
+                            <project-template v-bind:project="project"></project-template>
+
+
+                            <div v-if="project.productList && project.productList.length>0">
+                                <template v-for="good in project.productList">
+                                    <product-template v-bind:product="good"></product-template>
+                                </template>
+                            </div>
+                        </template>
+                    </div>
+
+                </template>
+            </div>
+
+            <div v-if="appointInfo.productList && appointInfo.productList.length>0">
+
+                <div style="background-color: white;height: 30px;display: flex;align-items: center">
+                    <span class="orange-block"></span>
+                    <span class="font font-28-333 ml8">商品</span>
+                </div>
+                <template v-for="good in appointInfo.productList">
+                    <product-template v-bind:product="good"></product-template>
+                </template>
+            </div>
+        </div>
+
+
+        <!--收费明细-->
+        <div v-if="appointInfo" style="background-color: white;margin-top: 12px">
+
+            <div style="padding:8px 12px;">
+                <span class="font font-26-333">成本总计</span>
+                <span class="font font-26-333" style="float: right">￥{{parseFloat(appointInfo.payInfo.costMoney).toFixed(2)}}</span>
+            </div>
+            <divider></divider>
+            <div style="padding:8px 12px;">
+                <span class="font font-26-333">业务金额</span>
+                <span class="font font-26-333" style="float: right">￥{{parseFloat(appointInfo.payInfo.productMoneys).toFixed(2)}}</span>
+            </div>
+            <divider></divider>
+            <div>
+                <div style="padding:8px 12px;">
+                    <span class="font font-26-333">客户优惠</span>
+                    <span class="font font-26-333" style="float: right">-￥{{parseFloat(appointInfo.payInfo.discountMoney).toFixed(2)}}</span>
+                </div>
+                <divider></divider>
+            </div>
+
+            <div style="padding:8px 12px;">
+                <span class="font font-26-333">客户应付</span>
+                <span class="font font-26-red" style="float: right">￥{{parseFloat(appointInfo.payInfo.payMoney).toFixed(2)}}</span>
+            </div>
+            <divider></divider>
+            <div @click="card()" style="padding:8px 12px;">
+                <span class="font font-26-333">客户卡券</span>
+                <div style="float: right">
+                    <span class="font font-26-red">{{appointInfo.payInfo.cardNum}}张卡券</span>
+                    <img src="img/right.png" style="width: 12px">
+                </div>
+            </div>
+            <divider></divider>
+            <div style="padding:8px 12px;">
+                <span class="font font-26-333">项目提成</span>
+                <span class="font font-26-333" style="float: right">-￥{{parseFloat(appointInfo.payInfo.bonusMoney).toFixed(2)}}</span>
+            </div>
+            <divider></divider>
+
+            <div v-if="appointInfo.payInfo.specialMoney!=0">
+                <div style="padding:8px 12px;">
+                    <span class="font font-26-333">特批优惠金额</span>
+                    <span class="font font-26-333" style="float: right">-￥{{parseFloat(appointInfo.payInfo.specialMoney).toFixed(2)}}</span>
+                </div>
+                <divider></divider>
+            </div>
+
+        </div>
+
+
+</div>
+
+</div>
+
+</body>
+</html>

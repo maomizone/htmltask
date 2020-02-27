@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-cn" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta charset="UTF-8" />
+    <title>领料记录</title>
+    <!--css-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/app.css">
+    <!--加载框-->
+    <link rel="stylesheet" href="css/iosOverlay.css">
+    <!--吐司-->
+    <link rel="stylesheet" href="css/toast.css">
+
+    <!--js-->
+    <script src="js/util/jquery-3.2.1.min.js"></script>
+    <script src="js/util/bootstrap.min.js"></script>
+    <!--加载框-->
+    <script src="js/util/spin.min.js"></script>
+    <script src="js/util/jquery.spin.js"></script>
+    <script src="js/util/iosOverlay.js"></script>
+    <!--吐司-->
+    <script src="js/util/toast.js"></script>
+    <!--vue-->
+    <script src="js/util/vue.min.js"></script>
+    <script src="js/common/component.js"></script>
+    <!--custom-->
+    <script src="js/common/app.js"></script>
+    <script src="js/common/tool.js"></script>
+    <script src="js/pickingRecords.js"></script>
+
+
+
+    <style type="text/css">
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            width: 100%;
+            height:100%;
+            background-color: #f2f2f2;
+        }
+        .content .top-bar{
+            padding: 12px;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            height: 35px;
+        }
+        .content .top-bar-fix{
+            position: fixed;
+            top:48px;
+            width: 100%;
+        }
+        .content .top-bar span{
+            flex: 2;
+        }
+        .content .top-bar span:last-of-type{
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+        footer .bottom{
+            z-index: 5;
+            position: fixed;
+
+            width: 100%;
+            bottom: 0;
+            background-color: white;
+            height: 35px;
+        }
+        footer .bottom .bottom2{
+            display: flex;
+            height: 35px;
+            padding-right: 12px;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+    </style>
+</head>
+<body>
+<div id="pickingRecords" v-cloak>
+
+    <header class="title-bar">
+        <div @click="back()" class="title-bar-left"><span>返回</span></div>
+        <div class="title-bar-center">
+            <span class="title-bar-title">领料记录</span>
+        </div>
+        <div class="title-bar-right">
+        </div>
+    </header>
+
+    <div class="content">
+        <div class="top-bar-fix">
+            <div class="top-bar" style="background-color: #f2f2f2">
+                <span class="font font-26-333" style="flex: 1.4;">领料时间</span>
+                <span class="font font-26-333" style="flex: 1.8;">商品编号</span>
+                <span class="font font-26-333" style="flex: 1.8;">商品名称</span>
+                <span class="font font-26-333" style="flex: 0.6;">数量</span>
+            </div>
+            <divider></divider>
+        </div>
+
+        <div style="margin:35px 0  45px 0" v-if="pickingList && pickingList.length > 0">
+            <template v-for="item in pickingList">
+                <div class="top-bar" @click="itemClick(item)" style="height: 75px">
+                    <span class="font font-26-999" style="flex: 1.4;">{{item.pickingTime}}</span>
+                    <span class="font font-26-999" style="flex: 1.8;">{{item.productNumber}}</span>
+                    <span class="font font-26-999" style="flex: 1.8;">{{item.productName}}</span>
+                    <span class="font font-26-999" style="flex: 0.6;">{{item.productNum ? parseFloat(item.productNum).toFixed(2) : 0}}</span>
+                </div>
+                <div v-if="item.pickingNum>1" style="background-color: white;display: flex;justify-content: center">
+                    <span class="font font-22-333">还有其他{{item.pickingNum - 1}}种商品</span>
+                </div>
+                <divider></divider>
+            </template>
+        </div>
+
+
+    </div>
+
+    <footer>
+        <div class="bottom">
+            <divider></divider>
+            <div class="bottom2">
+                <span class="font font-26-333">总领取数量：</span>
+                <span class="font font-26-333">{{allNum ? parseFloat(allNum).toFixed(2) : 0}}</span>
+            </div>
+        </div>
+
+    </footer>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="zh-cn" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta charset="UTF-8">
+    <title>特批优惠</title>
+
+    <!--css-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/app.css">
+    <!--加载框-->
+    <link rel="stylesheet" href="css/iosOverlay.css">
+    <!--吐司-->
+    <link rel="stylesheet" href="css/toast.css">
+    <!--弹出框-->
+    <link rel="stylesheet" href="css/dialog.css">
+
+    <!--js-->
+    <script src="js/util/jquery-3.2.1.min.js"></script>
+    <script src="js/util/bootstrap.min.js"></script>
+    <!--加载框-->
+    <script src="js/util/spin.min.js"></script>
+    <script src="js/util/jquery.spin.js"></script>
+    <script src="js/util/iosOverlay.js"></script>
+    <!--吐司-->
+    <script src="js/util/toast.js"></script>
+    <!--弹出框-->
+    <script src="js/util/windowOpen.js"></script>
+    <!--vue-->
+    <script src="js/util/vue.min.js"></script>
+    <script src="js/common/component.js"></script>
+    <!--custom-->
+    <script src="js/common/app.js"></script>
+    <script src="js/common/tool.js"></script>
+    <script src="js/specialDiscountApply.js"></script>
+
+
+    <style type="text/css">
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            width: 100%;
+            height: 100%;
+            background-color: #f2f2f2;
+        }
+        .moneyView{
+            width: 100%;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            background-color: white;
+            box-sizing: border-box;
+            padding: 0px 12px;
+        }
+        input{
+            height: 16px;
+            flex: 1;
+            border-style: none;/*****去掉边框******/
+            outline: none;/****去掉点击之后的边框*****/
+            padding: 12px;
+        }
+
+        .ShenpiView{
+            margin-top: 10px;
+            width: 100%;
+            background-color: white;
+            padding: 12px;
+        }
+
+        .ShenpiView .btn-warning{
+            margin-top: 10px;
+            width: 80px;
+            height: 30px;
+            background-color: #5e5e5e;
+            border-color: #5e5e5e;
+            padding: 0px;
+        }
+
+        .bottomView{
+            position: fixed;
+            width: 100%;
+            bottom: 0px;
+            height: 74px;
+            margin-bottom: 10px;
+            padding: 12px;
+        }
+
+        .button{
+            height: 40px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #FFD100;
+            border-color: #FFD100;
+            border-radius: 6px;
+        }
+        .button:active{
+            background-color: #FFD900;
+        }
+        .head{
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+            text-align: center;
+            line-height: 35px;
+            font-size: 14px;
+            background-color: #FFD100;
+            color: #333;
+            border-radius:20px;
+            margin-top: 12px;
+        }
+        .masking{
+            width: 100%;height: 100%;background: #000;opacity: .5;position: fixed;top:0;left:0;bottom:0;right:0;z-index: 999;
+        }
+        .pop{
+            width: 100%;height: 100%;;position: fixed;top:0;left:0;bottom:0;right:0;z-index: 1200;
+            display: flex;align-items: center;justify-content: center;
+        }
+        .kuang{
+            background-color: white;
+            width: 300px;
+            border-radius: 8px;
+            z-index: 99;
+        }
+        .item{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+            color: #333333;
+        }
+        .click:active{
+            background-color: #f2f2f2;
+        }
+
+    </style>
+</head>
+<body>
+<div id="sepcialDiscountApply" v-cloak>
+    <header class="title-bar">
+        <header class="title-bar-left" @click="back()"><span>返回</span></header>
+        <header class="title-bar-center">
+            <span class="title-bar-title">特批优惠</span>
+        </header>
+        <header class="title-bar-right"></header>
+    </header>
+    <div class="content">
+        <div class="moneyView">
+            <span class="font font-26-333">优惠金额</span>
+            <input class="font font-26-333"  style="width:80%" type="text" v-model="inputMoney" readonly="readonly" placeholder="请输入申请优惠金额" v-on:click="edit()">
+        </div>
+        <divider></divider>
+        <div class="moneyView">
+            <span class="font font-26-333">优惠原因</span>
+            <input class="font font-26-333" style="width:80%" type="text" placeholder="请填写优惠原因" maxlength="30" v-model="discountReason" :value="discountReason">
+        </div>
+
+        <!--总部承担-->
+        <div v-if="isBearFeeShow == 1">
+            <divider></divider>
+            <div class="moneyView">
+                <span class="font font-26-333" style="flex: 1">总部承担</span>
+                <img @click="bearClick()" v-if="!bear" src="img/switch_off.png" style="width: 55px">
+                <img @click="bearClick()" v-if="bear" src="img/switch_on.png" style="width: 55px">
+            </div>
+        </div>
+
+        <div class="ShenpiView">
+            <div class="font font-26-333">审批人</div>
+            <img v-if="approverList == null || approverList.length == 0" src="img/addPerson.png" style="width: 35px;margin-top: 12px">
+
+            <div v-if="approverList != null && approverList.length > 0" style="display:flex;flex-wrap:wrap;align-items: center">
+                <template v-for="item in approverList">
+                    <div style="display: flex;flex-direction:column;align-items: center;justify-content: center;">
+                        <span class="head">{{item.processUserName.substring(0,1)}}</span>
+                        <span class="font font-24-333 mt6">{{item.processUserName}}</span>
+                    </div>
+                    <img  v-if="item != approverList[approverList.length-1]" src="img/changarrow.png" style="width: 25px;height:25px;margin: 0 6px 8px 6px">
+                </template>
+            </div>
+        </div>
+        <div class="ShenpiView">
+            <div class="font font-26-333">抄送人<span class="font font-24-999" style="margin-left: 8px">审批通过后，通知抄送人</span></div>
+
+            <div v-if="ccList != null && ccList.length > 0" style="display:flex;flex-wrap:wrap;align-items: center">
+                <template v-for="item in ccList">
+                    <div style="display: flex;flex-direction:column;align-items: center;justify-content: center;margin-right: 12px">
+                        <span class="head">{{item.processUserName.substring(0,1)}}</span>
+                        <span class="font font-24-333 mt6">{{item.processUserName}}</span>
+                    </div>
+                    <img @click="tongxunluClick()" v-if="item == ccList[ccList.length-1]" src="img/addPerson.png" style="width: 35px;margin-bottom: 4px">
+                </template>
+            </div>
+
+            <img @click="tongxunluClick()" v-if="ccList == null || ccList.length == 0" src="img/addPerson.png" style="width: 35px;margin-top: 12px">
+        </div>
+    </div>
+    <footer class="bottomView">
+        <span v-on:click="submit()" class="font font-30-333 button">提交</span>
+    </footer>
+
+    <div class="masking" >
+    </div>
+    <div class="pop">
+        <div class="kuang">
+            <div class="item" style="padding: 16px">
+                <input style="width:80%" class="font font-26-333" type="text" v-model="editMoney" placeholder="请输入申请优惠金额" v-on:input="inputChange()">
+            </div>
+            <divider></divider>
+
+            <div style="display: flex;align-items: center">
+                <div @click="cancel()" class="item click" style="font-weight:bold;flex: 1;padding: 12px">
+                    <span class="font font-30-333 ">取消</span>
+                </div>
+                <div style="width: 1px;height: 50px;background-color: #f2f2f2"></div>
+                <div @click="confirm()" class="item click" style="font-weight:bold;flex: 1;padding: 12px">
+                    <span class="font font-30-red" style="color: #d6a41f;">确认</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

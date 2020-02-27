@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta charset="UTF-8" />
+    <title>签名</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/app.css">
+    <!--吐司-->
+    <link rel="stylesheet" href="css/toast.css">
+    <script type="text/javascript" src="js/util/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/util/jSignature.js"></script>
+    <!--吐司-->
+    <script src="js/util/toast.js"></script>
+    <script type="text/javascript" src="js/common/app.js"></script>
+    <script type="text/javascript" src="js/common/tool.js"></script>
+
+</head>
+<script type="text/javascript">
+    var str =location.search;
+    // 以下两个参数只有会员资料才传递
+    var base64 = str.getQuery("base64");
+    var notCheck = str.getQuery("notCheck"); // 未签名是否不要判断 0否1是
+    if(base64 == "null")
+        base64 = null;
+
+    var $sigdiv, datapair;
+    $(function(){
+        //初始化插件
+        $("#signature").jSignature();
+
+        $sigdiv = $("#signature");
+        datapair = $sigdiv.jSignature("getData", "image"); //设置输出的格式，具体可以参考官方文档
+
+        if(base64){
+            if(base64.startsWith("http")){
+                getBase64(base64)
+                    .then(function(base64New){
+                        //重新导入数据到jSignature。但是$sigdiv.jSignature("getData", "native").length == 0是返回true
+                        $sigdiv.jSignature("setData", "data:" + datapair[0] + "," + base64New.split(",")[1]);
+                    },function(err){
+                        console.log(err);//打印异常信息
+                    });
+            }else {
+                //重新导入数据到jSignature。但是$sigdiv.jSignature("getData", "native").length == 0是返回true
+                $sigdiv.jSignature("setData", "data:" + datapair[0] + "," + base64);
+            }
+        }
+    });
+
+    //输出签名图片
+    function commit(){
+        datapair = $sigdiv.jSignature("getData", "image"); //设置输出的格式，具体可以参考官方文档
+        if($sigdiv.jSignature("getData", "native").length == 0 && notCheck != 1){
+            showMessage("请先签名");
+            return;
+        }
+
+        // 会员资料
+        if(notCheck == 1 && $sigdiv.jSignature("getData", "native").length == 0){
+            var signBase64;
+            // 会员资料没有签名的
+            if(!base64){
+                signBase64 = "";
+            }else { // 会员资料已经有签名的
+                signBase64 = datapair[1];
+            }
+
+            dsBridge.call(GET_SIGN_BASE64_FROM_JS, {signBase64:signBase64}, function (responseData) {
+            });
+            return;
+        }
+
+        dsBridge.call(GET_SIGN_BASE64_FROM_JS, {signBase64: datapair[1]}, function (responseData) {
+        });
+    }
+
+    function reset(){
+        $sigdiv.jSignature("reset");
+        base64 = null;
+    }
+
+    //传入图片路径，返回base64
+    function getBase64(img){
+        function getBase64Image(img,width,height) {//width、height调用时传入具体像素值，控制大小 ,不传则默认图像大小
+            var canvas = document.createElement("canvas");
+            canvas.width = width ? width : img.width;
+            canvas.height = height ? height : img.height;
+
+            var ctx = canvas.getContext("2d");
+            ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+            var dataURL = canvas.toDataURL();
+            return dataURL;
+        }
+        var image = new Image();
+        image.crossOrigin = '';
+        image.src = img;
+        var deferred=$.Deferred();
+        if(img){
+            image.onload =function (){
+                deferred.resolve(getBase64Image(image));//将base64传给done上传处理
+            }
+            return deferred.promise();//问题要让onload完成后再return sessionStorage['imgTest']
+        }
+    }
+</script>
+
+
+<style type="text/css">
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    .container{
+        padding: 12px;
+        width: 100%;
+        background-color: white;
+    }
+    .jSignature {
+        height: 200px!important;
+        border: 1px solid gainsboro!important;
+
+    }
+    .btn-container{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        margin-top: 16px;
+    }
+    .btn-container button:nth-of-type(1){
+        flex:1;
+        background-color: white;
+        color: #999;
+        border-color:#999;
+    }
+    .btn-container button:nth-of-type(2){
+        flex:2;
+        color: #333;
+        background-color: #FFD100;
+        border-color: #FFD100;
+    }
+
+</style>
+<body>
+<div class="container">
+
+    <p>客户签字</p>
+    <p class="font font-24-999">请在下方区域签名确认</p>
+
+    <div id="signature" style="height: 100%;"></div>
+    <div class="btn-container">
+        <button type="button" onclick="reset()"  class="btn" style="margin-right: 16px">清除</button>
+        <button type="button" onclick="commit()"  class="btn">提交</button>
+    </div>
+
+    <!--<div id="image" style="margin:20px"></div>-->
+    <div id="test"></div>
+</div>
+</body>
+</html>

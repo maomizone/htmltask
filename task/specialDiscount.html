@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta charset="UTF-8" />
+    <title>特批优惠 提交or审批</title>
+    <!--css-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/app.css">
+    <!--加载框-->
+    <link rel="stylesheet" href="css/iosOverlay.css">
+    <!--吐司-->
+    <link rel="stylesheet" href="css/toast.css">
+    <!--弹出框-->
+    <link rel="stylesheet" href="css/dialog.css">
+
+    <!--js-->
+    <script src="js/util/jquery-3.2.1.min.js"></script>
+    <script src="js/util/bootstrap.min.js"></script>
+    <!--加载框-->
+    <script src="js/util/spin.min.js"></script>
+    <script src="js/util/jquery.spin.js"></script>
+    <script src="js/util/iosOverlay.js"></script>
+    <!--吐司-->
+    <script src="js/util/toast.js"></script>
+    <!--弹出框-->
+    <script src="js/util/windowOpen.js"></script>
+    <!--vue-->
+    <script src="js/util/vue.min.js"></script>
+    <script src="js/common/component.js"></script>
+    <!--custom-->
+    <script src="js/common/app.js"></script>
+    <script src="js/common/tool.js"></script>
+    <script src="js/specialDiscount.js"></script>
+
+
+    <style type="text/css">
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            width: 100%;
+            height:100%;
+            background-color: #f2f2f2;
+        }
+
+        .content .center{
+            padding: 8px 12px;
+            background-color: white;
+        }
+        .content .top{
+            padding: 12px;
+            background-color: white;
+        }
+        .content .top{
+           display: flex;
+            align-items: center;
+        }
+        .content .flow{
+            background-color: white;
+            padding: 20px 12px;
+        }
+        .content .flow .head-container{
+            height: 30px;
+            display: flex;
+            align-items: center;
+        }
+        .head, .head2{
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            font-size: 13px;
+            background-color: lightseagreen;
+            color: white;
+            border-radius:20px;
+            margin: 0px 10px;
+        }
+        .head2{
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            margin: 0px;
+        }
+
+        footer .bottom{
+            z-index: 10;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        footer .container{
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: white;
+            width: 100%;
+            height: 45px;
+        }
+        footer .container span{
+            width: 50%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: lightseagreen;
+        }
+        footer .container span:active{
+            color: #f0ad4e;
+        }
+
+    </style>
+</head>
+<body>
+<div id="sepcialDiscount" v-cloak>
+
+    <header class="title-bar">
+        <div class="title-bar-left" @click="back()"><span>返回</span></div>
+        <div class="title-bar-center">
+            <span class="title-bar-title">特批优惠</span>
+        </div>
+        <div class="title-bar-right">
+        </div>
+    </header>
+
+    <div class="content">
+        <div class="top">
+            <span class="head2" v-if="flowInfo.applyUserName">{{flowInfo.applyUserName.substring(0,1)}}</span>
+            <div class="ml12" style="display:flex;flex-direction: column">
+                <span class="font font-26-333" v-if="flowInfo.applyUserName">{{flowInfo.applyUserName + "    " + flowInfo.applyPostName}}</span>
+                <span class="font font-26-999 mt6">{{stateStr}}</span>
+
+            </div>
+        </div>
+
+        <divider></divider>
+
+        <div class="center">
+            <div>
+                <span class="font font-26-999 mr12">审批编号</span>
+                <span class="font font-26-333">{{flowInfo.approvalCode}}</span>
+            </div>
+            <div class="mt12" >
+                <span class="font font-26-999 mr12">所在部门</span>
+                <span class="font font-26-333">{{flowInfo.applyDepName}}</span>
+            </div>
+            <div class="mt12">
+                <span class="font font-26-999 mr12">优惠金额</span>
+                <span class="font font-26-333" v-if="flowInfo.money">{{parseFloat(flowInfo.money).toFixed(2)}}</span>
+            </div>
+            <div class="mt12">
+                <span class="font font-26-999 mr12">优惠原因</span>
+                <span class="font font-26-333" >{{flowInfo.reason}}</span>
+            </div>
+            <div class="mt12">
+                <span class="font font-26-999 mr12">所属车辆</span>
+                <span class="font font-24-333">{{flowInfo.autoNo}}</span>
+            </div>
+            <div v-if="flowInfo.isBearFeeShow == 1" class="mt12">
+                <span class="font font-26-999 mr12">总部承担</span>
+                <span class="font font-24-333">{{flowInfo.isBearFee == 0 ? "否" : "是"}}</span>
+            </div>
+            <div class="mt12 mb8">
+                <span class="font font-26-999 mr12">所属订单</span>
+                <span class="font font-26-333">{{flowInfo.billCode}}</span>
+                <span @click="repairDetail()" class="font font-26-orange" v-if="flowInfo.billCode">详情</span>
+            </div>
+        </div>
+
+        <space></space>
+
+        <div class="flow" v-if="flowInfo.flowList && flowInfo.flowList.length>0">
+            <template v-for="item in flowInfo.flowList">
+                <div class="head-container">
+                    <span class="head"  v-if="item.userName">{{item.userName.substring(0,1)}}</span>
+                    <span class="font font-26-333">{{item.userName}}</span>
+                    <span v-if="item.ideaCode == 0" class="font font-26-orange" style="flex: 1; margin-left: 6px">审批中</span>
+                    <span v-if="item.ideaCode == 1" class="font font-26-green" style="flex: 1; margin-left: 6px">审批通过</span>
+                    <span v-if="item.ideaCode == 2" class="font font-26-red" style="flex: 1; margin-left: 6px">审批拒绝</span>
+                    <span v-if="item.ideaCode == 3" class="font font-26-333" style="flex: 1; margin-left: 6px">发起申请</span>
+                    <span class="font font-22-999">{{item.dateTimeStr}}</span>
+                </div>
+
+                <div v-if="item != flowInfo.flowList[flowInfo.flowList.length-1]" style="width: 1px;height: 25px; background: #f2f2f2; margin-left:25px"></div>
+            </template>
+        </div>
+
+    </div>
+
+    <footer>
+        <!--用来填充，以免流程图-->
+        <div style="height: 60px;">
+        </div>
+        <div class="bottom">
+            <div v-if="flowInfo.isShowUndo == 1" class="container">
+                <span @click="remind()">提醒</span>
+                <div style="width: 1px;height: 25px; background: #f2f2f2;margin: 5px 0"></div>
+                <span @click="cancel()">撤销</span>
+            </div>
+            <div v-if="flowInfo.isShowOperate == 1" class="container">
+                <span @click="yes()">同意</span>
+                <div style="width: 1px;height: 25px; background: #f2f2f2;margin: 5px 0"></div>
+                <span @click="no()">拒绝</span>
+            </div>
+        </div>
+    </footer>
+</div>
+
+</body>
+</html>

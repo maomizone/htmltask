@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta charset="UTF-8" />
+    <title>结算单</title>
+
+    <!--css-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/app.css">
+    <!--加载框-->
+    <link rel="stylesheet" href="css/iosOverlay.css">
+    <!--吐司-->
+    <link rel="stylesheet" href="css/toast.css">
+
+    <!--js-->
+    <script src="js/util/jquery-3.2.1.min.js"></script>
+    <script src="js/util/bootstrap.min.js"></script>
+    <!--加载框-->
+    <script src="js/util/spin.min.js"></script>
+    <script src="js/util/jquery.spin.js"></script>
+    <script src="js/util/iosOverlay.js"></script>
+    <!--吐司-->
+    <script src="js/util/toast.js"></script>
+    <!--签名-->
+    <script type="text/javascript" src="js/util/jSignature.js"></script>
+    <!--vue-->
+    <script src="js/util/vue.min.js"></script>
+    <script src="js/common/component.js"></script>
+    <!--custom-->
+    <script src="js/common/app.js"></script>
+    <script src="js/common/tool.js"></script>
+    <script src="js/chargeOrder.js"></script>
+
+    <style type="text/css">
+        body{
+            width: 100%;
+            height:100%;
+            background-color: #f2f2f2;
+        }
+        footer .bottom{
+            z-index: 102;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            background-color: white;
+        }
+        .orange-block{
+            display: inline-block;
+            width: 10px;
+            height: 100%;
+            background-color: #FF9000;
+        }
+        .yellow-block{
+            display: inline-block;
+            width: 6px;
+            height: 70%;
+            margin-left: 12px;
+            margin-right: 8px;
+            background-color: #FFD100;
+        }
+
+    </style>
+</head>
+<body>
+<div id="chargeOrder" v-cloak>
+
+    <header class="title-bar">
+        <div @click="back()" class="title-bar-left"><span>返回</span></div>
+        <div class="title-bar-center">
+            <span class="title-bar-title">结算单</span>
+        </div>
+        <div class="title-bar-right">
+        </div>
+    </header>
+
+
+    <div class="content" style="margin-bottom: 150px">
+
+        <div v-if="payInfo.AgreementName && !isMember" style="padding:8px 12px;background-color: #FFD100">
+            <strong class="font font-30-333">当前车辆身份：{{payInfo.AgreementName}}</strong>
+        </div>
+        <div style="padding:8px 12px">
+            <strong class="font font-30-333">{{payInfo.companyName}}</strong>
+        </div>
+        <divider></divider>
+
+        <!--服务/商品列表-->
+        <div>
+            <div v-if="payInfo.serviceList && payInfo.serviceList.length>0">
+                <template v-for="item in payInfo.serviceList">
+
+                    <div v-if="!(item.serviceName== null || item.serviceName == undefined || item.serviceName == '')"  style="background-color: white;height: 30px;display: flex;align-items: center">
+                        <!--<span class="yellow-block"></span>-->
+                        <span class="font font-30-333 ml12">{{item.serviceName}}</span>
+                    </div>
+
+
+                    <div v-if="item.projectList && item.projectList.length>0">
+                        <template v-for="project in item.projectList">
+                            <project-template v-bind:project="project" v-bind:iswash="payInfo.isWash"></project-template>
+
+
+                            <div v-if="project.productList && project.productList.length>0">
+                                <template v-for="good in project.productList">
+                                    <product-template v-bind:product="good"></product-template>
+                                </template>
+                            </div>
+                        </template>
+                    </div>
+
+                </template>
+            </div>
+
+            <!--套餐-->
+            <div v-if="payInfo.packageList && payInfo.packageList.length>0">
+
+                <div style="background-color: white;height: 30px;display: flex;align-items: center">
+                    <!--<span class="orange-block"></span>-->
+                    <span class="font font-28-333 ml12">套餐</span>
+                </div>
+                <template v-for="package in payInfo.packageList">
+                    <package-template v-bind:package="package"  v-bind:saleid="payInfo.saleID" v-bind:apiurl="url" v-bind:imgurl="imgUrl">
+                    </package-template>
+                </template>
+            </div>
+
+            <!--卡券-->
+            <div v-if="payInfo.saleCardList && payInfo.saleCardList.length>0">
+
+                <div style="background-color: white;height: 30px;display: flex;align-items: center">
+                    <!--<span class="orange-block"></span>-->
+                    <span class="font font-28-333 ml12">卡券</span>
+                </div>
+                <template v-for="card in payInfo.saleCardList">
+                    <card-template v-bind:card="card" v-bind:saleid="payInfo.saleID" v-bind:apiurl="url" v-bind:imgurl="imgUrl">
+                    </card-template>
+                </template>
+            </div>
+
+            <!--商品-->
+            <div v-if="payInfo.productList && payInfo.productList.length>0">
+
+                <div style="background-color: white;height: 30px;display: flex;align-items: center">
+                    <!--<span class="orange-block"></span>-->
+                    <span class="font font-28-333 ml12">商品</span>
+                </div>
+                <template v-for="good in payInfo.productList">
+                    <product-template v-bind:product="good" v-bind:saleid="payInfo.saleID" v-bind:apiurl="url" v-bind:imgurl="imgUrl">
+                    </product-template>
+                </template>
+            </div>
+        </div>
+
+        <space></space>
+
+        <!--订单来源-->
+        <div v-if="payInfo.billID" >
+            <div @click="lookPaySource(payInfo.billID)" style="padding: 12px; background-color: white;display: flex;align-items: center">
+                <span class="font font-28-333" style="flex: 1">订单来源</span>
+                <span class="font font-28-orange">{{payInfo.billCode}}</span>
+                <img src="img/right.png"  style="width: 15px">
+            </div>
+
+            <space></space>
+        </div>
+
+        <!--收费明细-->
+        <charge-template v-if="!isNaN(payInfo.productMoneys)" v-bind:info="payInfo" v-bind:state="(stateStr=='待结算'||stateStr=='待支付') ? 0 : 1"></charge-template>
+
+        <!--特批原由-->
+        <div v-if="payInfo.content" style="margin-top: 12px">
+            <div style="padding: 8px 12px;background-color: white;display: flex;align-items: flex-start">
+                <p class="font font-28-333" style="width: 80px">特批原由</p>
+                <p class="font font-24-999">{{payInfo.content}}</p>
+            </div>
+        </div>
+
+        <!--客户需求-->
+        <div v-if="payInfo.remark">
+            <div style="padding: 8px 12px">
+                <span class="font font-24-999">客户需求</span>
+            </div>
+            <div style="padding: 8px 12px;background-color: white;height: 100px;overflow:scroll;width: 100%">
+                <span class="font font-28-333">{{payInfo.remark}}</span>
+            </div>
+        </div>
+
+        <!--退单原由-->
+        <div v-if="payInfo.backReasonName">
+            <div style="padding: 8px 12px">
+                <span class="font font-24-999">退单原由</span>
+            </div>
+            <div style="padding: 8px 12px;background-color: white">
+                <span class="font font-28-333">{{payInfo.backReasonName}}</span>
+            </div>
+            <div style="padding: 8px 12px;display: flex;justify-content: flex-end">
+                <span class="font font-24-999">{{payInfo.backTime}}退单</span>
+            </div>
+        </div>
+
+        <!--客户授权-->
+        <div v-if="payInfo.authorizeWay == 1 || payInfo.authorizeWay == 2" style="margin-top: 12px;background-color: white">
+            <div style="padding: 8px 12px">
+                <span class="font font-28-333">客户授权</span>
+                <span v-if="payInfo.authorizeWay==1" class="font font-28-333" style="float: right;">扫码授权成功</span>
+                <span v-if="payInfo.authorizeWay==2" class="font font-28-333" style="float: right;">签字授权成功</span>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="bottom">
+            <!--完成派工-->
+            <divider></divider>
+            <div style="display: flex;align-items: center;height: 60px;margin-left: 16px;width: 100%">
+                <div style="flex:1;display: flex;flex-direction:column;justify-content:center;height: 100%;">
+                    <div>
+                        <strong class="font font-30-333">应付总计：</strong>
+                        <strong class="font font-30-red">￥{{parseFloat(payInfo.payMoneyAll).toFixed(2)}}</strong>
+                    </div>
+                    <span class="font font-24-999">包含工时/安装费</span>
+                </div>
+                <strong v-if="stateStr=='待结算'" class="font font-30-orange" style="display: inline-block;margin-right: 26px;color: #F00C1C">{{stateStr}}</strong>
+                <strong v-if="stateStr=='待支付'" class="font font-30-orange" style="display: inline-block;margin-right: 26px;color: #F97979">{{stateStr}}</strong>
+                <strong v-if="stateStr=='待评价'" class="font font-30-orange" style="display: inline-block;margin-right: 26px;color: #000000">{{stateStr}}</strong>
+                <strong v-if="stateStr=='已完成'" class="font font-30-orange" style="display: inline-block;margin-right: 26px;color: #4FD2C2">{{stateStr}}</strong>
+                <strong v-if="stateStr=='已取消'" class="font font-30-orange" style="display: inline-block;margin-right: 26px;color: #999999">{{stateStr}}</strong>
+
+                <!--8781bug 商户端销售模块隐藏退单功能入口-->
+                <!--<span v-if="canBack==1 && isManager==0" @click="backOrder()" class="font font-26-999" style="display: inline-block;margin-right: 26px;border: 1px solid #999999;padding: 4px 12px; border-radius: 6px">退单</span>-->
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
+</html>

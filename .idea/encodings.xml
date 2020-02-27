@@ -13,7 +13,33 @@
     <file url="file://$PROJECT_DIR$/music.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mycss.css" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/position.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/task/YesOrNo.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/task/aboutUs.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/task/addressDetail.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/task/addressList.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/task/backOrderDetail.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/task/calendar.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/task/chargeOrder.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/task/chargeOrderOnline.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/task/commitBalance.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/task/contactUs.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/task/css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/task/customerConfirm.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/task/historyRepair.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/task/historyRepairOnline.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/task/img" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/task/inspectionApply.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/task/js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/task/js/jquery-3.2.1.min.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/task/pickingDetail.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/task/pickingRecords.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/task/repairOrderDetial.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/task/sign.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/task/specialDiscount.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/task/specialDiscountApply.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/task/specialDiscountRemind.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/task/toast.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/task/tongXunLu.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/task02.html" charset="UTF-8" />
     <file url="PROJECT" charset="GBK" />
   </component>
