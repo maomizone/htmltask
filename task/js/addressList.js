@@ -296,7 +296,7 @@ function getSpiner() {
     var icae = 0;
     function overfun(aic) {
         icae = aic;
-        // $(".biaoqian").html($(".spiner div").eq(aic).html());
+        $(".biaoqian").html($(".spiner div").eq(aic).html());
         $("html, body").stop(true);
 
         return false;
