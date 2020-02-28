@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="zh-cn" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta charset="UTF-8" />
+    <title>分享</title>
+    <!--css-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/tool.js"></script>
+
+    <style type="text/css">
+        body{
+            width: 100%;
+            height:100%;
+            background-color: #f4f4f4;
+        }
+        .wtips{
+            position:absolute;
+            left:0;
+            top:0;
+            background-color:rgba(0,0,0,0.65);
+            width:100%;
+            height:100%;
+            z-index:100;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .wtips p{
+            font-size: 18px;
+            color: black;
+            font-weight: bold;
+        }
+        .img{
+            width: 100%;
+            height: auto;
+            max-width: 100%;
+            max-height: 100%;
+        }
+        .head-container{
+            display: flex;
+            align-items: center;
+            margin-top: 5%;
+        }
+        .head{
+            width: 50px;
+            height: 50px;
+            border-radius: 50px;
+            background-color: yellow;
+            border: 2px solid white;
+        }
+        .name{
+            margin-left: 12px;
+            font-size: 20px;
+            color: white;
+        }
+        .mbtn{
+            width: 80%;
+            background-color: #13b15c;
+            height: 40px;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+        .red-btn{
+            background-color: #FF441F;
+            color: white;
+            margin-top: 40%;
+        }
+        .orange-btn{
+            background-color: #FF9000;
+            color: white;
+            margin-top: 255%;
+        }
+        .font{
+            word-wrap:break-word;
+            white-space: pre-line;
+            font-family:"KaiTi_GB2312";
+        }
+        /* iphone 5 */
+        @media screen and (max-width: 320px){
+            .red-btn{
+                margin-top: 40%;
+            }
+            .orange-btn{
+                background-color: #FF9000;
+                color: white;
+                margin-top: 253%;
+            }
+        }
+        /* iphone 6/7/8 */
+        @media screen and (min-width:321px) and (max-width: 375px){
+            .red-btn{
+                margin-top: 43%;
+            }
+            .orange-btn{
+                background-color: #FF9000;
+                color: white;
+                margin-top: 255%;
+            }
+        }
+        /* iphone 6/7/8 plus  iphone X */
+        @media screen and (min-width:376px) and (max-width: 414px){
+            .red-btn{
+                margin-top: 45%;
+            }
+            .orange-btn{
+                background-color: #FF9000;
+                color: white;
+                margin-top: 256%;
+            }
+        }
+    </style>
+</head>
+<script type="text/javascript">
+    var str =location.search;
+    var headUrl = str.getQuery("headUrl");
+    var sign = str.getQuery("headUrl");
+    var name = str.split("?")[1].split("&")[2].split("=")[1];
+    name = decodeURI(name);
+
+    var isAndroid;
+    var isIOS;
+    var androidScheme = 'scheme1://host1:8080/path1?query1=1&query2=true';  // 需要打开的app scheme 地址
+    var iosDownload='https://hxjdown.ychel.com/sycl';  // ios下载地址
+    var androidDownload = 'https://hxjdown.ychel.com/sycl'; // 安卓下载地址
+
+    function load() {
+        $("#biao1").val("@sign=" + sign + "@");//要复制的内容
+        document.getElementById("biaoios").innerHTML = "@sign=" + sign + "@";
+
+        document.getElementById("name").innerHTML = name;
+        if(headUrl == null || headUrl == undefined || headUrl == ""){
+        } else {
+            document.getElementById("head").src = headUrl;
+        }
+
+        var ua = window.navigator.userAgent.toLowerCase();
+        var u = navigator.userAgent;
+        isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1; //g
+        isIOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+        var micromessenger = ua.match(/MicroMessenger/i);
+        var weixin = micromessenger == 'micromessenger' ? true : false;
+
+        // 判断是否是微信内置浏览器，是就显示在浏览器中打开
+        if (weixin) {
+            document.getElementById("tipsdiv").style.display = "";
+            document.documentElement.style.overflow = 'hidden';
+            document.getElementById("tipsp").innerHTML= isIOS ? "请用Safari浏览器打开" : "请用其他浏览器打开";
+        }
+    }
+
+    //判断手机上是否安装了app，如果安装直接打开，如果没安装，跳转到下载页面
+    function openApp() {
+        copy();
+        // 尝试打开 scheme
+        if(isAndroid) {
+            //安卓app的scheme协议
+            window.location.href = androidScheme;
+            setTimeout(function(){
+                var hidden = window.document.hidden || window.document.mozHidden || window.document.msHidden ||window.document.webkitHidden;
+                if(typeof hidden =="undefined" || hidden ==false){
+                    // app下载地址
+                    window.location.href =androidDownload;
+                }
+            }, 2000);
+        }
+        if(isIOS) {
+            window.location.href = iosDownload;
+        }
+    }
+
+    function copy() {
+        if (isIOS) {//区分iPhone设备
+            window.getSelection().removeAllRanges();//这段代码必须放在前面否则无效
+            var Url2 = document.getElementById("biaoios");//要复制文字的节点
+            var range = document.createRange();
+            // 选中需要复制的节点
+            range.selectNode(Url2);
+            // 执行选中元素
+            window.getSelection().addRange(range);
+            // 执行 copy 操作
+            var successful = document.execCommand('copy');
+
+            // 移除选中的元素
+            window.getSelection().removeAllRanges();
+        } else {
+            var Url2 = document.getElementById("biao1");//要复制文字的节点
+            Url2.select(); // 选择对象
+            document.execCommand("Copy"); // 执行浏览器复制命令
+        }
+    }
+</script>
+
+<body onload="load()">
+<!--添加一个DIV，采用绝对定位，图片所属DIV为基准-->
+<div style="position:relative;width:100%;height:auto;">
+    <img class="img" src="images/share.jpg">
+    <div style="position:absolute;width:100%;height:auto;z-indent:2;left:0;top:0;">
+        <div style="width:100%;display: flex;align-items: center;justify-content: center;flex-direction: column">
+            <div class="head-container">
+                <img class="head" id="head" src="images/head.png"/>
+                <span class="font name" id="name"></span>
+            </div>
+            <div onclick="openApp()" class="mbtn red-btn"><span class="font" style="font-weight: bold">我也要领券 >></span></div>
+            <div onclick="openApp()" class="mbtn orange-btn"><span class="font" style="font-weight: bold">即刻下载体验 >></span></div>
+        </div>
+    </div>
+</div>
+
+<!--如果是微信内置浏览器会显示以下图标-->
+<div id="tipsdiv" class="wtips" style="display: none">
+    <div style="width: 70%;height: auto;background-color: white;border: 1px solid white;padding: 24px 12px;border-radius: 12px;display: flex;justify-content: center">
+        <p id="tipsp">请用其他浏览器打开</p>
+    </div>
+</div>
+
+
+<input readOnly="true" style="outline: none;border: 0px; color: rgba(0,0,0,0.0);position: absolute;left:-200px; background-color: transparent" id="biao1" value=""/>
+<div id="biaoios" style=";position: absolute;left:-200px; color: rgba(0,0,0,0);background-color: transparent" ></div>
+</body>
+</html>
