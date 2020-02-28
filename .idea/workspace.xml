@@ -1,61 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ddd6af18-c37f-4057-88a2-c15fe42b7ac4" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/fonts/fontawesome-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/fonts/fontawesome-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/fonts/fontawesome-webfont.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/fonts/glyphicons-halflings-regular.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/fonts/glyphicons-halflings-regular.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/fonts/glyphicons-halflings-regular.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/fonts/glyphicons-halflings-regular.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/images/2x - 副本 (2).png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/images/2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/images/3x - 副本 (2).png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/images/3x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/images/cha.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/images/cha_tri.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/images/fxjf-bg.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/images/head.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/images/hengxian.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/images/jiaoCha.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/images/lianghao.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/images/lianghao_tri.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/images/recommend.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/images/sfmx_01.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/images/sfmx_02.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/images/sfmx_03.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/images/share.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/images/ts.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/images/yb.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/images/youxiu-san.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/images/youxiu.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/images/youxiu_tri.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/images/zhongdeng.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/images/zhongdeng_tri.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/appointOuttimePay.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/css/bootstrap-theme.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/css/bootstrap-theme.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/css/bootstrap.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/fonts/fontawesome-webfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/fonts/glyphicons-halflings-regular.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/gxxy.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/gywm.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/js/chart.meter.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/js/jquery-3.2.1.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/js/tool.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/ljf.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/lxwm.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/memberProtocol.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/pointsNote.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/rechargeProtocol.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/recommend.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/share.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/ssf.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/yejf.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/yhxy.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task/zlxy.html" />
+    <list default="true" id="ddd6af18-c37f-4057-88a2-c15fe42b7ac4" name="Default" comment="djy">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task/share.html" afterPath="$PROJECT_DIR$/task/share.html" />
     </list>
     <ignored path="test.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -80,8 +28,8 @@
       <file leaf-file-name="share.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/task/share.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="8" column="67" lean-forward="false" selection-start-line="8" selection-start-column="67" selection-end-line="8" selection-end-column="67" />
+            <state relative-caret-position="180">
+              <caret line="6" column="5" lean-forward="false" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -381,14 +329,7 @@
       <workItem from="1582694666811" duration="4724000" />
       <workItem from="1582771477509" duration="25000" />
       <workItem from="1582794378865" duration="2251000" />
-      <workItem from="1582874072886" duration="2319000" />
-    </task>
-    <task id="LOCAL-00021" summary="djy">
-      <created>1520991134254</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1520991134254</updated>
+      <workItem from="1582874072886" duration="2534000" />
     </task>
     <task id="LOCAL-00022" summary="djy">
       <created>1520991584602</created>
@@ -726,14 +667,22 @@
       <option name="project" value="LOCAL" />
       <updated>1582876076716</updated>
     </task>
-    <option name="localTasksCounter" value="70" />
+    <task id="LOCAL-00070" summary="djy">
+      <created>1582876422252</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1582876422252</updated>
+    </task>
+    <option name="localTasksCounter" value="71" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="171873000" />
+    <option name="totallyTimeSpent" value="172088000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3024236" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1011,8 +960,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/task/share.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="8" column="67" lean-forward="false" selection-start-line="8" selection-start-column="67" selection-end-line="8" selection-end-column="67" />
+        <state relative-caret-position="180">
+          <caret line="6" column="5" lean-forward="false" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
           <folding />
         </state>
       </provider>
