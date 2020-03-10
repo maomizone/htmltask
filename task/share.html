@@ -4,10 +4,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta charset="UTF-8" />
     <title>分享</title>
+    <!--css-->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="js/tool.js"></script>
-
 
     <style type="text/css">
         body{
@@ -125,6 +125,7 @@
 
     var isAndroid;
     var isIOS;
+    var isWX;
     var androidScheme = 'scheme1://host1:8080/path1?query1=1&query2=true';  // 需要打开的app scheme 地址
     var iosDownload='https://hxjdown.ychel.com/sycl';  // ios下载地址
     var androidDownload = 'https://hxjdown.ychel.com/sycl'; // 安卓下载地址
@@ -144,33 +145,33 @@
         isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1; //g
         isIOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
         var micromessenger = ua.match(/MicroMessenger/i);
-        var weixin = micromessenger == 'micromessenger' ? true : false;
-
-        // 判断是否是微信内置浏览器，是就显示在浏览器中打开
-        if (weixin) {
-            document.getElementById("tipsdiv").style.display = "";
-            document.documentElement.style.overflow = 'hidden';
-            document.getElementById("tipsp").innerHTML= isIOS ? "请用Safari浏览器打开" : "请用其他浏览器打开";
-        }
+        isWX = micromessenger == 'micromessenger' ? true : false;
     }
 
     //判断手机上是否安装了app，如果安装直接打开，如果没安装，跳转到下载页面
     function openApp() {
-        copy();
-        // 尝试打开 scheme
-        if(isAndroid) {
-            //安卓app的scheme协议
-            window.location.href = androidScheme;
-            setTimeout(function(){
-                var hidden = window.document.hidden || window.document.mozHidden || window.document.msHidden ||window.document.webkitHidden;
-                if(typeof hidden =="undefined" || hidden ==false){
-                    // app下载地址
-                    window.location.href =androidDownload;
-                }
-            }, 2000);
-        }
-        if(isIOS) {
-            window.location.href = iosDownload;
+        // 判断是否是微信内置浏览器，是就显示在浏览器中打开
+        if (isWX) {
+            document.getElementById("tipsdiv").style.display = "";
+            document.documentElement.style.overflow = 'hidden';
+            document.getElementById("tipsp").innerHTML= isIOS ? "请用Safari浏览器打开" : "请用其他浏览器打开";
+        } else {
+            copy();
+            // 尝试打开 scheme
+            if(isAndroid) {
+                //安卓app的scheme协议
+                window.location.href = androidScheme;
+                setTimeout(function(){
+                    var hidden = window.document.hidden || window.document.mozHidden || window.document.msHidden ||window.document.webkitHidden;
+                    if(typeof hidden =="undefined" || hidden ==false){
+                        // app下载地址
+                        window.location.href =androidDownload;
+                    }
+                }, 2000);
+            }
+            if(isIOS) {
+                window.location.href = iosDownload;
+            }
         }
     }
 
